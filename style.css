@@ -48,6 +48,16 @@ header {
   text-align: center;
 }
 
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 /* 🔘 Buttons */
 .button {
   display: inline-block;
@@ -57,12 +67,13 @@ header {
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
+  font-weight: bold;
 }
 .button:hover {
   background-color: #003f8a;
 }
 
-/* 📋 Service List */
+/* 📋 Section Styling */
 section {
   padding: 2rem;
 }
