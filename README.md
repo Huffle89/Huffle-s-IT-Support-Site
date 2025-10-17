@@ -27,7 +27,6 @@ Huffle’s IT Services provides personalized support for individuals and small b
 
 ## 📁 Site Structure
 
-```
 Huffle's-IT-Support-Site/
 ├── index.html                ← Main landing page
 ├── Reference.html            ← Quick-access command sheet
@@ -44,7 +43,7 @@ Huffle's-IT-Support-Site/
 │   ├── logo.png
 │   ├── background-circuitry.png
 │   └── styles.css
-```
+
 
 ## 🌐 This Is the Site
 
@@ -52,3 +51,4 @@ You're already here—this is the official home of Huffle’s IT Services:
 🔗 [https://www.hufflesitservices.online/index.html](https://www.hufflesitservices.online/index.html)
 
 Everything you see is live, branded, and built to reflect our values. We’re constantly refining and expanding, so check back often for new pages and updates.
+...
