@@ -6,18 +6,18 @@ Thank you for visiting the official website of **Huffle’s IT Services LLC**, a
 
 Huffle’s IT Services provides personalized support for individuals and small businesses. We specialize in:
 
-- System troubleshooting and repair
-- Network setup and security
-- Backup and recovery planning
-- Comfort-driven IT workflows
-- Clear, jargon-free guidance
+- System troubleshooting and repair  
+- Network setup and security  
+- Backup and recovery planning  
+- Comfort-driven IT workflows  
+- Clear, jargon-free guidance  
 
 ## 🧠 Certifications & Expertise
 
-- A+ and Security+ certified
-- Network+ and CySA+ in progress
-- Fluent in Windows, Linux, and PowerShell
-- Strategic planning for layered security and smart home integration
+- A+ and Security+ certified  
+- Network+ and CySA+ in progress  
+- Fluent in Windows, Linux, and PowerShell  
+- Strategic planning for layered security and smart home integration  
 
 ## 📁 Site Structure
 Huffle's-IT-Support-Site/ ├── index.html                ← Main landing page ├── Reference.html            ← Quick-access command sheet ├── overlays/                 ← Service pages (Firewall, Encryption, etc.) │   ├── firewall.html │   ├── encryption.html │   ├── backup.html │   ├── monitoring.html │   ├── incident-response.html │   └── [thank-you.html, browser.html, mobile.html] ← coming soon ├── assets/ │   ├── logo.png │   ├── background-circuitry.png │   └── styles.css
@@ -31,4 +31,6 @@ Everything you see is live, branded, and built to reflect our values. We’re co
 
 ---
 
-Let me know if you want to add a mission statement, client contact section, or a short intro about porch-coded philosophy. We can also version this README later to track updates and overlay drops.
+### 🧭 Mission Statement
+
+At Huffle’s IT Services, our mission is to provide clear, honest, and comfort-driven support to every client we serve. We believe in transparency at every step—whether diagnosing a system, recommending a fix, or building a secure workflow. No upsells, no shortcuts, no tech-speak smokescreens. Just real solutions, porch-coded with integrity and care.
