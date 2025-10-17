@@ -1,75 +1,90 @@
-/* 🔧 Global Reset (Safe for layout) */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* 🌐 Body Styling */
+/* 🔧 Reset and Base Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fdfdfd;
-  color: #222;
-  line-height: 1.6;
-  padding: 2rem;
-}
-
-/* 🧱 Container for README-style blocks */
-.readme-block {
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin: 2rem 0;
-  overflow-x: auto;
-}
-
-/* 🧾 Preformatted Text (Tree diagrams, code blocks) */
-.readme-block pre,
-pre {
-  white-space: pre;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-/* 🧮 Inline Code */
-code {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #eee;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-}
-
-/* 🖼️ Image Styling */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem 0;
-}
-
-/* 🔗 Link Styling */
-a {
-  color: #0056b3;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* 🧭 Headings */
-h1, h2, h3 {
-  margin-bottom: 1rem;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
   color: #333;
 }
 
-/* 📁 List Styling */
-ul {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+main {
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #0056b3;
+}
+
+/* 🔗 Navigation Bar */
+nav {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar li a:hover {
+  color: #003f8a;
+  text-decoration: underline;
+}
+
+/* 🧭 Hero Section */
+header {
+  padding: 2rem;
+  background-color: #e9f1ff;
+  text-align: center;
+}
+
+/* 🔘 Buttons */
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75em 1.5em;
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.button:hover {
+  background-color: #003f8a;
+}
+
+/* 📋 Service List */
+section {
+  padding: 2rem;
+}
+section ul {
+  list-style: none;
+  padding-left: 0;
+}
+section li {
+  margin-bottom: 0.5rem;
+}
+
+/* 🧭 Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f4f4f4;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #0056b3;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
