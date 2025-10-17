@@ -27,18 +27,17 @@ Huffle’s IT Services provides personalized support for individuals and small b
 
 ## 📁 Site Structure
 
-```
-HT-IT-Support-Site/
+```text
+HIT-IT-Support-Site/
 ├── index.html                ← Main landing page
-├── Reference.html            ← Quick-access command sheet
+├── Reference.html
 ├── overlays/                 ← Service pages (Firewall, Encryption, etc.)
 │   ├── firewall.html
 │   ├── encryption.html
 │   ├── backup.html
 │   ├── monitoring.html
-│   ├── incident-response.html
-│   └── thank-you.html
-├── browse.html
+│   └── incident-response.html ← Quick-access command sheet
+├── browse.html               ← Service page
 ├── mobile.html               ← coming soon
 ├── assets/
 │   ├── logo.png
