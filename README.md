@@ -26,24 +26,7 @@ Huffle’s IT Services provides personalized support for individuals and small b
 - Strategic planning for layered security and smart home integration  
 
 ## 📁 Site Structure
-
-```plaintext
-HIT-IT-Support-Site/
-├── index.html                ← Main landing page
-├── Reference.html
-├── overlays/                 ← Service pages (Firewall, Encryption, etc.)
-│   ├── firewall.html
-│   ├── encryption.html
-│   ├── backup.html
-│   ├── monitoring.html
-│   └── incident-response.html ← Quick-access command sheet
-├── browse.html               ← Service page
-├── mobile.html               ← coming soon
-├── assets/
-│   ├── logo.png
-│   ├── background-circuitry.png
-│   └── styles.css
-```
+<a href="site-structure.html">View full site structure</a>
 
 ## 🌐 This Is the Site
 
