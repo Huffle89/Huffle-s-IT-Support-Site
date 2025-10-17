@@ -1,4 +1,31 @@
-                                 Apache License
+📜 Custom License Notice — Huffle’s IT Services LLC
+
+The content, branding, and overlays of this site are protected under the following terms:
+
+Copyright © 2024 Huffle’s IT Services LLC  
+All rights reserved.
+
+You may:
+- View and interact with the site for personal or educational use  
+- Reference public-facing materials with attribution  
+- Share links to the site for informational purposes  
+
+You may not:
+- Copy, modify, or redistribute any part of this site or its overlays  
+- Use the logo, branding, or mission statement for commercial purposes  
+- Republish site content without written permission  
+
+This license applies to all original content created by Huffle’s IT Services LLC, including HTML, CSS, overlays, and branded materials.
+
+For permissions or inquiries, contact:  
+📧 support@hufflesitservices.online
+
+---
+
+The following components are licensed under the Apache License, Version 2.0:
+
+```
+                                Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -196,6 +223,7 @@
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
+---
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
