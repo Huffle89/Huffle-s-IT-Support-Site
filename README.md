@@ -27,7 +27,7 @@ Huffle’s IT Services provides personalized support for individuals and small b
 
 ## 📁 Site Structure
 
-```text
+```plaintext
 HIT-IT-Support-Site/
 ├── index.html                ← Main landing page
 ├── Reference.html
