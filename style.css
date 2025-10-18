@@ -4,8 +4,34 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #333;
+  background-image: url("Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
+/* 🖼️ Logo Styling */
+.logo {
+  display: block;
+  margin: 1rem auto;
+  height: 80px;
+}
+
+/* Optional: Logo as background in header */
+header::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background-image: url("Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 🧭 Layout Containers */
 main {
   padding: 2rem;
 }
@@ -44,7 +70,7 @@ nav {
 /* 🧭 Hero Section */
 header {
   padding: 2rem;
-  background-color: #e9f1ff;
+  background-color: rgba(233, 241, 255, 0.85);
   text-align: center;
 }
 
