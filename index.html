@@ -3,42 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Huffle’s IT Services</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Welcome to Huffle’s IT Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .background-wrapper {
+      background-image: url("assets/Background.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      min-height: 100vh;
+      padding: 0;
+    }
+    .logo {
+      display: block;
+      margin: 1rem auto;
+      height: 80px;
+    }
+    nav {
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #ccc;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75em 1.5em;
+      background-color: #0056b3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .button:hover {
+      background-color: #003f8a;
+    }
+    section {
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <ul class="navbar">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="browse.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="Reference.html">Reference</a></li>
-      <li><a href="site-structure.html">Site Structure</a></li>
-      <li><a href="intake.html">Start Service Request</a></li>
-    </ul>
-  </nav>
+  <div class="background-wrapper">
+    <header>
+      <img src="assets/Logo.png" alt="Huffle’s IT Services Logo" class="logo" />
+      <h1>Welcome to Huffle’s IT Services</h1>
+      <p>Conflict-coded support from real people. No shortcuts. No scare tactics. Just clarity, care, and custom-coded solutions.</p>
+      <a href="services.html" class="button">Explore Services</a>
+    </header>
 
-  <header>
-    <h1>Welcome to Huffle’s IT Services</h1>
-    <p>Comfort-coded support for real people. No shortcuts. No scare tactics. Just clarity, care, and porch-coded solutions.</p>
-    <a href="browse.html" class="button">Explore Services</a>
-  </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="Reference.html">Reference</a>
+      <a href="site-structure.html">Site Structure</a>
+      <a href="intake.html">Start Service Request</a>
+    </nav>
 
-  <section>
-    <h2>Our Services</h2>
-    <ul>
-      <li><a href="overlays/firewall.html">Firewall</a></li>
-      <li><a href="overlays/encryption.html">Encryption</a></li>
-      <li><a href="overlays/backup.html">Backup</a></li>
-      <li><a href="overlays/monitoring.html">Monitoring</a></li>
-      <li><a href="overlays/incident-response.html">Incident Response</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Our Services</h2>
+      <ul>
+        <li>Firewall</li>
+        <li>Encryption</li>
+        <li>Backup</li>
+        <li>Monitoring</li>
+        <li>Incident Response</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>This site is porch-coded with care by Huffle’s IT Services LLC.</p>
-    <p>&copy; 2024 Huffle’s IT Services LLC. All rights reserved.</p>
-    <p><a href="mailto:support@hufflesitservices.online">Contact Us</a></p>
-  </footer>
+    <footer>
+      <p>This site & its goods crafted with care by Huffle’s IT Services LLC.</p>
+      <p>© 2024 Huffle’s IT Services LLC. All rights reserved.</p>
+      <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+  </div>
 </body>
 </html>
