@@ -1,0 +1,29 @@
+/* 🌙 Dark Mode Overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+section.dark-mode {
+  background-color: rgba(30, 30, 30, 0.95);
+  color: #f0f0f0;
+}
+
+nav.dark-mode a {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+footer.dark-mode {
+  border-top: 1px solid #444;
+  color: #ccc;
+}
+
+.button.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.button.dark-mode:hover {
+  background-color: #555;
+}
