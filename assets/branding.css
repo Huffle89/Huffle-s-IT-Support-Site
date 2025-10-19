@@ -1,0 +1,65 @@
+/* 🎨 Brand Color Variables */
+:root {
+  --primary: #4b2e2e;
+  --accent: #7a5c5c;
+  --cream: #fdfaf6;
+  --overlay: rgba(255, 248, 240, 0.95);
+  --text-light: #f5e9dc;
+  --text-dark: #333;
+  --alert: #ffdddd;
+  --safe: #e6d7cc;
+}
+
+/* 🖋️ Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* 🪞 Logo & Anchors */
+.logo {
+  height: 140px;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.brand-badge {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: var(--overlay);
+  color: var(--primary);
+}
+
+/* 🧸 Emotional Cues */
+.safe-mode {
+  background-color: var(--safe);
+  color: var(--primary);
+}
+
+.alert-mode {
+  background-color: var(--alert);
+  color: #990000;
+}
+
+.calming-text {
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* 🌙 Dark Mode Variant (Optional) */
+body.dark-mode {
+  background-color: #121212;
+  color: var(--text-light);
+}
+
+section.dark-mode {
+  background-color: rgba(30, 30, 30, 0.95);
+}
