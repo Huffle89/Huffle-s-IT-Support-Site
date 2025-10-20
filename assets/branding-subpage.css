@@ -1,101 +1,86 @@
-/* 🔷 Page Background Layer */
-body {
-  background-image: 
-    url("background.png"),
-    url("circuit-pattern.png");
-  background-position: center center;
-  background-repeat: no-repeat, repeat;
-  background-size: cover, contain;
-  background-attachment: fixed;
-  background-color: #000; /* fallback */
+/* 🔧 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* 🔷 Reset top spacing */
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* Optional: tighten nav bar spacing */
+/* 🔷 Navigation Bar */
 #menu {
-  margin-top: 0;
-  padding-top: 0;
+  background-color: #1a1a1a;
+  padding: 0.75rem 1rem;
+  text-align: center;
 }
-/* 🔷 Logo for subpages */
+
+#menu a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#menu a:hover,
+#menu a.active {
+  color: #00aaff;
+}
+
+/* 🔷 Logo Styling */
 .logo {
-  position: relative; /* or remove 'position' entirely */
+  position: relative;
   display: block;
   margin: 1rem auto;
   max-width: 200px;
   padding: 0.5rem 0;
+  text-align: center;
   filter: drop-shadow(0 0 6px rgba(15, 82, 186, 0.6)); /* Sapphire glow */
 }
 
-/* 🔷 Nav bar fix */
-#menu {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 6rem; /* adjust for logo height */
-  font-size: 1rem;
-}
-/* 🔷 Nav Bar Styling */
-#menu {
-  background-color: #000;
-  color: #eaeaea;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 0;
-  font-size: 1rem;
-  z-index: 2;
-}
-
-#menu a {
-  color: #eaeaea;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
-}
-
-#menu a:hover {
-  background-color: #222;
-  border-radius: 4px;
-}
-
-/* 🔷 Text adjustments */
+/* 🔷 Content Block */
 .content-block {
-  background-color: rgba(255, 255, 255, 0.75);
-  color: #111;
-  padding: 2rem;
-  margin: 2rem auto;
   max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  position: relative;
-  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-/* 🔷 Heading clarity */
 .content-block h1,
 .content-block h2 {
-  color: #222;
-  font-weight: 600;
+  text-align: center;
+  color: #1a1a1a;
   margin-bottom: 1rem;
 }
-/* 🔷 Ensure full-page layout */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
+.content-block ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* 🔷 Footer Styling */
+.content-block li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.content-block li strong {
+  color: #005a9c;
+}
+
+/* 🔷 Footer */
 footer {
-  background-color: #000;
-  color: #eaeaea;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: auto;
-  width: 100%;
-  z-index: 1;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
