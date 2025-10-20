@@ -2,100 +2,61 @@
 /* === Huffle Branding Styles === */
 /* ============================= */
 
-/* === Base Background Layers === */
-/* Circuit texture on bottom, branded overlay on top */
+/* === Layered Background Styling === */
 body {
   background-image: 
-    url("background.png"),         /* Top layer */
-    url("circuit-pattern.png");    /* Bottom layer */
+    url("background.png"),
+    url("circuit-pattern.png");
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: cover, cover;
   background-attachment: fixed, fixed;
-  color: #ffffff; /* Ensures text pops against dark background */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-
-/* ============================= */
-/* === Logo Styling & Effects === */
-/* ============================= */
-
-/* Logo container */
+/* === Logo Styling with Sapphire Glow === */
 .logo {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
-/* Logo image with sapphire glow */
 .logo img {
-  max-width: 200px;
+  max-width: 300px; /* Increased size */
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0 0 8px #0f52ba); /* Sapphire blue glow */
+  filter: drop-shadow(0 0 12px #0f52ba);
 }
 
-/* Logo hover effect — subtle pulse */
 .logo img:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 12px #0f52ba); /* Slightly stronger glow on hover */
+  filter: drop-shadow(0 0 20px #0f52ba);
 }
 
+/* === Main Content Styling === */
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+  border-radius: 8px;
+  text-align: center;
+}
 
-/* ============================= */
-/* === Typography & Text Accents === */
-/* ============================= */
+.container h1, .container p {
+  color: #000000; /* Black text */
+}
 
-/* Headings */
-h1, h2, h3 {
-  font-family: 'Segoe UI', sans-serif;
+/* === Footer Styling === */
+footer {
+  background-color: #000000;
   color: #ffffff;
   text-align: center;
-}
-
-/* Paragraphs */
-p {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: #e0e0e0;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-
-/* ============================= */
-/* === Button Styling (Optional) === */
-/* ============================= */
-
-button {
-  background-color: #0f52ba; /* Sapphire blue */
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #093a7e; /* Darker sapphire */
-}
-
-
-/* ============================= */
-/* === Section Anchors (Future Use) === */
-/* ============================= */
-
-/* Cert ladder, fallback alerts, regression sanctuary scenes */
-.section-cert-ladder {
-  /* Placeholder for future overlay logic */
-}
-
-.section-fallback-alert {
-  /* Placeholder for emergency glow or red pulse */
-}
-
-.section-regression-sanctuary {
-  /* Placeholder for soft tones and sensory shielding */
+  padding: 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px #0f52ba;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
