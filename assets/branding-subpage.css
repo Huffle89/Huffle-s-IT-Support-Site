@@ -1,8 +1,8 @@
 /* 🔷 Page Background Layer */
 body {
   background-image: 
-    url("assets/background.png"),
-    url("assets/circuit-pattern.png");
+    url("background.png"),
+    url("circuit-pattern.png");
   background-position: center center;
   background-repeat: no-repeat, repeat;
   background-size: cover, contain;
