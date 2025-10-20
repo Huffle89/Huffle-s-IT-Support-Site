@@ -13,7 +13,7 @@ jobs:
     steps:
       # 🛡️ Harden-Runner for CI/CD security
       - name: Harden Runner
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@v2.9.1
         with:
           egress-policy: audit
 
