@@ -5,11 +5,12 @@
   box-sizing: border-box;
 }
 
+/* 🔷 Multi-Layered Page Background */
 body {
-  background-image: 
+  background-image:
     url("background.png"),
     url("circuit-pattern.png");
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, repeat;
   background-position: center center, center center;
   background-size: cover, cover;
   background-attachment: fixed, fixed;
@@ -17,20 +18,6 @@ body {
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 🔷 Overlay Layer */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.85); /* Soft white overlay */
-  z-index: -1;
 }
 
 /* 🔷 Navigation Bar */
@@ -54,12 +41,19 @@ body::before {
   color: #005a9c;
 }
 
-/* 🔷 Logo Styling */
+/* 🔷 Logo Header */
+.logo-header {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.95); /* White only behind logo */
+}
+
 .logo {
   display: block;
   margin: 1rem auto;
   max-width: 200px;
-  filter: drop-shadow(0 0 6px rgba(15, 82, 186, 0.6));
+  height: auto;
+  filter: drop-shadow(0 0 6px rgba(15, 82, 186, 0.6)); /* Sapphire glow */
 }
 
 /* 🔷 Content Block */
@@ -67,7 +61,7 @@ body::before {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95); /* White only behind text */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
