@@ -48,14 +48,12 @@ body::before {
 }
 
 /* 🔷 Logo Header */
-.logo {
-  display: block;
-  margin: 1rem auto;
-  max-width: 200px;
-  height: auto;
-  filter: drop-shadow(0 0 6px rgba(15, 82, 186, 0.6)); /* Sapphire glow */
+.logo-header {
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 1;
 }
-
 .logo {
   display: block;
   margin: 1rem auto;
