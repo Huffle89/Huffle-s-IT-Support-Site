@@ -1,17 +1,17 @@
-/* === Base Reset === */
+/* --- Basic Reset --- */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: white;
-  color: #222;
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: transparent; /* ✅ Allows branding.css backgrounds to show */
+    color: #222;
 }
 
-/* === Container Layout === */
+/* --- Container Layout --- */
 .container {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+    padding: 20px;
+    max-width: 960px;
+    margin: 2rem auto; /* ✅ Adds vertical spacing */
 }
 
 /* === Title Styling === */
