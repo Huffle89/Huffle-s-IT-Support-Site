@@ -5,16 +5,18 @@
   box-sizing: border-box;
 }
 
-/* 🔷 Page Background */
+/* 🔷 Multi-Layered Page Background */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('background-circuit.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-image: 
+    url('assets/background.png'),         /* Soft glow layer */
+    url('assets/circuit-pattern.png');    /* Base texture layer */
+  background-size: cover, cover;
+  background-repeat: no-repeat, repeat;
+  background-attachment: fixed, fixed;
+  background-position: center, center;
   position: relative;
   color: #333;
 }
