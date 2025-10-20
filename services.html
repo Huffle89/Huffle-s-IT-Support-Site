@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Huffle's IT Services</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/branding.css" />
+  <link rel="stylesheet" href="assets/darkmode.css" />
+  <link rel="stylesheet" href="assets/mobile.css" media="only screen and (max-width: 768px)" />
+</head>
+<body>
+
+  <!-- Logo -->
+  <img src="assets/Logo.png" alt="Huffle's IT Services Logo" class="logo" />
+
+  <!-- Header -->
+  <header>
+    <h1>SERVICES OFFERED</h1>
+    <p>Every fix backed by grit, grace, and good sense.</p>
+  </header>
+
+  <!-- Dark Mode Toggle -->
+  <button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="reference.html">Reference</a>
+    <a href="structure.html">Site Structure</a>
+    <a href="request.html">Start Service Request</a>
+  </nav>
+
+  <!-- Services Section -->
+  <section>
+    <ul>
+      <li><strong>Device Setup & Troubleshooting</strong>
+        <ul>
+          <li>New PC or Laptop Setup</li>
+          <li>Printer and Scanner Configuration</li>
+          <li>Wi-Fi and Network Troubleshooting</li>
+        </ul>
+      </li>
+
+      <li><strong>Smart Home Device Support</strong> (TVs, Thermostats, Speakers)</li>
+
+      <li><strong>System Maintenance & Optimization</strong>
+        <ul>
+          <li>Speed-Up and Clean-Up Services</li>
+        </ul>
+      </li>
+
+      <li><strong>Software Installation and Updates</strong></li>
+      <li><strong>Driver Fixes and Compatibility Checks</strong></li>
+
+      <li><strong>Storage Management and Backup Setup</strong>
+        <ul>
+          <li>Security & Protection</li>
+        </ul>
+      </li>
+
+      <li><strong>Antivirus Installation and Configuration</strong></li>
+
+      <li><strong>Email Setup and Basic Security Hardening</strong>
+        <ul>
+          <li>Password Management Guidance</li>
+          <li>Scam and Phishing Prevention Tips</li>
+        </ul>
+      </li>
+
+      <li><strong>Email Setup and Domain Configuration</strong></li>
+      <li><strong>Basic Website Help</strong> (Canva, Hosting, etc.)</li>
+
+      <li><strong>Remote Monitoring and Routine Checkups</strong>
+        <ul>
+          <li>Tech Purchasing Help for New Startups</li>
+        </ul>
+      </li>
+
+      <li><strong>Device Inspection and Tech Check</strong>
+        <ul>
+          <li>Porch-Side Visits (Local Only)</li>
+        </ul>
+      </li>
+
+      <li><strong>Remote Help via Phone or Screen Share</strong></li>
+      <li><strong>Friendly Pick-Ups</strong> — because we don’t ghost our neighbors.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Huffle's IT Services LLC. Built with love, patience, and emotional care.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelectorAll('section, nav, footer, .button').forEach(el => {
+        el.classList.toggle('dark-mode');
+      });
+    }
+
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
