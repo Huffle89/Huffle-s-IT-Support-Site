@@ -9,6 +9,17 @@ body {
   background-attachment: fixed;
   background-color: #000; /* fallback */
 }
+/* 🔷 Reset top spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: tighten nav bar spacing */
+#menu {
+  margin-top: 0;
+  padding-top: 0;
+}
 /* 🔷 Logo for subpages */
 .logo {
   position: relative; /* or remove 'position' entirely */
