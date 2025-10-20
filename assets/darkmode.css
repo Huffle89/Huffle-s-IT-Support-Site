@@ -2,7 +2,12 @@
   body {
     background-color: #000;
     color: #e0e0e0;
-  }
+  .content-block h1,
+  .content-block h2 {
+    color: #f0f0f0; /* Bright enough to pop against dark */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
 
   .content-block {
     background-color: rgba(30, 30, 30, 0.85); /* softened from 0.95 */
