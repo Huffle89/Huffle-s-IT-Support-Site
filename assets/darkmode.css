@@ -1,29 +1,31 @@
-/* 🌙 Dark Mode Overrides */
+/* Dark mode base */
 body.dark-mode {
-  background-color: #121212;
+  background-color: #000;
   color: #f0f0f0;
 }
 
-section.dark-mode {
-  background-color: rgba(30, 30, 30, 0.95);
+/* Dark mode sections */
+body.dark-mode section,
+body.dark-mode nav,
+body.dark-mode footer,
+body.dark-mode .button {
+  background-color: rgba(20, 20, 20, 0.85);
   color: #f0f0f0;
 }
 
-nav.dark-mode a {
-  background-color: #1e1e1e;
+/* Dark mode headings */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #ffffff;
+}
+
+/* Dark mode hamburger */
+body.dark-mode .hamburger {
   color: #f0f0f0;
 }
 
-footer.dark-mode {
-  border-top: 1px solid #444;
-  color: #ccc;
-}
-
-.button.dark-mode {
-  background-color: #333;
-  color: #f0f0f0;
-}
-
-.button.dark-mode:hover {
-  background-color: #555;
+/* Dark mode links */
+body.dark-mode a {
+  color: #9ecfff;
 }
