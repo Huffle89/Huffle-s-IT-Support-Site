@@ -7,12 +7,18 @@
 
 body {
   background-image: 
-    url('assets/background.png'),
-    url('assets/circuit-pattern.png');
+    url("background.png"),
+    url("circuit-pattern.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
   background-size: cover, cover;
-  background-repeat: no-repeat, repeat;
   background-attachment: fixed, fixed;
-  background-position: center, center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 🔷 Overlay Layer */
