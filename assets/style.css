@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   background-image: 
     url('assets/circuit-pattern.png'), /* Layer 1: fills screen */
-    /url('assets/background.png');      /* Layer 2: wolf image */
+    url('assets/background.png');      /* Layer 2: wolf image */
   background-size: cover, contain;
   background-position: center center, center center;
   background-repeat: repeat, no-repeat;
