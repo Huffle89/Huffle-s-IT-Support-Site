@@ -1,12 +1,14 @@
-/* Base layout and background */
+/* Base layout and dual-layer background */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('background.png');
-  background-size: contain; /* shows full wolf image */
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-image: 
+    url('assets/circuit-pattern.png'), /* Layer 1: fills screen */
+    url('assets/background.png');      /* Layer 2: wolf image */
+  background-size: cover, contain;
+  background-position: center center, center center;
+  background-repeat: repeat, no-repeat;
   background-attachment: fixed;
   background-color: #000;
   color: #000;
