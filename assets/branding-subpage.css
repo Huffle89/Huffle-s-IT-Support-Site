@@ -55,7 +55,6 @@ body::before {
   height: auto;
   filter: drop-shadow(0 0 6px rgba(15, 82, 186, 0.6)); /* Sapphire glow */
 }
-}
 
 .logo {
   display: block;
