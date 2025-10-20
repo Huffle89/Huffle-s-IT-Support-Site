@@ -14,29 +14,29 @@
   flex-wrap: wrap;
 }
 
-/* 🔷 Nav Links — Sapphire Glow */
+/* 🔷 Nav Links — Sapphire Text + Glow */
 #menu a {
-  color: #eaeaea;
+  color: #0f52ba; /* Sapphire Blue Text */
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  background-color: #0f52ba; /* Sapphire Blue */
-  box-shadow: 0 0 8px rgba(15, 82, 186, 0.6); /* Soft glow */
+  background-color: transparent;
+  box-shadow: 0 0 6px rgba(15, 82, 186, 0.4); /* Soft glow around text */
   transition: all 0.3s ease;
 }
 
 /* 🔷 Hover Effect — Intensified Glow */
 #menu a:hover {
-  background-color: #1e66d0;
-  box-shadow: 0 0 12px rgba(30, 102, 208, 0.8);
+  color: #1e66d0;
+  box-shadow: 0 0 10px rgba(30, 102, 208, 0.8);
   transform: translateY(-2px);
 }
 
 /* 🔷 Active Page Highlight */
 #menu a.active {
-  background-color: #1e66d0;
-  box-shadow: 0 0 14px rgba(30, 102, 208, 1);
+  color: #1e66d0;
   font-weight: bold;
+  box-shadow: 0 0 12px rgba(30, 102, 208, 1);
   transform: translateY(-2px);
 }
 
