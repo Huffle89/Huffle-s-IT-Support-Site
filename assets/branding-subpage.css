@@ -11,8 +11,8 @@ body {
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: 
-    url('assets/background.png'),         /* Soft glow layer */
-    url('assets/circuit-pattern.png');    /* Base texture layer */
+    url('background.png'),         /* Soft glow layer */
+    url('circuit-pattern.png');    /* Base texture layer */
   background-size: cover, cover;
   background-repeat: no-repeat, repeat;
   background-attachment: fixed, fixed;
