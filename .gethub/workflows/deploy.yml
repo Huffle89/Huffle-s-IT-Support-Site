@@ -1,27 +1,39 @@
-name: Deploy to GitHub Pages
+name: Deploy Huffle's IT Services Site
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      # 🛡️ Harden-Runner for CI/CD security
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      # 🧰 Checkout your repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      # 🧪 Optional: Install dependencies (if using a static site generator)
+      - name: Install dependencies
+        run: |
+          npm install
 
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./
+      # 🧱 Build your site (adjust if using Hugo, Jekyll, etc.)
+      - name: Build site
+        run: |
+          npm run build
 
+      # 🚀 Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
