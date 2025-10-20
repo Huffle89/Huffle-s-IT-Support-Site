@@ -14,16 +14,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* === Logo Styling with Sapphire Glow === */
 .logo {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .logo img {
-  max-width: 300px; /* Increased size */
+  max-width: 300px;
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: drop-shadow(0 0 12px #0f52ba);
@@ -37,15 +40,13 @@ body {
 /* === Main Content Styling === */
 .container {
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+  background-color: rgba(255, 255, 255, 0.85); /* Transparent white */
   border-radius: 8px;
   text-align: center;
-}
-
-.container h1, .container p {
   color: #000000; /* Black text */
+  flex-grow: 1;
 }
 
 /* === Footer Styling === */
@@ -56,7 +57,5 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   box-shadow: 0 0 10px #0f52ba;
-  position: relative;
-  bottom: 0;
   width: 100%;
 }
