@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Intake Form — Huffle’s IT Services</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/nav.css" />
+  <link rel="stylesheet" href="assets/branding-subpage.css" />
+</head>
+<body>
+  <!-- 🔷 Navigation Bar -->
+  <nav id="menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="intake.html" class="active">Intake Form</a>
+    <a href="resources.html">IT Resources</a>
+    <a href="about.html">About</a>
+    <a href="browse.html">Browse</a>
+  </nav>
 
+  <!-- 🔷 Logo Section -->
+  <header class="logo-header">
+    <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <!-- 🔷 Intake Form Section -->
+  <section class="content-block">
+    <h1>Client Intake Form</h1>
+    <p>Let us know what you need. We’ll respond with comfort-first support and a clear plan.</p>
+
+    <form action="submit-intake.php" method="POST" onsubmit="return validateForm()">
+      <label for="name">Full Name: *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Preferred Phone: *</label>
+      <input type="tel" id="phone" name="phone" maxlength="14" placeholder="(123)456-7890" oninput="formatPhone(this)" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="contact">Preferred Method of Contact:</label>
+      <select id="contact" name="contact">
+        <option value="Phone">Phone</option>
+        <option value="Email">Email</option>
+        <option value="Text">Text</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="pronouns">Pronouns:</label>
+      <select id="pronouns" name="pronouns">
+        <option value="She/Her">She/Her</option>
+        <option value="He/Him">He/Him</option>
+        <option value="They/Them">They/Them</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="os">Operating System: *</label>
+      <select id="os" name="os" required>
+        <option value="">-- Select OS --</option>
+        <option value="Windows">Windows</option>
+        <option value="macOS">macOS</option>
+        <option value="Linux">Linux</option>
+        <option value="iOS">iOS</option>
+        <option value="Android">Android</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="device">Device Type:</label>
+      <input type="text" id="device" name="device" />
+
+      <label for="service">Service Needed:</label>
+      <select id="service" name="service">
+        <option value="Firewall Setup & Support">Firewall Setup & Support</option>
+        <option value="Encryption Guidance">Encryption Guidance</option>
+        <option value="Backup Planning">Backup Planning</option>
+        <option value="Monitoring & Alerts">Monitoring & Alerts</option>
+        <option value="Incident Response Sheet">Incident Response Sheet</option>
+        <option value="Custom Gaming System Build">Custom Gaming System Build</option>
+        <option value="New Computer Setup">New Computer Setup</option>
+        <option value="Smart Home Device Setup">Smart Home Device Setup</option>
+        <option value="Home Network Setup">Home Network Setup</option>
+        <option value="Software Diagnosis & Repair">Software Diagnosis & Repair</option>
+        <option value="Hardware Diagnosis & Repair">Hardware Diagnosis & Repair</option>
+        <option value="General Tech Support">General Tech Support</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="message">Additional Notes:</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <label>
+        <input type="checkbox" id="consent" name="consent" required />
+        I consent to Huffle’s IT Services reviewing this information to provide support.
+      </label>
+
+      <p><strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless caused by proven negligence.</p>
+
+      <button type="submit">Submit Intake</button>
+    </form>
+  </section>
+
+  <!-- 🔷 Footer -->
+  <footer>
+    ©2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned
+  </footer>
+
+  <!-- 🔷 Scripts -->
+  <script>
+    function formatPhone(input) {
+      let digits = input.value.replace(/\D/g, "").substring(0, 10);
+      let formatted = "";
+
+      if (digits.length > 0) {
+        formatted += "(" + digits.substring(0, 3);
+      }
+      if (digits.length >= 4) {
+        formatted += ")" + digits.substring(3, 6);
+      }
+      if (digits.length >= 7) {
+        formatted += "-" + digits.substring(6, 10);
+      }
+
+      input.value = formatted;
+    }
+
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const os = document.getElementById("os").value;
+      const consent = document.getElementById("consent").checked;
+
+      if (!name || !phone || !os || !consent) {
+        alert("Please provide your name, phone number, operating system, and consent to submit.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
