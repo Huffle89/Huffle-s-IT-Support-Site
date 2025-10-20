@@ -1,3 +1,14 @@
+/* 🔷 Page Background Layer */
+body {
+  background-image: 
+    url("assets/background.png"),
+    url("assets/circuit-pattern.png");
+  background-position: center center;
+  background-repeat: no-repeat, repeat;
+  background-size: cover, contain;
+  background-attachment: fixed;
+  background-color: #000; /* fallback */
+}
 /* 🔷 Logo for subpages */
 .logo {
   position: absolute;
