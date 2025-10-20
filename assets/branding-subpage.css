@@ -27,6 +27,29 @@ body {
   margin-top: 6rem; /* adjust for logo height */
   font-size: 1rem;
 }
+/* 🔷 Nav Bar Styling */
+#menu {
+  background-color: #000;
+  color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+#menu a {
+  color: #eaeaea;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#menu a:hover {
+  background-color: #222;
+  border-radius: 4px;
+}
 
 /* 🔷 Text adjustments */
 .content-block {
@@ -47,4 +70,15 @@ body {
   color: #222;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+/* 🔷 Footer Styling */
+footer {
+  background-color: #000;
+  color: #eaeaea;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
 }
