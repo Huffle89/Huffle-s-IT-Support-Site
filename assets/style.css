@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Huffle's IT Services</title>
+/* === Base Reset === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #222;
+}
 
-  <!-- Comfort-coded adaptive title colors -->
-  <style>
-    /* Default (light mode) */
-    h1, h2, h3, h4, h5, h6 {
-      color: black;
-    }
+/* === Container Layout === */
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
 
-    /* Dark mode override */
-    @media (prefers-color-scheme: dark) {
-      h1, h2, h3, h4, h5, h6 {
-        color: #00bfff; /* Electric blue — swap for your brand palette */
-      }
-    }
+/* === Title Styling === */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: white;
-    }
+/* === Paragraph Styling === */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #121212;
-        color: #e0e0e0;
-      }
-    }
-
-    .container {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to Huffle's IT Services</h1>
-    <p>Comfort-coded support for neurodivergent and veteran clients. Built with porch wisdom and emotional care.</p>
-  </div>
-</body>
-</html>
+/* === Link Styling (Optional) === */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
