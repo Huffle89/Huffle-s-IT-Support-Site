@@ -6,8 +6,8 @@
 /* Circuit texture on bottom, branded overlay on top */
 body {
   background-image: 
-    url("assets/background.png"),         /* Top layer */
-    url("assets/circuit-pattern.png");    /* Bottom layer */
+    url("background.png"),         /* Top layer */
+    url("circuit-pattern.png");    /* Bottom layer */
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: cover, cover;
