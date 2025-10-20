@@ -8,7 +8,7 @@ body {
     url('background.png');      /* Layer 2: wolf image */
   background-size: cover, contain;
   background-position: center center, center center;
-  background-repeat: repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-color: #000;
   color: #000;
