@@ -1,154 +1,54 @@
-/* Global Reset & Base Styling */
-* {
+/* Base layout and background */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('assets/background.png');
+  font-family: Arial, sans-serif;
+  background-image: url('background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #000; /* Fallback black */
-  color: #f0f0f0;
-  line-height: 1.6;
-  padding: 1rem;
+  background-color: #000; /* fallback */
+  color: #000; /* readable text in light mode */
 }
 
-/* Logo Styling */
+/* Logo styling */
 .logo {
   display: block;
   margin: 2rem auto;
-  height: 140px; /* Increased from 80px */
+  height: 140px;
   max-width: 100%;
 }
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-header h1 {
-  font-size: 2.2rem;
-  color: #f5e9dc;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1rem;
-  color: #d8cfc4;
-}
-
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: #f5e9dc;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #333;
-}
-
-/* Sections with Overlay Enhancement */
+/* Section spacing */
 section {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
+  padding: 2rem;
+}
+
+/* Navigation layout */
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
   padding: 1rem;
-  background-color: rgba(20, 20, 20, 0.85); /* Dark overlay for readability */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-section h2 {
+nav.show {
+  display: flex;
+}
+
+/* Hamburger menu */
+.hamburger {
+  cursor: pointer;
   font-size: 1.5rem;
-  color: #f5e9dc;
-  margin-bottom: 1rem;
+  margin: 1rem;
+  color: #000;
 }
 
-section ul {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 1.2rem;
-}
-
-section ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Badge Embeds */
-section div[data-share-badge-id] {
-  margin: 1rem auto;
-  text-align: center;
-}
-
-/* Buttons */
+/* Button styling */
 .button {
-  display: inline-block;
-  background-color: #4b2e2e;
-  color: #fff;
+  margin: 1rem;
   padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #7a5c5c;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #444;
-}
-
-footer a {
-  color: #f5e9dc;
-  text-decoration: underline;
-}
-
-/* Subtle Animation: Wolf Eye Pulse */
-#wolf-eye {
-  animation: pulse 2.5s infinite ease-in-out;
-  transform-origin: center;
-  display: inline-block;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-    filter: drop-shadow(0 0 2px #00f);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 6px #00f);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    filter: drop-shadow(0 0 2px #00f);
-  }
+  font-size: 1rem;
+  cursor: pointer;
 }
