@@ -5,73 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Huffle's IT Services</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/style.css" />
-  <link rel="stylesheet" href="assets/branding.css" />
-  <link rel="stylesheet" href="assets/darkmode.css" />
-  <link rel="stylesheet" href="assets/mobile.css" media="only screen and (max-width: 768px)" />
+  <!-- 🔧 Stylesheets -->
+  <link rel="stylesheet" href="branding.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" />
+  <link rel="stylesheet" href="darkmode.css" media="(prefers-color-scheme: dark)" />
 </head>
+
 <body>
-
-  <!-- Logo -->
-  <img src="assets/Logo.png" alt="Huffle's IT Services Logo" class="logo" />
-
-  <!-- Header -->
+  <!-- 🔷 Logo Section -->
   <header>
-    <h1>Welcome to Huffle’s IT Services</h1>
-    <p>Tech support from a disabled veteran who blends porch wisdom with full-stack security.<br>
-    We don’t just fix machines—we restore peace of mind.</p>
+    <img src="logo.png" alt="Huffle's IT Services Logo" class="logo" />
   </header>
 
-  <!-- Dark Mode Toggle -->
-  <button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
-
-  <!-- Hamburger Menu -->
-  <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="reference.html">Reference</a>
-    <a href="structure.html">Site Structure</a>
-    <a href="request.html">Start Service Request</a>
+  <!-- 🔷 Navigation Menu -->
+  <nav id="menu">
+    <a href="#who-we-are">Who We Are</a>
+    <a href="#mission">Our Mission</a>
+    <a href="#difference">What Makes Us Different</a>
   </nav>
 
-  <!-- Main Section -->
-  <section>
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Comfort-coded IT support for neurodivergent and veteran clients</li>
-      <li>Modular overlays and emotional infrastructure</li>
-      <li>Porch-wisdom troubleshooting and full-stack security</li>
-    </ul>
-
-    <!-- Placeholder Embed -->
-    <div class="badge-placeholder">
-      <iframe src="https://example.com" width="300" height="150" frameborder="0"></iframe>
-    </div>
+  <!-- 🔷 Welcome Section -->
+  <section class="content-block" id="welcome">
+    <h1>Welcome to Huffle's IT Services</h1>
+    <p>Comfort-coded support for neurodivergent and veteran clients. Built with porch wisdom and emotional care.</p>
   </section>
 
-  <!-- Footer -->
+  <!-- 🔷 What We Offer -->
+  <section class="content-block" id="what-we-offer">
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Modular overlays and emotional infrastructure</li>
+      <li>Porch-wisdom troubleshooting and full-stack security</li>
+      <li>Client-first branding and comfort-coded workflows</li>
+    </ul>
+  </section>
+
+  <!-- 🔷 Who We Are -->
+  <section class="content-block" id="who-we-are">
+    <h2>Who We Are</h2>
+    <p>We’re a disabled veteran-owned IT support company rooted in southern porch wisdom and neurodivergent care logic. Every system we build honors emotional safety, sensory boundaries, and modular comfort.</p>
+  </section>
+
+  <!-- 🔷 Our Mission -->
+  <section class="content-block" id="mission">
+    <h2>Our Mission</h2>
+    <p>To create sanctuary-grade IT support systems that blend technical overlays with emotional resonance. We serve with patience, precision, and purpose.</p>
+  </section>
+
+  <!-- 🔷 What Makes Us Different -->
+  <section class="content-block" id="difference">
+    <h2>What Makes Us Different</h2>
+    <ul>
+      <li>Comfort-coded workflows designed for neurodivergent clients</li>
+      <li>Modular dashboards with emotional overlays and fallback logic</li>
+      <li>Veteran stewardship and southern-rooted troubleshooting rituals</li>
+    </ul>
+  </section>
+
+  <!-- 🔷 Footer -->
   <footer>
-    <p>&copy; 2025 Huffle's IT Services LLC. Built with love, patience, and emotional care.</p>
+    <p>© 2025 Huffle's IT Services LLC. Built with love, patience, and emotional care.</p>
   </footer>
-
-  <!-- Scripts -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      document.querySelectorAll('section, nav, footer, .button').forEach(el => {
-        el.classList.toggle('dark-mode');
-      });
-    }
-
-    function toggleMenu() {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('show');
-    }
-  </script>
 </body>
 </html>
