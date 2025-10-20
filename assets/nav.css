@@ -1,0 +1,40 @@
+/* ============================= */
+/* === Huffle Navigation Styles === */
+/* ============================= */
+
+/* === Navigation Bar Container === */
+.navbar {
+  background-color: #000000; /* Solid black bar */
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px #0f52ba; /* Sapphire glow around nav bar */
+}
+
+/* === Navigation List === */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Navigation Items === */
+.navbar li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+/* === Navigation Links === */
+.navbar a {
+  text-decoration: none;
+  color: #ffffff; /* White text */
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 6px #0f52ba; /* Sapphire glow */
+}
+
+/* === Hover Effect === */
+.navbar a:hover {
+  color: #0f52ba; /* Sapphire text on hover */
+  text-shadow: 0 0 10px #0f52ba; /* Stronger glow on hover */
+}
