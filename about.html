@@ -3,62 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Huffle’s IT Services</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>About | Huffle's IT Services</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/branding.css" />
+  <link rel="stylesheet" href="assets/darkmode.css" />
+  <link rel="stylesheet" href="assets/mobile.css" media="only screen and (max-width: 768px)" />
 </head>
-<body class="about-page">
+<body>
+
+  <!-- Logo -->
+  <img src="assets/Logo.png" alt="Huffle's IT Services Logo" class="logo" />
+
+  <!-- Header -->
   <header>
-    <img src="assets/Logo.png" alt="Huffle’s IT Services Logo" class="logo" />
-    <h1>About Huffle’s IT Services</h1>
-    <p>Founded by Christopher Lagasse, Huffle’s is a disabled veteran-owned IT support company built on clarity, care, and custom-coded solutions. Every workflow is comfort-coded, modular, and emotionally resonant.</p>
+    <h1>About Huffle's IT Services</h1>
+    <p>Founded by a disabled veteran with a heart for porch wisdom and full-stack security.</p>
   </header>
 
+  <!-- Dark Mode Toggle -->
+  <button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
-    <a href="Reference.html">Reference</a>
-    <a href="site-structure.html">Site Structure</a>
-    <a href="intake.html">Start Service Request</a>
+    <a href="reference.html">Reference</a>
+    <a href="structure.html">Site Structure</a>
+    <a href="request.html">Start Service Request</a>
   </nav>
 
+  <!-- About Section -->
   <section>
-    <h2>About Me</h2>
-    <p><strong>BUILT ON BACKBONE. RUN WITH HEART.</strong></p>
-    <p>Welcome to Huffle’s IT Services—where tech support meets porch wisdom. I’m Christopher Lagasse, a disabled veteran and founder of this comfort-coded support company. I don’t just fix machines—I restore peace of mind. Every workflow is modular, emotionally aware, and mapped to real-world needs.</p>
+    <h2>Who We Are</h2>
+    <p>Huffle’s IT Services is a porch-coded support company built on comfort, clarity, and care. We specialize in modular overlays, emotional infrastructure, and neurodivergent-aware tech support.</p>
 
-    <p>Whether you’re wrangling a stubborn Wi-Fi signal, setting up a new device, or trying to get your printer to behave, I’m there with tools in hand and a calm voice on the line. My goal is simple: deliver honest, grounded tech support with the kind of loyalty you’d expect from a front porch hound.</p>
+    <h2>Our Mission</h2>
+    <p>To restore peace of mind—one fix, one form, one overlay at a time. Every workflow is designed with emotional safety and technical precision, honoring both veteran grit and neurodivergent needs.</p>
 
+    <h2>What Makes Us Different</h2>
     <ul>
-      <li>✯ <strong>Veteran-owned and operated</strong> — service is in my bones</li>
-      <li>✯ <strong>Southern-rooted support</strong> — no jargon, just clarity</li>
-      <li>✯ <strong>Wolf-coded loyalty</strong> — I stick with you 'til it’s fixed</li>
-      <li>✯ <strong>Comfort-first approach</strong> — every fix mapped to emotional and sensory boundaries</li>
-      <li>✯ <strong>Modular overlays</strong> — every system built with layered logic and least privilege</li>
+      <li>Disabled veteran-owned and operated</li>
+      <li>Comfort-coded branding and modular support overlays</li>
+      <li>Neurodivergent stewardship and regression-safe dashboards</li>
+      <li>Porch-side troubleshooting and emotional cue mapping</li>
+      <li>Multi-path alert systems and sanctuary build logic</li>
     </ul>
-
-    <p>Your technology should feel like a trusted neighbor, not a mystery. That’s why every service I offer is backed by porch logic, practical care, and a promise: I’ll treat your tech like it’s mine.</p>
   </section>
 
-  <section>
-    <h2>Certifications & Credentials</h2>
-    <p>All certifications are active and verified via Credly. Valid through October 2028.</p>
-
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4be95c00-883d-4618-b23e-4133a1f999ca" data-share-badge-host="https://www.credly.com"></div>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d1949654-673c-41eb-82b1-03976a30f034" data-share-badge-host="https://www.credly.com"></div>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="dca4b1e6-6aeb-4983-8eb1-1055583e89c8" data-share-badge-host="https://www.credly.com"></div>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f080edf1-e044-4cbf-a80c-372350dcec9a" data-share-badge-host="https://www.credly.com"></div>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="53bb164c-a9d6-4594-aaf8-ace0ff46fccc" data-share-badge-host="https://www.credly.com"></div>
-    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
-    <p>These certifications reflect Huffle’s commitment to clarity, care, and custom-coded solutions. Every workflow is backed by verified expertise and emotional stewardship.</p>
-    <a href="https://www.credly.com/users/christopher-lagasse" target="_blank" class="button">View Full Credly Profile</a>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p>This site & its goods crafted with care by Huffle’s IT Services LLC.</p>
-    <p>© 2024 Huffle’s IT Services LLC. All rights reserved.</p>
-    <p><a href="contact.html">Contact Us</a></p>
+    <p>&copy; 2025 Huffle's IT Services LLC. Built with love, patience, and emotional care.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelectorAll('section, nav, footer, .button').forEach(el => {
+        el.classList.toggle('dark-mode');
+      });
+    }
+
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
