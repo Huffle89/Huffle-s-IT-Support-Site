@@ -1,45 +1,101 @@
+/* ============================= */
+/* === Huffle Branding Styles === */
+/* ============================= */
+
+/* === Base Background Layers === */
+/* Circuit texture on bottom, branded overlay on top */
+body {
+  background-image: 
+    url("assets/background.png"),         /* Top layer */
+    url("assets/circuit-pattern.png");    /* Bottom layer */
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+  color: #ffffff; /* Ensures text pops against dark background */
+}
+
+
+/* ============================= */
+/* === Logo Styling & Effects === */
+/* ============================= */
+
+/* Logo container */
+.logo {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Logo image with sapphire glow */
+.logo img {
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 8px #0f52ba); /* Sapphire blue glow */
+}
+
+/* Logo hover effect — subtle pulse */
+.logo img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px #0f52ba); /* Slightly stronger glow on hover */
+}
+
+
+/* ============================= */
+/* === Typography & Text Accents === */
+/* ============================= */
+
 /* Headings */
 h1, h2, h3 {
   font-family: 'Segoe UI', sans-serif;
-  color: #2c2c2c;
-  margin-bottom: 1rem;
-}
-
-/* Paragraphs and lists */
-p, li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #000;
-}
-
-/* Footer */
-footer {
+  color: #ffffff;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Buttons */
-.button {
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
-  color: #000;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+/* Paragraphs */
+p {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* ============================= */
+/* === Button Styling (Optional) === */
+/* ============================= */
+
+button {
+  background-color: #0f52ba; /* Sapphire blue */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #ddd;
+button:hover {
+  background-color: #093a7e; /* Darker sapphire */
 }
 
-/* Logo pulse (optional) */
-.logo {
-  transition: transform 0.3s ease;
+
+/* ============================= */
+/* === Section Anchors (Future Use) === */
+/* ============================= */
+
+/* Cert ladder, fallback alerts, regression sanctuary scenes */
+.section-cert-ladder {
+  /* Placeholder for future overlay logic */
 }
 
-.logo:hover {
-  transform: scale(1.05);
+.section-fallback-alert {
+  /* Placeholder for emergency glow or red pulse */
+}
+
+.section-regression-sanctuary {
+  /* Placeholder for soft tones and sensory shielding */
 }
