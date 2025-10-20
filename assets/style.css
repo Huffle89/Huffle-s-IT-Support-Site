@@ -47,7 +47,11 @@ section {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   position: relative;
   z-index: 2;
+  .content-block h1,
+  .content-block h2 {
+  color: #222; /* Soft black for readability */
 }
+
 
 /* Optional soft overlay tint behind content */
 body::before {
