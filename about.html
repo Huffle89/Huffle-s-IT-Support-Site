@@ -3,77 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Huffle's IT Services</title>
-
-  <!-- Stylesheets -->
+  <title>About — Huffle's IT Services</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <link rel="stylesheet" href="assets/branding.css" />
-  <link rel="stylesheet" href="assets/darkmode.css" />
-  <link rel="stylesheet" href="assets/mobile.css" media="only screen and (max-width: 768px)" />
+  <link rel="stylesheet" href="assets/branding-subpage.css" />
+  <link rel="stylesheet" href="assets/nav.css" />
 </head>
 <body>
-
-  <!-- Logo -->
-  <img src="assets/Logo.png" alt="Huffle's IT Services Logo" class="logo" />
-
-  <!-- Header -->
-  <header>
-    <h1>About Huffle's IT Services</h1>
-    <p>Founded by a disabled veteran with a heart for porch wisdom and full-stack security.</p>
-  </header>
-
-  <!-- Dark Mode Toggle -->
-  <button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
-
-  <!-- Hamburger Menu -->
-  <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
-
-  <!-- Navigation -->
-  <nav>
+  <!-- 🔷 Navigation Bar -->
+  <nav id="menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="reference.html">Reference</a>
-    <a href="structure.html">Site Structure</a>
-    <a href="request.html">Start Service Request</a>
+    <a href="intake.html">Intake Form</a>
+    <a href="resources.html">IT Resources</a>
+    <a href="about.html" class="active">About</a>
+    <a href="browse.html">Browse</a>
   </nav>
 
-  <!-- About Section -->
-  <section>
-    <h2>Who We Are</h2>
-    <p>Huffle’s IT Services is a porch-coded support company built on comfort, clarity, and care. We specialize in modular overlays, emotional infrastructure, and neurodivergent-aware tech support.</p>
+  <!-- 🔷 Logo Section -->
+  <header>
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+    </a>
+  </header>
 
-    <h2>Our Mission</h2>
-    <p>To restore peace of mind—one fix, one form, one overlay at a time. Every workflow is designed with emotional safety and technical precision, honoring both veteran grit and neurodivergent needs.</p>
+  <!-- 🔷 About Section -->
+  <section class="content-block" id="about">
+    <h1>About Huffle’s IT Services</h1>
+    <p><strong>Built on backbone. Run with heart.</strong></p>
 
-    <h2>What Makes Us Different</h2>
+    <p>At Huffle’s IT Services, we don’t sell junky, off-the-shelf machines—we restore peace of mind. Founded by a disabled veteran with a knack for porch-coded problem solving and a calm voice on the line, our mission is simple: deliver honest, grounded tech support with the kind of loyalty you’d expect from a proper handshake.</p>
+
+    <p>We specialize in everyday IT solutions with southern grit and real-world know-how. Whether you’re wrangling a stubborn Wi-Fi signal, setting up a new device, or just trying to get your printer to behave—we show up with tools in hand and comfort-first logic in every fix.</p>
+
+    <h2>Why Choose Huffle’s?</h2>
     <ul>
-      <li>Disabled veteran-owned and operated</li>
-      <li>Comfort-coded branding and modular support overlays</li>
-      <li>Neurodivergent stewardship and regression-safe dashboards</li>
-      <li>Porch-side troubleshooting and emotional cue mapping</li>
-      <li>Multi-path alert systems and sanctuary build logic</li>
+      <li>🟩 <strong>Veteran-owned and operated:</strong> Service is in our bones</li>
+      <li>🟫 <strong>Southern-rooted support:</strong> Fixin’ it jargon, local care</li>
+      <li>🟨 <strong>Wolf-coded loyalty:</strong> We stick with you ‘til it’s fixed</li>
+      <li>🟦 <strong>Comfort-first approach:</strong> Every fix mapped to real experience</li>
     </ul>
+
+    <p>We believe technology should feel like a trusted neighbor, not a mystery. That’s why every service we offer is backed by porch wisdom, emotional resonance, and a promise: we’ll treat your tech like it’s family.</p>
   </section>
 
-  <!-- Footer -->
+  <!-- 🔷 Footer -->
   <footer>
-    <p>&copy; 2025 Huffle's IT Services LLC. Built with love, patience, and emotional care.</p>
+    © 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned
   </footer>
-
-  <!-- Scripts -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      document.querySelectorAll('section, nav, footer, .button').forEach(el => {
-        el.classList.toggle('dark-mode');
-      });
-    }
-
-    function toggleMenu() {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('show');
-    }
-  </script>
 </body>
 </html>
