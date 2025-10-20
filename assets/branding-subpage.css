@@ -1,0 +1,39 @@
+/* 🔷 Logo for subpages */
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 80px; /* small to medium size */
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* 🔷 Nav bar fix */
+#menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 6rem; /* adjust for logo height */
+  font-size: 1rem;
+}
+
+/* 🔷 Text adjustments */
+.content-block {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #111;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔷 Heading clarity */
+.content-block h1,
+.content-block h2 {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
