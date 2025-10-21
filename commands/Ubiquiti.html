@@ -1,79 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ubiquiti — Huffles IT Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubiquiti — Huffle’s IT Services</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
+    .section {
+      margin-bottom: 60px;
     }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
-    .table-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto 60px;
-    }
-
     table {
-      flex: 1 1 300px;
-      max-width: 400px;
+      margin: 0 auto;
+      max-width: 1000px;
       border-collapse: collapse;
       width: 100%;
     }
-
     th, td {
       border: 1px solid #0F52BA;
       padding: 12px;
       text-align: left;
       background-color: #111111;
     }
-
     th {
       background-color: #0F52BA;
       color: #FFFFFF;
     }
-
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
     @media screen and (max-width: 600px) {
-      .table-group {
-        flex-direction: column;
-        align-items: center;
-      }
-
       table thead {
         display: none;
       }
-
       table, table tbody, table tr, table td {
         display: block;
         width: 100%;
       }
-
       table tr {
         margin-bottom: 20px;
         border: 1px solid #0F52BA;
         background-color: #111111;
         padding: 10px;
       }
-
       table td {
         text-align: right;
         padding-left: 50%;
         position: relative;
       }
-
       table td::before {
         content: attr(data-label);
         position: absolute;
@@ -85,13 +61,6 @@
         color: #0F52BA;
       }
     }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -102,74 +71,127 @@
       border-radius: 6px;
       font-weight: bold;
     }
-
     .back-button:hover {
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Ubiquiti</h1>
-  <h2>Device CLI Reference</h2>
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="Recovery.html">Recovery</a>
+    <a href="Reference.html">Reference</a>
+    <a href="Scan.html">Scan</a>
+    <a href="Terminal.html">Terminal</a>
+    <a href="Tools.html">Tools</a>
+    <a href="Ubiquiti.html" class="active">Ubiquiti</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
 
-  <div class="table-group">
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <section class="content-block">
+    <h1>Ubiquiti</h1>
+    <h2>Device CLI Reference</h2>
+  </section>
+
+  <section class="content-block section">
+    <h2>🖥️ System</h2>
     <table>
-      <thead><tr><th>System</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">show version</td><td data-label="Description">Display firmware version</td></tr>
-        <tr><td data-label="Command">show system uptime</td><td data-label="Description">Device uptime</td></tr>
-        <tr><td data-label="Command">reboot</td><td data-label="Description">Restart device</td></tr>
-        <tr><td data-label="Command">show configuration</td><td data-label="Description">View full config</td></tr>
+        <tr><td>show version</td><td>Display firmware version</td></tr>
+        <tr><td>show system uptime</td><td>Device uptime</td></tr>
+        <tr><td>reboot</td><td>Restart device</td></tr>
+        <tr><td>show configuration</td><td>View full config</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🔌 Interfaces</h2>
     <table>
-      <thead><tr><th>Interfaces</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">show interfaces</td><td data-label="Description">List interfaces</td></tr>
-        <tr><td data-label="Command">show interfaces stats</td><td data-label="Description">Interface statistics</td></tr>
-        <tr><td data-label="Command">ip address</td><td data-label="Description">Assign IP to interface</td></tr>
-        <tr><td data-label="Command">set interfaces</td><td data-label="Description">Configure interface settings</td></tr>
+        <tr><td>show interfaces</td><td>List interfaces</td></tr>
+        <tr><td>show interfaces stats</td><td>Interface statistics</td></tr>
+        <tr><td>ip address</td><td>Assign IP to interface</td></tr>
+        <tr><td>set interfaces</td><td>Configure interface settings</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🧭 Routing</h2>
     <table>
-      <thead><tr><th>Routing</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">show ip route</td><td data-label="Description">View routing table</td></tr>
-        <tr><td data-label="Command">set protocols static</td><td data-label="Description">Add static route</td></tr>
-        <tr><td data-label="Command">delete protocols static</td><td data-label="Description">Remove static route</td></tr>
-        <tr><td data-label="Command">commit</td><td data-label="Description">Apply configuration changes</td></tr>
+        <tr><td>show ip route</td><td>View routing table</td></tr>
+        <tr><td>set protocols static</td><td>Add static route</td></tr>
+        <tr><td>delete protocols static</td><td>Remove static route</td></tr>
+        <tr><td>commit</td><td>Apply configuration changes</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🧪 Diagnostics</h2>
     <table>
-      <thead><tr><th>Diagnostics</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">ping</td><td data-label="Description">Test connectivity</td></tr>
-        <tr><td data-label="Command">traceroute</td><td data-label="Description">Trace route to host</td></tr>
-        <tr><td data-label="Command">show log</td><td data-label="Description">View system logs</td></tr>
-        <tr><td data-label="Command">show tech-support</td><td data-label="Description">Generate support dump</td></tr>
+        <tr><td>ping</td><td>Test connectivity</td></tr>
+        <tr><td>traceroute</td><td>Trace route to host</td></tr>
+        <tr><td>show log</td><td>View system logs</td></tr>
+        <tr><td>show tech-support</td><td>Generate support dump</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🧬 Firmware</h2>
     <table>
-      <thead><tr><th>Firmware</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">add system image</td><td data-label="Description">Upload new firmware</td></tr>
-        <tr><td data-label="Command">show system image</td><td data-label="Description">List available images</td></tr>
-        <tr><td data-label="Command">delete system image</td><td data-label="Description">Remove firmware image</td></tr>
-        <tr><td data-label="Command">run upgrade</td><td data-label="Description">Start firmware upgrade</td></tr>
+        <tr><td>add system image</td><td>Upload new firmware</td></tr>
+        <tr><td>show system image</td><td>List available images</td></tr>
+        <tr><td>delete system image</td><td>Remove firmware image</td></tr>
+        <tr><td>run upgrade</td><td>Start firmware upgrade</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>© 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a></p>
   </footer>
 </body>
 </html>
