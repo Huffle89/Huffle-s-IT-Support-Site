@@ -3,10 +3,20 @@
   function loadMiaCue() {
     const cue = JSON.parse(localStorage.getItem("miaCue"));
     const status = document.getElementById("cue-status");
-    if (cue) {
-      status.innerText = `Last cue received: "${cue.message}" at ${cue.timestamp}`;
+    if (status) {
+      if (cue) {
+        status.innerText = `Last cue received: "${cue.message}" at ${cue.timestamp}`;
+        if (Notification.permission === "granted") {
+          new Notification("Mia Cue Received", {
+            body: `"${cue.message}" at ${cue.timestamp}`,
+            icon: "/assets/icon.png"
+          });
+        }
+      } else {
+        status.innerText = "No cue received yet.";
+      }
     } else {
-      status.innerText = "No cue received yet.";
+      console.warn("Element #cue-status not found.");
     }
   }
 
@@ -67,7 +77,7 @@
     const emp = employees.find(e => e.name === name);
     if (!emp) return;
 
-    const url = `https://www.hufflesitservices.online/Employee/dashboard-template.html?token=${emp.token}`;
+    const url = `https://www.hufflesitservices.online/Employee/dashboard-daddy.html?token=${emp.token}`;
     const qr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(url)}`;
 
     document.getElementById("qrPreview").innerHTML = `
@@ -84,9 +94,39 @@
     list.prepend(li);
   }
 
+  function detectMasterToken() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get("token");
+    if (!token) return;
+
+    try {
+      const decoded = JSON.parse(atob(token));
+      if (decoded.role === "master") {
+        document.body.classList.add("master-mode");
+        logAudit("Master token detected — full access granted.");
+      }
+    } catch (e) {
+      console.warn("Invalid token format.");
+    }
+  }
+
+  function requestNotificationPermission() {
+    if ("Notification" in window) {
+      Notification.requestPermission().then(permission => {
+        if (permission === "granted") {
+          logAudit("Push notifications enabled.");
+        } else {
+          logAudit("Push notifications denied or dismissed.");
+        }
+      });
+    }
+  }
+
   window.onload = () => {
+    detectMasterToken();
     loadMiaCue();
     renderEmployees();
+    requestNotificationPermission();
   };
 </script>
 
