@@ -83,6 +83,37 @@ body::before {
   margin: 2rem 0;
 }
 
+/* 🔷 Command Table Styling */
+table.command-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.95); /* Soft white for readability */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table.command-table th,
+table.command-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+table.command-table th {
+  background-color: #0F52BA;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+table.command-table tr:hover {
+  background-color: #e6f0ff;
+}
+
 /* 🔷 Footer */
 footer {
   text-align: center;
