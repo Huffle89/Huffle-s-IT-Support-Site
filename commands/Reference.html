@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reference — Huffles IT Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reference — Huffle’s IT Services</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
+    .section {
+      margin-bottom: 60px;
     }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
     .link-group {
       display: flex;
       flex-wrap: wrap;
@@ -26,7 +19,6 @@
       max-width: 1200px;
       margin: 0 auto 60px;
     }
-
     .link-box {
       flex: 1 1 300px;
       max-width: 400px;
@@ -36,25 +28,16 @@
       text-align: left;
       border-radius: 8px;
     }
-
     .link-box h3 {
       color: #0F52BA;
       margin-bottom: 10px;
     }
-
     .link-box a {
       color: #FFFFFF;
       text-decoration: underline;
       display: block;
       margin-bottom: 8px;
     }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -65,59 +48,97 @@
       border-radius: 6px;
       font-weight: bold;
     }
-
     .back-button:hover {
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Reference</h1>
-  <h2>External Docs & Vendor Links</h2>
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="Recovery.html">Recovery</a>
+    <a href="Reference.html" class="active">Reference</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
 
-  <div class="link-group">
-    <div class="link-box">
-      <h3>Microsoft</h3>
-      <a href="https://learn.microsoft.com/en-us/windows-server/" target="_blank">Windows Server Docs</a>
-      <a href="https://learn.microsoft.com/en-us/powershell/" target="_blank">PowerShell Reference</a>
-      <a href="https://learn.microsoft.com/en-us/security/" target="_blank">Microsoft Security Docs</a>
-    </div>
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
 
-    <div class="link-box">
-      <h3>Cisco</h3>
-      <a href="https://www.cisco.com/c/en/us/support/index.html" target="_blank">Cisco Support</a>
-      <a href="https://www.cisco.com/c/en/us/td/docs/" target="_blank">Cisco Documentation Index</a>
-      <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/exam-tutorial.html" target="_blank">Cisco Exam Tutorials</a>
-    </div>
+  <section class="content-block">
+    <h1>Reference</h1>
+    <h2>External Docs & Vendor Links</h2>
+  </section>
 
-    <div class="link-box">
-      <h3>CompTIA</h3>
-      <a href="https://www.comptia.org/certifications" target="_blank">Certification Overview</a>
-      <a href="https://www.comptia.org/training/resources" target="_blank">Study Resources</a>
-      <a href="https://www.comptia.org/blog" target="_blank">CompTIA Blog</a>
-    </div>
+  <section class="content-block section">
+    <div class="link-group">
+      <div class="link-box">
+        <h3>Microsoft</h3>
+        <a href="https://learn.microsoft.com/en-us/windows-server/" target="_blank">Windows Server Docs</a>
+        <a href="https://learn.microsoft.com/en-us/powershell/" target="_blank">PowerShell Reference</a>
+        <a href="https://learn.microsoft.com/en-us/security/" target="_blank">Microsoft Security Docs</a>
+      </div>
 
-    <div class="link-box">
-      <h3>Ubiquiti</h3>
-      <a href="https://help.ui.com/" target="_blank">Ubiquiti Help Center</a>
-      <a href="https://community.ui.com/" target="_blank">Ubiquiti Community</a>
-      <a href="https://dl.ui.com/" target="_blank">Firmware Downloads</a>
-    </div>
+      <div class="link-box">
+        <h3>Cisco</h3>
+        <a href="https://www.cisco.com/c/en/us/support/index.html" target="_blank">Cisco Support</a>
+        <a href="https://www.cisco.com/c/en/us/td/docs/" target="_blank">Cisco Documentation Index</a>
+        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/exam-tutorial.html" target="_blank">Cisco Exam Tutorials</a>
+      </div>
 
-    <div class="link-box">
-      <h3>Linux & Open Source</h3>
-      <a href="https://man7.org/linux/man-pages/index.html" target="_blank">Linux Man Pages</a>
-      <a href="https://wiki.archlinux.org/" target="_blank">Arch Wiki</a>
-      <a href="https://www.kernel.org/doc/html/latest/" target="_blank">Kernel Documentation</a>
+      <div class="link-box">
+        <h3>CompTIA</h3>
+        <a href="https://www.comptia.org/certifications" target="_blank">Certification Overview</a>
+        <a href="https://www.comptia.org/training/resources" target="_blank">Study Resources</a>
+        <a href="https://www.comptia.org/blog" target="_blank">CompTIA Blog</a>
+      </div>
+
+      <div class="link-box">
+        <h3>Ubiquiti</h3>
+        <a href="https://help.ui.com/" target="_blank">Ubiquiti Help Center</a>
+        <a href="https://community.ui.com/" target="_blank">Ubiquiti Community</a>
+        <a href="https://dl.ui.com/" target="_blank">Firmware Downloads</a>
+      </div>
+
+      <div class="link-box">
+        <h3>Linux & Open Source</h3>
+        <a href="https://man7.org/linux/man-pages/index.html" target="_blank">Linux Man Pages</a>
+        <a href="https://wiki.archlinux.org/" target="_blank">Arch Wiki</a>
+        <a href="https://www.kernel.org/doc/html/latest/" target="_blank">Kernel Documentation</a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>© 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a></p>
   </footer>
 </body>
 </html>
