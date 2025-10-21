@@ -23,7 +23,7 @@
 /* 🔷 INDIVIDUAL BUTTONS */
 .nav-group a {
   padding: 12px 20px;
-  background-color: transparent; /* No white background */
+  background-color: #FFFFFF; /* White button fill */
   color: #0F52BA; /* Sapphire text */
   text-decoration: none;
   border-radius: 12px;
