@@ -1,158 +1,206 @@
-<script>
-  // Load Mia's last cue
-  function loadMiaCue() {
-    const cue = JSON.parse(localStorage.getItem("miaCue"));
-    const status = document.getElementById("cue-status");
-    if (status) {
-      if (cue) {
-        status.innerText = `Last cue received: "${cue.message}" at ${cue.timestamp}`;
-        logAudit("Mia cue loaded", "mia");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daddy Dashboard</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    body.master-mode {
+      border: 4px solid gold;
+      background-image: url('../assets/background.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    #miaPanel {
+      margin-top: 20px;
+      padding: 10px;
+      border: 2px solid #0F52BA;
+      background-color: #f0f8ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome, Christopher</h1>
 
-        if (Notification.permission === "granted") {
-          new Notification("Mia Cue Received", {
-            body: `"${cue.message}" at ${cue.timestamp}`,
-            icon: "/assets/icon.png"
-          });
+  <!-- 🧸 Mia's Cue Panel (Master-only) -->
+  <div id="miaPanel" style="display: none;">
+    <h2>Mia’s Cue Panel</h2>
+    <div id="cue-status" style="font-weight: bold; color: #0F52BA;">
+      Loading Mia’s cue...
+    </div>
+    <!-- Future: Add regression sanctuary controls, smart home triggers, etc. -->
+  </div>
+
+  <!-- 👥 Employee Management Panel -->
+  <h2>Employee Access Panel</h2>
+  <input type="text" id="newName" placeholder="Employee name" />
+  <button onclick="addEmployee()">➕ Add Employee</button>
+  <ul id="employeeList"></ul>
+  <div id="qrPreview"></div>
+
+  <!-- 🧾 Audit Trail -->
+  <h2>Audit Log</h2>
+  <ul id="auditList"></ul>
+
+  <!-- 🧠 Full Script -->
+  <script>
+    function loadMiaCue() {
+      const cue = JSON.parse(localStorage.getItem("miaCue"));
+      const status = document.getElementById("cue-status");
+      if (status) {
+        if (cue) {
+          status.innerText = `Last cue received: "${cue.message}" at ${cue.timestamp}`;
+          logAudit("Mia cue loaded", "mia");
+
+          if (Notification.permission === "granted") {
+            new Notification("Mia Cue Received", {
+              body: `"${cue.message}" at ${cue.timestamp}`,
+              icon: "/assets/icon.png"
+            });
+          }
+        } else {
+          status.innerText = "No cue received yet.";
         }
       } else {
-        status.innerText = "No cue received yet.";
+        console.warn("Element #cue-status not found.");
       }
-    } else {
-      console.warn("Element #cue-status not found.");
     }
-  }
 
-  let employees = [];
+    let employees = [];
 
-  function generateToken(name, expiry = null) {
-    const tokenData = {
-      name,
-      issued: new Date().toISOString(),
-      role: "employee"
-    };
-    if (expiry) tokenData.expires = expiry;
-    return btoa(JSON.stringify(tokenData));
-  }
+    function generateToken(name, expiry = null) {
+      const tokenData = {
+        name,
+        issued: new Date().toISOString(),
+        role: "employee"
+      };
+      if (expiry) tokenData.expires = expiry;
+      return btoa(JSON.stringify(tokenData));
+    }
 
-  function renderEmployees() {
-    const list = document.getElementById("employeeList");
-    list.innerHTML = "";
-    employees.forEach(emp => {
-      const li = document.createElement("li");
-      li.innerHTML = `
-        ${emp.name} — <strong>${emp.status}</strong> —
-        <button onclick="lockAccess('${emp.name}')">🔒 Lock</button>
-        <button onclick="removeAccess('${emp.name}')">❌ Remove</button>
-        <button onclick="showQR('${emp.name}')">📎 QR</button>
-      `;
-      list.appendChild(li);
-    });
-  }
+    function renderEmployees() {
+      const list = document.getElementById("employeeList");
+      list.innerHTML = "";
+      employees.forEach(emp => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          ${emp.name} — <strong>${emp.status}</strong> —
+          <button onclick="lockAccess('${emp.name}')">🔒 Lock</button>
+          <button onclick="removeAccess('${emp.name}')">❌ Remove</button>
+          <button onclick="showQR('${emp.name}')">📎 QR</button>
+        `;
+        list.appendChild(li);
+      });
+    }
 
-  function addEmployee() {
-    const name = document.getElementById("newName").value.trim();
-    if (name) {
-      const token = generateToken(name);
-      employees.push({ name, status: "active", token });
-      logAudit(`Added ${name}`, "general");
+    function addEmployee() {
+      const name = document.getElementById("newName").value.trim();
+      if (name) {
+        const token = generateToken(name);
+        employees.push({ name, status: "active", token });
+        logAudit(`Added ${name}`, "general");
+        renderEmployees();
+        document.getElementById("newName").value = "";
+      }
+    }
+
+    function lockAccess(name) {
+      employees = employees.map(emp =>
+        emp.name === name ? { ...emp, status: "locked" } : emp
+      );
+      logAudit(`Locked ${name}`, "general");
       renderEmployees();
-      document.getElementById("newName").value = "";
     }
-  }
 
-  function lockAccess(name) {
-    employees = employees.map(emp =>
-      emp.name === name ? { ...emp, status: "locked" } : emp
-    );
-    logAudit(`Locked ${name}`, "general");
-    renderEmployees();
-  }
-
-  function removeAccess(name) {
-    employees = employees.filter(emp => emp.name !== name);
-    logAudit(`Removed ${name}`, "general");
-    renderEmployees();
-    document.getElementById("qrPreview").innerHTML = "";
-  }
-
-  function showQR(name) {
-    const emp = employees.find(e => e.name === name);
-    if (!emp) return;
-
-    const url = `https://www.hufflesitservices.online/Employee/dashboard-daddy.html?token=${emp.token}`;
-    const qr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(url)}`;
-
-    document.getElementById("qrPreview").innerHTML = `
-      <h3>QR Code for ${name}</h3>
-      <img src="${qr}" alt="QR Code for ${name}" />
-      <p><a href="${url}" target="_blank">${url}</a></p>
-    `;
-  }
-
-  function logAudit(action, tag = "general") {
-    const list = document.getElementById("auditList");
-    const li = document.createElement("li");
-    li.innerText = `${new Date().toLocaleString()}: ${action}`;
-    li.setAttribute("data-tag", tag);
-    list.prepend(li);
-  }
-
-  function filterAuditForMaster() {
-    const logs = document.querySelectorAll("#auditList li");
-    logs.forEach(log => {
-      const tag = log.getAttribute("data-tag");
-      if (tag !== "mia" && tag !== "general") {
-        log.style.display = "none";
-      }
-    });
-  }
-
-  function detectMasterToken() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get("token");
-    if (!token) return;
-
-    try {
-      const decoded = JSON.parse(atob(token));
-      if (decoded.role === "master") {
-        document.body.classList.add("master-mode");
-        logAudit("Master token detected — full access granted.", "mia");
-
-        const miaPanel = document.getElementById("miaPanel");
-        if (miaPanel) miaPanel.style.display = "block";
-
-        filterAuditForMaster();
-      }
-    } catch (e) {
-      console.warn("Invalid token format.");
+    function removeAccess(name) {
+      employees = employees.filter(emp => emp.name !== name);
+      logAudit(`Removed ${name}`, "general");
+      renderEmployees();
+      document.getElementById("qrPreview").innerHTML = "";
     }
-  }
 
-  function requestNotificationPermission() {
-    if ("Notification" in window) {
-      Notification.requestPermission().then(permission => {
-        if (permission === "granted") {
-          logAudit("Push notifications enabled.", "general");
-        } else {
-          logAudit("Push notifications denied or dismissed.", "general");
+    function showQR(name) {
+      const emp = employees.find(e => e.name === name);
+      if (!emp) return;
+
+      const url = `https://www.hufflesitservices.online/Employee/dashboard-daddy.html?token=${emp.token}`;
+      const qr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(url)}`;
+
+      document.getElementById("qrPreview").innerHTML = `
+        <h3>QR Code for ${name}</h3>
+        <img src="${qr}" alt="QR Code for ${name}" />
+        <p><a href="${url}" target="_blank">${url}</a></p>
+      `;
+    }
+
+    function logAudit(action, tag = "general") {
+      const list = document.getElementById("auditList");
+      const li = document.createElement("li");
+      li.innerText = `${new Date().toLocaleString()}: ${action}`;
+      li.setAttribute("data-tag", tag);
+      list.prepend(li);
+    }
+
+    function filterAuditForMaster() {
+      const logs = document.querySelectorAll("#auditList li");
+      logs.forEach(log => {
+        const tag = log.getAttribute("data-tag");
+        if (tag !== "mia" && tag !== "general") {
+          log.style.display = "none";
         }
       });
     }
-  }
 
-  window.onload = () => {
-    detectMasterToken();
-    loadMiaCue();
-    renderEmployees();
-    requestNotificationPermission();
-  };
-</script>
+    function detectMasterToken() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const token = urlParams.get("token");
+      if (!token) return;
 
-<!-- 🔔 Service Worker Registration -->
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/assets/service-worker.js')
-      .then(reg => console.log('Service Worker registered:', reg))
-      .catch(err => console.error('Service Worker registration failed:', err));
-  }
-</script>
+      try {
+        const decoded = JSON.parse(atob(token));
+        if (decoded.role === "master") {
+          document.body.classList.add("master-mode");
+          logAudit("Master token detected — full access granted.", "mia");
+
+          const miaPanel = document.getElementById("miaPanel");
+          if (miaPanel) miaPanel.style.display = "block";
+
+          filterAuditForMaster();
+          loadMiaCue();
+        }
+      } catch (e) {
+        console.warn("Invalid token format.");
+      }
+    }
+
+    function requestNotificationPermission() {
+      if ("Notification" in window) {
+        Notification.requestPermission().then(permission => {
+          if (permission === "granted") {
+            logAudit("Push notifications enabled.", "general");
+          } else {
+            logAudit("Push notifications denied or dismissed.", "general");
+          }
+        });
+      }
+    }
+
+    window.onload = () => {
+      detectMasterToken();
+      renderEmployees();
+      requestNotificationPermission();
+    };
+  </script>
+
+  <!-- 🔧 Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/assets/service-worker.js')
+        .then(reg => console.log('Service Worker registered:', reg))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+</body>
+</html>
