@@ -6,6 +6,8 @@
     if (status) {
       if (cue) {
         status.innerText = `Last cue received: "${cue.message}" at ${cue.timestamp}`;
+        logAudit("Mia cue loaded", "mia");
+
         if (Notification.permission === "granted") {
           new Notification("Mia Cue Received", {
             body: `"${cue.message}" at ${cue.timestamp}`,
@@ -52,7 +54,7 @@
     if (name) {
       const token = generateToken(name);
       employees.push({ name, status: "active", token });
-      logAudit(`Added ${name}`);
+      logAudit(`Added ${name}`, "general");
       renderEmployees();
       document.getElementById("newName").value = "";
     }
@@ -62,13 +64,13 @@
     employees = employees.map(emp =>
       emp.name === name ? { ...emp, status: "locked" } : emp
     );
-    logAudit(`Locked ${name}`);
+    logAudit(`Locked ${name}`, "general");
     renderEmployees();
   }
 
   function removeAccess(name) {
     employees = employees.filter(emp => emp.name !== name);
-    logAudit(`Removed ${name}`);
+    logAudit(`Removed ${name}`, "general");
     renderEmployees();
     document.getElementById("qrPreview").innerHTML = "";
   }
@@ -87,11 +89,22 @@
     `;
   }
 
-  function logAudit(action) {
+  function logAudit(action, tag = "general") {
     const list = document.getElementById("auditList");
     const li = document.createElement("li");
     li.innerText = `${new Date().toLocaleString()}: ${action}`;
+    li.setAttribute("data-tag", tag);
     list.prepend(li);
+  }
+
+  function filterAuditForMaster() {
+    const logs = document.querySelectorAll("#auditList li");
+    logs.forEach(log => {
+      const tag = log.getAttribute("data-tag");
+      if (tag !== "mia" && tag !== "general") {
+        log.style.display = "none";
+      }
+    });
   }
 
   function detectMasterToken() {
@@ -103,7 +116,12 @@
       const decoded = JSON.parse(atob(token));
       if (decoded.role === "master") {
         document.body.classList.add("master-mode");
-        logAudit("Master token detected — full access granted.");
+        logAudit("Master token detected — full access granted.", "mia");
+
+        const miaPanel = document.getElementById("miaPanel");
+        if (miaPanel) miaPanel.style.display = "block";
+
+        filterAuditForMaster();
       }
     } catch (e) {
       console.warn("Invalid token format.");
@@ -114,9 +132,9 @@
     if ("Notification" in window) {
       Notification.requestPermission().then(permission => {
         if (permission === "granted") {
-          logAudit("Push notifications enabled.");
+          logAudit("Push notifications enabled.", "general");
         } else {
-          logAudit("Push notifications denied or dismissed.");
+          logAudit("Push notifications denied or dismissed.", "general");
         }
       });
     }
