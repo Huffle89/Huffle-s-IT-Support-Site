@@ -1,221 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daddy Dashboard — Huffle’s IT Services</title>
-  <link rel="stylesheet" href="../assets/style.css" />
-  <link rel="stylesheet" href="../assets/nav.css" />
-  <link rel="stylesheet" href="../assets/branding-subpage.css" />
-  <style>
-    body {
-      background-image: url('../assets/background.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: 'Segoe UI', sans-serif;
-      color: #1a1a1a;
-      padding: 40px 20px;
-      text-align: center;
+<script>
+  // Load Mia's last cue
+  function loadMiaCue() {
+    const cue = JSON.parse(localStorage.getItem("miaCue"));
+    const status = document.getElementById("cue-status");
+    if (cue) {
+      status.innerText = `Last cue received: "${cue.message}" at ${cue.timestamp}`;
+    } else {
+      status.innerText = "No cue received yet.";
     }
+  }
 
-    .dashboard-box {
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 900px;
-      margin: 0 auto;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    }
+  let employees = [];
 
-    .dashboard-box h1 {
-      color: #0F52BA;
-      margin-bottom: 1rem;
-    }
-
-    .dashboard-box p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-
-    .button-group a {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #0F52BA;
-      color: #FFFFFF;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      margin: 0.5rem;
-    }
-
-    .button-group a:hover {
-      background-color: #003f7f;
-    }
-
-    .access-panel input {
-      padding: 0.5rem;
-      margin-right: 0.5rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    .access-panel button {
-      padding: 0.5rem 1rem;
-      background-color: #0F52BA;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin: 0.25rem;
-    }
-
-    .access-panel button:hover {
-      background-color: #003f7f;
-    }
-
-    #qrPreview img {
-      margin-top: 1rem;
-    }
-
-    #auditList {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    #auditList li {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="dashboard-box">
-    <h1>Daddy Dashboard</h1>
-    <p>Welcome, Christopher. Your dashboard is active.</p>
-
-    <div id="cue-status" style="font-weight: bold; color: #0F52BA;">
-      Loading Mia’s cue...
-    </div>
-
-    <div class="button-group" style="margin-top: 2rem;">
-      <a href="../certs.html">📜 View Certification Ladder</a>
-      <a href="../scare-mode.html">🚨 Activate Scare Mode</a>
-      <a href="../sanctuary.html">🧸 Trigger Regression Sanctuary</a>
-      <a href="../mia-cues.html">💬 Update Mia’s Emotional Cues</a>
-      <a href="../audit-panel.html">🔍 View Audit + Token Panel</a>
-    </div>
-
-    <h2 style="margin-top: 3rem;">🧑‍💼 Employee Access Control</h2>
-    <div class="access-panel">
-      <p><strong>Add New Employee:</strong></p>
-      <input type="text" id="newName" placeholder="Employee Name" />
-      <button onclick="addEmployee()">➕ Add</button>
-
-      <hr />
-
-      <p><strong>Manage Existing Employees:</strong></p>
-      <ul id="employeeList"></ul>
-    </div>
-
-    <div id="qrPreview" style="margin-top: 2rem;"></div>
-
-    <div id="auditLog" style="margin-top: 2rem;">
-      <h3>📜 Access Audit Trail</h3>
-      <ul id="auditList"></ul>
-    </div>
-  </div>
-
-  <script>
-    function loadMiaCue() {
-      const cue = JSON.parse(localStorage.getItem("miaCue"));
-      const status = document.getElementById("cue-status");
-      if (cue) {
-        status.innerText = `Last cue received: "${cue.message}" at ${cue.timestamp}`;
-      } else {
-        status.innerText = "No cue received yet.";
-      }
-    }
-
-    let employees = [];
-
-    function generateToken(name, expiry = null) {
-      const tokenData = {
-        name,
-        issued: new Date().toISOString(),
-        role: "employee"
-      };
-      if (expiry) tokenData.expires = expiry;
-      return btoa(JSON.stringify(tokenData));
-    }
-
-    function renderEmployees() {
-      const list = document.getElementById("employeeList");
-      list.innerHTML = "";
-      employees.forEach(emp => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-          ${emp.name} — <strong>${emp.status}</strong> —
-          <button onclick="lockAccess('${emp.name}')">🔒 Lock</button>
-          <button onclick="removeAccess('${emp.name}')">❌ Remove</button>
-          <button onclick="showQR('${emp.name}')">📎 QR</button>
-        `;
-        list.appendChild(li);
-      });
-    }
-
-    function addEmployee() {
-      const name = document.getElementById("newName").value.trim();
-      if (name) {
-        const token = generateToken(name);
-        employees.push({ name, status: "active", token });
-        logAudit(`Added ${name}`);
-        renderEmployees();
-        document.getElementById("newName").value = "";
-      }
-    }
-
-    function lockAccess(name) {
-      employees = employees.map(emp =>
-        emp.name === name ? { ...emp, status: "locked" } : emp
-      );
-      logAudit(`Locked ${name}`);
-      renderEmployees();
-    }
-
-    function removeAccess(name) {
-      employees = employees.filter(emp => emp.name !== name);
-      logAudit(`Removed ${name}`);
-      renderEmployees();
-      document.getElementById("qrPreview").innerHTML = "";
-    }
-
-    function showQR(name) {
-      const emp = employees.find(e => e.name === name);
-      if (!emp) return;
-
-      const url = `https://www.hufflesitservices.online/Employee/dashboard-template.html?token=${emp.token}`;
-      const qr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(url)}`;
-
-      document.getElementById("qrPreview").innerHTML = `
-        <h3>QR Code for ${name}</h3>
-        <img src="${qr}" alt="QR Code for ${name}" />
-        <p><a href="${url}" target="_blank">${url}</a></p>
-      `;
-    }
-
-    function logAudit(action) {
-      const list = document.getElementById("auditList");
-      const li = document.createElement("li");
-      li.innerText = `${new Date().toLocaleString()}: ${action}`;
-      list.prepend(li);
-    }
-
-    window.onload = () => {
-      loadMiaCue();
-      renderEmployees();
+  function generateToken(name, expiry = null) {
+    const tokenData = {
+      name,
+      issued: new Date().toISOString(),
+      role: "employee"
     };
-  </script>
-</body>
-</html>
+    if (expiry) tokenData.expires = expiry;
+    return btoa(JSON.stringify(tokenData));
+  }
+
+  function renderEmployees() {
+    const list = document.getElementById("employeeList");
+    list.innerHTML = "";
+    employees.forEach(emp => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        ${emp.name} — <strong>${emp.status}</strong> —
+        <button onclick="lockAccess('${emp.name}')">🔒 Lock</button>
+        <button onclick="removeAccess('${emp.name}')">❌ Remove</button>
+        <button onclick="showQR('${emp.name}')">📎 QR</button>
+      `;
+      list.appendChild(li);
+    });
+  }
+
+  function addEmployee() {
+    const name = document.getElementById("newName").value.trim();
+    if (name) {
+      const token = generateToken(name);
+      employees.push({ name, status: "active", token });
+      logAudit(`Added ${name}`);
+      renderEmployees();
+      document.getElementById("newName").value = "";
+    }
+  }
+
+  function lockAccess(name) {
+    employees = employees.map(emp =>
+      emp.name === name ? { ...emp, status: "locked" } : emp
+    );
+    logAudit(`Locked ${name}`);
+    renderEmployees();
+  }
+
+  function removeAccess(name) {
+    employees = employees.filter(emp => emp.name !== name);
+    logAudit(`Removed ${name}`);
+    renderEmployees();
+    document.getElementById("qrPreview").innerHTML = "";
+  }
+
+  function showQR(name) {
+    const emp = employees.find(e => e.name === name);
+    if (!emp) return;
+
+    const url = `https://www.hufflesitservices.online/Employee/dashboard-template.html?token=${emp.token}`;
+    const qr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(url)}`;
+
+    document.getElementById("qrPreview").innerHTML = `
+      <h3>QR Code for ${name}</h3>
+      <img src="${qr}" alt="QR Code for ${name}" />
+      <p><a href="${url}" target="_blank">${url}</a></p>
+    `;
+  }
+
+  function logAudit(action) {
+    const list = document.getElementById("auditList");
+    const li = document.createElement("li");
+    li.innerText = `${new Date().toLocaleString()}: ${action}`;
+    list.prepend(li);
+  }
+
+  window.onload = () => {
+    loadMiaCue();
+    renderEmployees();
+  };
+</script>
+
+<!-- 🔔 Service Worker Registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/assets/service-worker.js')
+      .then(reg => console.log('Service Worker registered:', reg))
+      .catch(err => console.error('Service Worker registration failed:', err));
+  }
+</script>
