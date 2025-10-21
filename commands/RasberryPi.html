@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raspberry Pi — Huffles IT Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raspberry Pi — Huffle’s IT Services</title>
+
+  <!-- 🔷 Shared Stylesheets -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
+
+  <!-- 🔷 Inline Styling for Responsive Tables -->
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
-    .table-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto 60px;
+    .section {
+      margin-bottom: 60px;
     }
 
     table {
-      flex: 1 1 300px;
-      max-width: 400px;
+      margin: 0 auto;
+      max-width: 1000px;
       border-collapse: collapse;
       width: 100%;
     }
@@ -46,12 +35,12 @@
       color: #FFFFFF;
     }
 
-    @media screen and (max-width: 600px) {
-      .table-group {
-        flex-direction: column;
-        align-items: center;
-      }
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
 
+    @media screen and (max-width: 600px) {
       table thead {
         display: none;
       }
@@ -86,12 +75,6 @@
       }
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -107,59 +90,115 @@
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-  <h1>Raspberry Pi</h1>
-  <h2>Setup & GPIO Reference</h2>
+  <!-- 🔷 Navigation Bar -->
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="RaspberryPi.html" class="active">Raspberry Pi</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
 
-  <div class="table-group">
+  <!-- 🔷 Logo Header -->
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <!-- 🔷 Page Title -->
+  <section class="content-block">
+    <h1>Raspberry Pi</h1>
+    <h2>Setup & GPIO Reference</h2>
+  </section>
+
+  <!-- 🔹 Section: Setup -->
+  <section class="content-block section">
+    <h2>🛠️ Setup</h2>
     <table>
-      <thead><tr><th>Setup</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">Raspberry Pi Imager</td><td data-label="Description">Flash OS to SD card</td></tr>
-        <tr><td data-label="Command">Enable SSH</td><td data-label="Description">Add empty ssh file to boot</td></tr>
-        <tr><td data-label="Command">Enable Wi-Fi</td><td data-label="Description">Add wpa_supplicant.conf to boot</td></tr>
-        <tr><td data-label="Command">Headless Boot</td><td data-label="Description">Boot without monitor/keyboard</td></tr>
+        <tr><td>Raspberry Pi Imager</td><td>Flash OS to SD card</td></tr>
+        <tr><td>Enable SSH</td><td>Add empty ssh file to boot</td></tr>
+        <tr><td>Enable Wi-Fi</td><td>Add wpa_supplicant.conf to boot</td></tr>
+        <tr><td>Headless Boot</td><td>Boot without monitor/keyboard</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <!-- 🔹 Section: System -->
+  <section class="content-block section">
+    <h2>🧭 System</h2>
     <table>
-      <thead><tr><th>System</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">sudo raspi-config</td><td data-label="Description">Configure Pi settings</td></tr>
-        <tr><td data-label="Command">sudo reboot</td><td data-label="Description">Restart Pi</td></tr>
-        <tr><td data-label="Command">hostname -I</td><td data-label="Description">Show IP address</td></tr>
-        <tr><td data-label="Command">vcgencmd measure_temp</td><td data-label="Description">Check CPU temperature</td></tr>
+        <tr><td>sudo raspi-config</td><td>Configure Pi settings</td></tr>
+        <tr><td>sudo reboot</td><td>Restart Pi</td></tr>
+        <tr><td>hostname -I</td><td>Show IP address</td></tr>
+        <tr><td>vcgencmd measure_temp</td><td>Check CPU temperature</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <!-- 🔹 Section: GPIO -->
+  <section class="content-block section">
+    <h2>🔌 GPIO</h2>
     <table>
-      <thead><tr><th>GPIO</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">gpio readall</td><td data-label="Description">Show pin layout</td></tr>
-        <tr><td data-label="Command">gpio -g mode 17 out</td><td data-label="Description">Set pin 17 as output</td></tr>
-        <tr><td data-label="Command">gpio -g write 17 1</td><td data-label="Description">Turn pin 17 on</td></tr>
-        <tr><td data-label="Command">gpio -g write 17 0</td><td data-label="Description">Turn pin 17 off</td></tr>
+        <tr><td>gpio readall</td><td>Show pin layout</td></tr>
+        <tr><td>gpio -g mode 17 out</td><td>Set pin 17 as output</td></tr>
+        <tr><td>gpio -g write 17 1</td><td>Turn pin 17 on</td></tr>
+        <tr><td>gpio -g write 17 0</td><td>Turn pin 17 off</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <!-- 🔹 Section: Overlays -->
+  <section class="content-block section">
+    <h2>🧬 Overlays</h2>
     <table>
-      <thead><tr><th>Overlays</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">/boot/config.txt</td><td data-label="Description">Modify boot overlays</td></tr>
-        <tr><td data-label="Command">dtoverlay=pi3-disable-bt</td><td data-label="Description">Disable Bluetooth</td></tr>
-        <tr><td data-label="Command">dtoverlay=disable-wifi</td><td data-label="Description">Disable Wi-Fi</td></tr>
-        <tr><td data-label="Command">dtoverlay=vc4-kms-v3d</td><td data-label="Description">Enable full graphics</td></tr>
+        <tr><td>/boot/config.txt</td><td>Modify boot overlays</td></tr>
+        <tr><td>dtoverlay=pi3-disable-bt</td><td>Disable Bluetooth</td></tr>
+        <tr><td>dtoverlay=disable-wifi</td><td>Disable Wi-Fi</td></tr>
+        <tr><td>dtoverlay=vc4-kms-v3d</td><td>Enable full graphics</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
+  <!-- 🔷 Footer -->
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>© 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a></p>
   </footer>
 </body>
 </html>
