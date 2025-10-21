@@ -1,122 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🏡 Welcome to the Porch</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #0A0A0A;
-      font-family: 'Segoe UI', sans-serif;
-      color: #FFFFFF;
-      text-align: center;
-      padding: 60px 20px;
-      position: relative;
-      overflow: hidden;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Reference — Huffle’s IT Services</title>
 
-    .circuit-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-image: url('circuit-pattern.svg'); /* Replace with actual SVG */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.15;
-      animation: shimmer 20s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes shimmer {
-      0% { background-position: center; }
-      50% { background-position: top right; }
-      100% { background-position: center; }
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    img.logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 140px;
-      filter: drop-shadow(0 0 8px rgba(0,0,0,0.7)) brightness(1.2);
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-top: 100px;
-    }
-
-    p {
-      font-size: 1.1em;
-      margin: 20px auto;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background-color: #1E3A8A;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-size: 1em;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      background-color: #374FC7;
-    }
-
-    .qr-container {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .qr-container img {
-      width: 140px;
-      max-width: 100%;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-    }
-
-    @media screen and (max-width: 600px) {
-      h1 { font-size: 2em; }
-      p { font-size: 1em; }
-      img.logo { width: 100px; top: 10px; left: 10px; }
-    }
-  </style>
+  <!-- 🔹 Shared Stylesheets for Branding Consistency -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
 </head>
+
 <body>
-  <div class="circuit-overlay"></div>
-  <img src="Logo.png" alt="Huffle's IT Services logo" class="logo">
+  <!-- 🔷 Navigation Menu (Matches Main Site) -->
+  <nav id="menu">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../intake.html">Intake Form</a>
+    <a href="../resources.html" class="active">IT Resources</a>
+    <a href="../about.html">About</a>
+    <a href="../browse.html">Browse</a>
+  </nav>
 
-  <div class="content">
-    <h1>Huffle's IT Services LLC</h1>
-    <p>
-      I'm Christopher Lagasse, founder of Huffle's IT Services LLC — a disabled veteran-owned support company built on porch wisdom, southern grit, and repeatable comfort. I'm A+ and Security+ certified, with Network+ and CySA+ in progress. I specialize in layered security, adaptive overlays, and beginner-friendly troubleshooting that speaks plain. Around here, technology isn't just about specs and scripts — it's about making people feel safe, seen, and supported. Whether you're a client, a student, or just passing through, this porch is yours. Every page, every command, every QR code is built with heart. View my certifications on <a href="https://www.credly.com/users/chris-lagasse" target="_blank">Credly</a>.
-    </p>
+  <!-- 🔷 Logo Header -->
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
 
-    <a href="Huffles-IT-Services-Code-Reference.html" class="button">📚 View Overlay Library</a>
+  <!-- 🔷 Command Reference Section -->
+  <section class="content-block">
+    <h1>Command Reference</h1>
+    <p>Comfort-coded command sheets for quick reference and modular troubleshooting.</p>
 
-       <footer>
-      <p>&copy; 2025 Huffle's IT Services LLC — All rights reserved.</p>
-    </footer>
-  </div>
+    <!-- 🔹 Windows Command Sheet -->
+    <div class="overlay-block">
+      <h2>Windows Commands</h2>
+      <p>Quick reference for common Windows CLI tasks.</p>
+      <a href="windows.html" class="button-link">Open Windows Sheet</a>
+    </div>
+
+    <!-- 🔹 Linux Command Sheet -->
+    <div class="overlay-block">
+      <h2>Linux Commands</h2>
+      <p>Essential terminal commands for Linux systems.</p>
+      <a href="linux.html" class="button-link">Open Linux Sheet</a>
+    </div>
+
+    <!-- 🔹 macOS Command Sheet -->
+    <div class="overlay-block">
+      <h2>macOS Commands</h2>
+      <p>Useful macOS terminal commands for troubleshooting and setup.</p>
+      <a href="macos.html" class="button-link">Open macOS Sheet</a>
+    </div>
+  </section>
+
+  <!-- 🔷 Footer -->
+  <footer>
+    ©2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned
+  </footer>
 </body>
 </html>
