@@ -1,7 +1,108 @@
-Copyright © 2025 Huffle’s IT Services LLC
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 🔷 Meta & Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>License — Huffle’s IT Services</title>
 
-All rights reserved. This command reference, including all HTML content, styling, overlays, and the Huffle’s IT Services logo, is the intellectual property of Huffle’s IT Services LLC. No part of this repository may be copied, reproduced, distributed, modified, or used in any form without express written permission from the owner.
+  <!-- 🔷 Shared Stylesheets for Branding Consistency -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
 
-The Huffle’s IT Services logo is a protected visual mark. Unauthorized use, reproduction, or imitation of the logo in any medium is strictly prohibited.
+  <!-- 🔷 Inline Styling for Legal Block -->
+  <style>
+    .legal-block {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #111111;
+      border: 1px solid #0F52BA;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 1em;
+      line-height: 1.6;
+    }
 
-This repository is provided for educational and operational use by authorized users only.
+    .legal-block p {
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🔷 Navigation Bar -->
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="license.html" class="active">License</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
+
+  <!-- 🔷 Logo Header -->
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <!-- 🔷 Legal Notice Block -->
+  <section class="legal-block">
+    <p><strong>Copyright © 2025 Huffle’s IT Services LLC</strong></p>
+
+    <p>All rights reserved. This command reference, including all HTML content, styling, overlays, and the Huffle’s IT Services logo, is the intellectual property of Huffle’s IT Services LLC. No part of this repository may be copied, reproduced, distributed, modified, or used in any form without express written permission from the owner.</p>
+
+    <p>The Huffle’s IT Services logo is a protected visual mark. Unauthorized use, reproduction, or imitation of the logo in any medium is strictly prohibited.</p>
+
+    <p>This repository is provided for educational and operational use by authorized users only.</p>
+
+    <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+  </section>
+
+  <!-- 🔷 Footer -->
+  <footer>
+    <p>©2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+  </footer>
+</body>
+</html>
