@@ -1,0 +1,16 @@
+{
+  "name": "Daddy Dashboard",
+  "short_name": "Dashboard",
+  "start_url": "/Employee/dashboard-daddy.html",
+  "display": "standalone",
+  "background_color": "#0F52BA",
+  "theme_color": "#0F52BA",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "permissions": ["notifications"]
+}
