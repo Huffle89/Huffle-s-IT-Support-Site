@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recovery — Huffles IT Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recovery — Huffle’s IT Services</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
     .section {
       margin-bottom: 60px;
     }
-
     table {
       margin: 0 auto;
       max-width: 1000px;
       border-collapse: collapse;
       width: 100%;
     }
-
     th, td {
       border: 1px solid #0F52BA;
       padding: 12px;
@@ -36,23 +24,14 @@
       background-color: #111111;
       vertical-align: top;
     }
-
     th {
       background-color: #0F52BA;
       color: #FFFFFF;
     }
-
     td:first-child {
       width: 250px;
       white-space: nowrap;
     }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -63,18 +42,55 @@
       border-radius: 6px;
       font-weight: bold;
     }
-
     .back-button:hover {
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Recovery</h1>
-  <h2>Boot Options & Data Rescue Workflows</h2>
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="Recovery.html" class="active">Recovery</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
 
-  <div class="section">
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <section class="content-block">
+    <h1>Recovery</h1>
+    <h2>Boot Options & Data Rescue Workflows</h2>
+  </section>
+
+  <section class="content-block section">
     <h2>🖥️ Windows Recovery</h2>
     <table>
       <thead><tr><th>Tool/Option</th><th>Type</th><th>Purpose</th></tr></thead>
@@ -82,13 +98,13 @@
         <tr><td>Advanced Startup (Shift+Restart)</td><td>Boot Option</td><td>Access recovery tools and safe mode</td></tr>
         <tr><td>System Restore</td><td>GUI</td><td>Roll back to previous restore point</td></tr>
         <tr><td>Startup Repair</td><td>GUI</td><td>Fix boot issues automatically</td></tr>
-        <tr><td>CMD: `sfc /scannow`</td><td>CLI</td><td>Scan and repair system files</td></tr>
-        <tr><td>CMD: `chkdsk /f /r`</td><td>CLI</td><td>Check and fix disk errors</td></tr>
+        <tr><td>sfc /scannow</td><td>CLI</td><td>Scan and repair system files</td></tr>
+        <tr><td>chkdsk /f /r</td><td>CLI</td><td>Check and fix disk errors</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="content-block section">
     <h2>🍎 macOS Recovery</h2>
     <table>
       <thead><tr><th>Tool/Option</th><th>Type</th><th>Purpose</th></tr></thead>
@@ -96,31 +112,29 @@
         <tr><td>Recovery Mode (⌘+R)</td><td>Boot Option</td><td>Access reinstall, restore, and disk tools</td></tr>
         <tr><td>Disk Utility > First Aid</td><td>GUI</td><td>Check and repair disk errors</td></tr>
         <tr><td>Time Machine</td><td>GUI</td><td>Restore from backup</td></tr>
-        <tr><td>Terminal: `sudo fsck -fy`</td><td>CLI</td><td>Force file system check and repair</td></tr>
+        <tr><td>sudo fsck -fy</td><td>CLI</td><td>Force file system check and repair</td></tr>
         <tr><td>Safe Mode</td><td>Boot Option</td><td>Loads minimal drivers and runs diagnostics</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="content-block section">
     <h2>🐧 Linux Recovery</h2>
     <table>
       <thead><tr><th>Tool/Option</th><th>Type</th><th>Purpose</th></tr></thead>
       <tbody>
         <tr><td>GRUB Recovery</td><td>Boot Option</td><td>Access recovery kernel or rescue shell</td></tr>
         <tr><td>Live USB</td><td>Boot Option</td><td>Boot into live environment for rescue</td></tr>
-        <tr><td>Terminal: `fsck /dev/sdX`</td><td>CLI</td><td>Check and repair file system</td></tr>
-        <tr><td>Terminal: `mount -o remount,rw /`</td><td>CLI</td><td>Remount root partition as writable</td></tr>
+        <tr><td>fsck /dev/sdX</td><td>CLI</td><td>Check and repair file system</td></tr>
+        <tr><td>mount -o remount,rw /</td><td>CLI</td><td>Remount root partition as writable</td></tr>
         <tr><td>TestDisk</td><td>CLI</td><td>Recover lost partitions and files</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>© 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a></p>
   </footer>
 </body>
 </html>
