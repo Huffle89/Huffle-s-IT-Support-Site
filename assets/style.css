@@ -61,3 +61,21 @@ a:hover {
 .navbar a:hover {
   text-decoration: underline;
 }
+/* 🧠 Universal Text Block Fix */
+.text-block, .audit-log, .cue-panel, .employee-panel {
+  color: #FFFFFF; /* High contrast white text */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Segoe UI', sans-serif;
+  text-shadow: 0 0 4px #0F52BA; /* Optional glow */
+}
+
+/* 📱 Responsive Font Scaling */
+@media (max-width: 600px) {
+  .text-block, .audit-log, .cue-panel, .employee-panel {
+    font-size: 0.9rem;
+  }
+}
