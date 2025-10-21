@@ -1,79 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wireshark — Huffles IT Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireshark — Huffle’s IT Services</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
+    .section {
+      margin-bottom: 60px;
     }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
-    .table-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto 60px;
-    }
-
     table {
-      flex: 1 1 300px;
-      max-width: 400px;
+      margin: 0 auto;
+      max-width: 1000px;
       border-collapse: collapse;
       width: 100%;
     }
-
     th, td {
       border: 1px solid #0F52BA;
       padding: 12px;
       text-align: left;
       background-color: #111111;
     }
-
     th {
       background-color: #0F52BA;
       color: #FFFFFF;
     }
-
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
     @media screen and (max-width: 600px) {
-      .table-group {
-        flex-direction: column;
-        align-items: center;
-      }
-
       table thead {
         display: none;
       }
-
       table, table tbody, table tr, table td {
         display: block;
         width: 100%;
       }
-
       table tr {
         margin-bottom: 20px;
         border: 1px solid #0F52BA;
         background-color: #111111;
         padding: 10px;
       }
-
       table td {
         text-align: right;
         padding-left: 50%;
         position: relative;
       }
-
       table td::before {
         content: attr(data-label);
         position: absolute;
@@ -85,13 +61,6 @@
         color: #0F52BA;
       }
     }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -102,74 +71,129 @@
       border-radius: 6px;
       font-weight: bold;
     }
-
     .back-button:hover {
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Wireshark</h1>
-  <h2>Packet Analysis Reference</h2>
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="Recovery.html">Recovery</a>
+    <a href="Reference.html">Reference</a>
+    <a href="Scan.html">Scan</a>
+    <a href="Terminal.html">Terminal</a>
+    <a href="Tools.html">Tools</a>
+    <a href="Ubiquiti.html">Ubiquiti</a>
+    <a href="VirtualMachines.html">Virtual Machines</a>
+    <a href="Wireshark.html" class="active">Wireshark</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
 
-  <div class="table-group">
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <section class="content-block">
+    <h1>Wireshark</h1>
+    <h2>Packet Analysis Reference</h2>
+  </section>
+
+  <section class="content-block section">
+    <h2>📡 Capture</h2>
     <table>
-      <thead><tr><th>Capture</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">Start Capture</td><td data-label="Description">Begin packet sniffing</td></tr>
-        <tr><td data-label="Command">Capture Filter</td><td data-label="Description">Limit packets by protocol/IP</td></tr>
-        <tr><td data-label="Command">Interface List</td><td data-label="Description">Choose network interface</td></tr>
-        <tr><td data-label="Command">Save .pcap</td><td data-label="Description">Export capture file</td></tr>
+        <tr><td>Start Capture</td><td>Begin packet sniffing</td></tr>
+        <tr><td>Capture Filter</td><td>Limit packets by protocol/IP</td></tr>
+        <tr><td>Interface List</td><td>Choose network interface</td></tr>
+        <tr><td>Save .pcap</td><td>Export capture file</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🔍 Display Filters</h2>
     <table>
-      <thead><tr><th>Display Filters</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">ip.addr == 192.168.1.1</td><td data-label="Description">Filter by IP address</td></tr>
-        <tr><td data-label="Command">tcp.port == 443</td><td data-label="Description">Filter by TCP port</td></tr>
-        <tr><td data-label="Command">http</td><td data-label="Description">Show HTTP traffic</td></tr>
-        <tr><td data-label="Command">dns</td><td data-label="Description">Show DNS queries</td></tr>
+        <tr><td>ip.addr == 192.168.1.1</td><td>Filter by IP address</td></tr>
+        <tr><td>tcp.port == 443</td><td>Filter by TCP port</td></tr>
+        <tr><td>http</td><td>Show HTTP traffic</td></tr>
+        <tr><td>dns</td><td>Show DNS queries</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>📊 Analysis</h2>
     <table>
-      <thead><tr><th>Analysis</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">Follow TCP Stream</td><td data-label="Description">View full conversation</td></tr>
-        <tr><td data-label="Command">Statistics → Protocol Hierarchy</td><td data-label="Description">Break down traffic types</td></tr>
-        <tr><td data-label="Command">Expert Info</td><td data-label="Description">Highlight anomalies</td></tr>
-        <tr><td data-label="Command">IO Graphs</td><td data-label="Description">Visualize traffic over time</td></tr>
+        <tr><td>Follow TCP Stream</td><td>View full conversation</td></tr>
+        <tr><td>Statistics → Protocol Hierarchy</td><td>Break down traffic types</td></tr>
+        <tr><td>Expert Info</td><td>Highlight anomalies</td></tr>
+        <tr><td>IO Graphs</td><td>Visualize traffic over time</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>📦 Protocols</h2>
     <table>
-      <thead><tr><th>Protocols</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">ARP</td><td data-label="Description">Address Resolution Protocol</td></tr>
-        <tr><td data-label="Command">ICMP</td><td data-label="Description">Ping and echo requests</td></tr>
-        <tr><td data-label="Command">TLS</td><td data-label="Description">Encrypted traffic</td></tr>
-        <tr><td data-label="Command">DHCP</td><td data-label="Description">IP assignment traffic</td></tr>
+        <tr><td>ARP</td><td>Address Resolution Protocol</td></tr>
+        <tr><td>ICMP</td><td>Ping and echo requests</td></tr>
+        <tr><td>TLS</td><td>Encrypted traffic</td></tr>
+        <tr><td>DHCP</td><td>IP assignment traffic</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🛠️ Export & Tools</h2>
     <table>
-      <thead><tr><th>Export & Tools</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">Export Packet Bytes</td><td data-label="Description">Save raw data</td></tr>
-        <tr><td data-label="Command">Export Objects → HTTP</td><td data-label="Description">Extract files from traffic</td></tr>
-        <tr><td data-label="Command">Color Rules</td><td data-label="Description">Highlight traffic types</td></tr>
-        <tr><td data-label="Command">Command Line: tshark</td><td data-label="Description">CLI version of Wireshark</td></tr>
+        <tr><td>Export Packet Bytes</td><td>Save raw data</td></tr>
+        <tr><td>Export Objects → HTTP</td><td>Extract files from traffic</td></tr>
+        <tr><td>Color Rules</td><td>Highlight traffic types</td></tr>
+        <tr><td>Command Line: tshark</td><td>CLI version of Wireshark</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>© 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a></p>
   </footer>
 </body>
 </html>
