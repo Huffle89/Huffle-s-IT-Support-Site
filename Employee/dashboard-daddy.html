@@ -188,10 +188,22 @@
     }
 
     window.onload = () => {
-      detectMasterToken();
-      renderEmployees();
-      requestNotificationPermission();
-    };
+  detectMasterToken();
+  renderEmployees();
+
+  // ✅ Define and immediately call
+  (function requestNotificationPermission() {
+    if ("Notification" in window) {
+      Notification.requestPermission().then(permission => {
+        if (permission === "granted") {
+          logAudit("Push notifications enabled.", "general");
+        } else {
+          logAudit("Push notifications denied or dismissed.", "general");
+        }
+      });
+    }
+  })();
+};
   </script>
 
   <!-- 🔧 Service Worker Registration -->
