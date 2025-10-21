@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PowerShell — Huffles IT Services</title>
+  <!-- 🔷 Meta & Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerShell — Huffle’s IT Services</title>
+
+  <!-- 🔷 Shared Stylesheets for Branding Consistency -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
+
+  <!-- 🔷 Inline Styling for Tables & Layout -->
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
     .section {
       margin-bottom: 60px;
     }
@@ -47,12 +42,6 @@
       white-space: nowrap;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 40px;
@@ -68,13 +57,56 @@
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
-<body>
-  <h1>PowerShell</h1>
-  <h2>Windows CLI Workflows & Scripting</h2>
 
-  <div class="section">
+<body>
+  <!-- 🔷 Navigation Bar -->
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html" class="active">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
+
+  <!-- 🔷 Logo Header -->
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <!-- 🔷 Page Title -->
+  <section class="content-block">
+    <h1>PowerShell</h1>
+    <h2>Windows CLI Workflows & Scripting</h2>
+  </section>
+
+  <!-- 🔹 Section: Core Commands -->
+  <section class="content-block section">
     <h2>⚙️ Core Commands</h2>
     <table>
       <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
@@ -86,9 +118,10 @@
         <tr><td>Get-Help Get-Process</td><td>View help for a specific command</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: File & System Tasks -->
+  <section class="content-block section">
     <h2>📁 File & System Tasks</h2>
     <table>
       <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
@@ -100,9 +133,10 @@
         <tr><td>Test-Connection</td><td>Ping a host (like ping)</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: Scripting Basics -->
+  <section class="content-block section">
     <h2>🧠 Scripting Basics</h2>
     <table>
       <thead><tr><th>Syntax</th><th>Purpose</th></tr></thead>
@@ -114,13 +148,12 @@
         <tr><td>Write-Output "Hello World"</td><td>Print to console</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
+  <!-- 🔷 Footer -->
   <footer>
-    <p>&copy; 2025 Huffle's IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>©2025 Huffle's IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a></p>
   </footer>
 </body>
 </html>
