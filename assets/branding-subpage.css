@@ -26,25 +26,36 @@ body::before {
 
 /* 🔷 Navigation Bar */
 #menu {
-  background-color: #ffffff;
-  padding: 0.75rem 1rem;
+  background-color: transparent;
+  padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   position: relative;
   z-index: 1;
 }
 
-#menu a {
-  color: #1a1a1a;
+.nav-group a {
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #0F52BA;
   text-decoration: none;
-  margin: 0 1rem;
+  border-radius: 12px;
   font-weight: bold;
-  transition: color 0.3s ease;
+  font-size: 1em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid #0F52BA;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-#menu a:hover,
-#menu a.active {
-  color: #005a9c;
+.nav-group a:hover {
+  background-color: #0F52BA;
+  color: #FFFFFF;
+}
+
+.nav-group a.active {
+  background-color: #0F52BA;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
 }
 
 /* 🔷 Logo Header — NO background */
