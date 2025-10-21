@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleanup — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cleanup</h1>
+  <h2>System Maintenance & Optimization</h2>
+
+  <div class="section">
+    <h2>🖥️ Windows Cleanup Tools</h2>
+    <table>
+      <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Disk Cleanup</td><td>GUI</td><td>Removes temp files, system cache, and thumbnails</td></tr>
+        <tr><td>Storage Sense</td><td>GUI</td><td>Automates cleanup of unused files and recycle bin</td></tr>
+        <tr><td>CMD: `cleanmgr`</td><td>CLI</td><td>Launches Disk Cleanup via command line</td></tr>
+        <tr><td>CMD: `del /q /f /s %TEMP%\*`</td><td>CLI</td><td>Force deletes all temp files</td></tr>
+        <tr><td>PowerShell: `Get-ChildItem $env:TEMP -Recurse | Remove-Item -Force`</td><td>CLI</td><td>PowerShell method to clean temp folder</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🍎 macOS Cleanup Tools</h2>
+    <table>
+      <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Finder > Go to Folder > ~/Library/Caches</td><td>GUI</td><td>Manually clear user cache files</td></tr>
+        <tr><td>Disk Utility > First Aid</td><td>GUI</td><td>Checks and repairs disk errors</td></tr>
+        <tr><td>Terminal: `sudo rm -rf ~/Library/Caches/*`</td><td>CLI</td><td>Deletes user cache via terminal</td></tr>
+        <tr><td>Terminal: `purge`</td><td>CLI</td><td>Clears inactive memory (older macOS)</td></tr>
+        <tr><td>AppCleaner</td><td>GUI</td><td>Removes apps and associated files cleanly</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🐧 Linux Cleanup Tools</h2>
+    <table>
+      <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>BleachBit</td><td>GUI</td><td>System cleaner for cache, logs, and temp files</td></tr>
+        <tr><td>Terminal: `sudo apt autoremove`</td><td>CLI</td><td>Removes unused packages (Debian/Ubuntu)</td></tr>
+        <tr><td>Terminal: `sudo apt clean`</td><td>CLI</td><td>Clears local package cache</td></tr>
+        <tr><td>Terminal: `journalctl --vacuum-time=7d`</td><td>CLI</td><td>Deletes system logs older than 7 days</td></tr>
+        <tr><td>Terminal: `rm -rf ~/.cache/*`</td><td>CLI</td><td>Clears user cache folder</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

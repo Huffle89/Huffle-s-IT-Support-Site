@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Monitoring</h1>
+  <h2>CLI & GUI Workflows for System Visibility</h2>
+
+  <div class="section">
+    <h2>📜 Syslog (Linux CLI)</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>cat /var/log/syslog</td><td>View system log entries</td></tr>
+        <tr><td>tail -f /var/log/syslog</td><td>Live stream log updates</td></tr>
+        <tr><td>grep "error" /var/log/syslog</td><td>Search for error entries</td></tr>
+        <tr><td>logger "Test log entry"</td><td>Write custom log message</td></tr>
+        <tr><td>systemctl status rsyslog</td><td>Check syslog service status</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📡 SNMP (Linux CLI)</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>snmpwalk -v2c -c public localhost</td><td>Walk SNMP tree for device info</td></tr>
+        <tr><td>snmpget -v2c -c public localhost OID</td><td>Query specific SNMP value</td></tr>
+        <tr><td>snmptrapd</td><td>Receive SNMP traps</td></tr>
+        <tr><td>snmpconf -g basic_setup</td><td>Generate SNMP config interactively</td></tr>
+        <tr><td>systemctl status snmpd</td><td>Check SNMP daemon status</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🧭 Nagios (Web GUI)</h2>
+    <table>
+      <thead><tr><th>Action</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Access Nagios Web Interface</td><td>View host and service status</td></tr>
+        <tr><td>Configure hosts/services</td><td>Define monitoring targets</td></tr>
+        <tr><td>Set up alerts</td><td>Trigger notifications on failure</td></tr>
+        <tr><td>Use plugins</td><td>Extend monitoring capabilities</td></tr>
+        <tr><td>Check performance graphs</td><td>Visualize resource usage</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🪟 Windows Event Viewer</h2>
+    <table>
+      <thead><tr><th>Tool/Action</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Event Viewer</td><td>Access system, application, and security logs</td></tr>
+        <tr><td>Filter Current Log</td><td>Search by event ID or source</td></tr>
+        <tr><td>Create Custom View</td><td>Save filtered log views</td></tr>
+        <tr><td>Export Log</td><td>Save logs to file for analysis</td></tr>
+        <tr><td>Task Scheduler Integration</td><td>Trigger actions based on events</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffle's IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

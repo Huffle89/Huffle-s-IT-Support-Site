@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Response — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Incident Response</h1>
+  <h2>Triage, Forensics & Escalation Workflows</h2>
+
+  <div class="section">
+    <h2>🧪 Triage Scripts (CLI)</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>who -a</td><td>Check active sessions and logins</td></tr>
+        <tr><td>netstat -tulnp</td><td>List active network connections</td></tr>
+        <tr><td>ps aux --sort=-%cpu</td><td>Identify high CPU processes</td></tr>
+        <tr><td>df -h</td><td>Check disk usage</td></tr>
+        <tr><td>uptime</td><td>Review system load and uptime</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔍 Forensic Tools</h2>
+    <table>
+      <thead><tr><th>Tool</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Autopsy</td><td>GUI-based digital forensics platform</td></tr>
+        <tr><td>Volatility</td><td>Analyze memory dumps for artifacts</td></tr>
+        <tr><td>FTK Imager</td><td>Create forensic disk images</td></tr>
+        <tr><td>Wireshark</td><td>Capture and analyze network traffic</td></tr>
+        <tr><td>Chkrootkit</td><td>Scan for rootkits on Unix systems</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📈 Escalation Logic</h2>
+    <table>
+      <thead><tr><th>Step</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>1. Contain</td><td>Isolate affected systems from network</td></tr>
+        <tr><td>2. Preserve</td><td>Capture logs, memory, and disk images</td></tr>
+        <tr><td>3. Analyze</td><td>Use forensic tools to identify root cause</td></tr>
+        <tr><td>4. Report</td><td>Document findings and notify stakeholders</td></tr>
+        <tr><td>5. Recover</td><td>Restore systems and monitor for recurrence</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffle's IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

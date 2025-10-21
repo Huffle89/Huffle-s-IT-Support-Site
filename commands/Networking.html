@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Networking — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .table-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    table {
+      flex: 1 1 300px;
+      max-width: 400px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 600px) {
+      .table-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table thead {
+        display: none;
+      }
+
+      table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+      }
+
+      table tr {
+        margin-bottom: 20px;
+        border: 1px solid #0F52BA;
+        background-color: #111111;
+        padding: 10px;
+      }
+
+      table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #0F52BA;
+      }
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Networking</h1>
+  <h2>IP, DNS & Firewall Reference</h2>
+
+  <div class="table-group">
+    <table>
+      <thead><tr><th>IP & Host</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">ipconfig</td><td data-label="Description">Windows IP info</td></tr>
+        <tr><td data-label="Command">ifconfig</td><td data-label="Description">Linux/macOS IP info</td></tr>
+        <tr><td data-label="Command">hostname</td><td data-label="Description">Show system hostname</td></tr>
+        <tr><td data-label="Command">ping 8.8.8.8</td><td data-label="Description">Test connectivity</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>DNS</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">nslookup domain.com</td><td data-label="Description">Query DNS records</td></tr>
+        <tr><td data-label="Command">dig domain.com</td><td data-label="Description">Detailed DNS lookup</td></tr>
+        <tr><td data-label="Command">host domain.com</td><td data-label="Description">Resolve domain to IP</td></tr>
+        <tr><td data-label="Command">systemd-resolve --status</td><td data-label="Description">View DNS config (Linux)</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Routing</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">tracert domain.com</td><td data-label="Description">Trace route (Windows)</td></tr>
+        <tr><td data-label="Command">traceroute domain.com</td><td data-label="Description">Trace route (Linux/macOS)</td></tr>
+        <tr><td data-label="Command">route print</td><td data-label="Description">View routing table (Windows)</td></tr>
+        <tr><td data-label="Command">ip route</td><td data-label="Description">View routing table (Linux)</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Firewall</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">netsh advfirewall show allprofiles</td><td data-label="Description">Windows firewall status</td></tr>
+        <tr><td data-label="Command">ufw status</td><td data-label="Description">Linux firewall status</td></tr>
+        <tr><td data-label="Command">sudo ufw enable</td><td data-label="Description">Enable firewall (Linux)</td></tr>
+        <tr><td data-label="Command">sudo ufw allow 22</td><td data-label="Description">Allow SSH port</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recovery — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Recovery</h1>
+  <h2>Boot Options & Data Rescue Workflows</h2>
+
+  <div class="section">
+    <h2>🖥️ Windows Recovery</h2>
+    <table>
+      <thead><tr><th>Tool/Option</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Advanced Startup (Shift+Restart)</td><td>Boot Option</td><td>Access recovery tools and safe mode</td></tr>
+        <tr><td>System Restore</td><td>GUI</td><td>Roll back to previous restore point</td></tr>
+        <tr><td>Startup Repair</td><td>GUI</td><td>Fix boot issues automatically</td></tr>
+        <tr><td>CMD: `sfc /scannow`</td><td>CLI</td><td>Scan and repair system files</td></tr>
+        <tr><td>CMD: `chkdsk /f /r`</td><td>CLI</td><td>Check and fix disk errors</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🍎 macOS Recovery</h2>
+    <table>
+      <thead><tr><th>Tool/Option</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Recovery Mode (⌘+R)</td><td>Boot Option</td><td>Access reinstall, restore, and disk tools</td></tr>
+        <tr><td>Disk Utility > First Aid</td><td>GUI</td><td>Check and repair disk errors</td></tr>
+        <tr><td>Time Machine</td><td>GUI</td><td>Restore from backup</td></tr>
+        <tr><td>Terminal: `sudo fsck -fy`</td><td>CLI</td><td>Force file system check and repair</td></tr>
+        <tr><td>Safe Mode</td><td>Boot Option</td><td>Loads minimal drivers and runs diagnostics</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🐧 Linux Recovery</h2>
+    <table>
+      <thead><tr><th>Tool/Option</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>GRUB Recovery</td><td>Boot Option</td><td>Access recovery kernel or rescue shell</td></tr>
+        <tr><td>Live USB</td><td>Boot Option</td><td>Boot into live environment for rescue</td></tr>
+        <tr><td>Terminal: `fsck /dev/sdX`</td><td>CLI</td><td>Check and repair file system</td></tr>
+        <tr><td>Terminal: `mount -o remount,rw /`</td><td>CLI</td><td>Remount root partition as writable</td></tr>
+        <tr><td>TestDisk</td><td>CLI</td><td>Recover lost partitions and files</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

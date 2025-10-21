@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git & GitHub — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Git & GitHub</h1>
+  <h2>Version Control & Collaboration Workflows</h2>
+
+  <div class="section">
+    <h2>📦 Repo Setup</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>git init</td><td>Initialize a new local repository</td></tr>
+        <tr><td>git clone [URL]</td><td>Clone remote repository</td></tr>
+        <tr><td>git remote add origin [URL]</td><td>Link local repo to remote</td></tr>
+        <tr><td>git config --global user.name "Your Name"</td><td>Set global username</td></tr>
+        <tr><td>git config --global user.email "you@example.com"</td><td>Set global email</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📝 Commit Workflow</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>git status</td><td>Check current repo state</td></tr>
+        <tr><td>git add [file]</td><td>Stage file for commit</td></tr>
+        <tr><td>git commit -m "message"</td><td>Commit staged changes</td></tr>
+        <tr><td>git log</td><td>View commit history</td></tr>
+        <tr><td>git diff</td><td>Show changes not yet staged</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🌿 Branching & Merging</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>git branch</td><td>List branches</td></tr>
+        <tr><td>git branch [name]</td><td>Create new branch</td></tr>
+        <tr><td>git checkout [name]</td><td>Switch to branch</td></tr>
+        <tr><td>git merge [name]</td><td>Merge branch into current</td></tr>
+        <tr><td>git branch -d [name]</td><td>Delete branch</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🚀 Push & Pull</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>git push origin [branch]</td><td>Push commits to remote</td></tr>
+        <tr><td>git pull origin [branch]</td><td>Fetch and merge from remote</td></tr>
+        <tr><td>git fetch</td><td>Download changes without merging</td></tr>
+        <tr><td>git rebase [branch]</td><td>Reapply commits on top of another branch</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

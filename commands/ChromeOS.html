@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChromeOS — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .table-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    table {
+      flex: 1 1 300px;
+      max-width: 400px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 600px) {
+      .table-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table thead {
+        display: none;
+      }
+
+      table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+      }
+
+      table tr {
+        margin-bottom: 20px;
+        border: 1px solid #0F52BA;
+        background-color: #111111;
+        padding: 10px;
+      }
+
+      table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #0F52BA;
+      }
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>ChromeOS</h1>
+  <h2>Chromebook CLI & Recovery Reference</h2>
+
+  <div class="table-group">
+    <table>
+      <thead><tr><th>crosh</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">Ctrl+Alt+T</td><td data-label="Description">Open crosh shell</td></tr>
+        <tr><td data-label="Command">help</td><td data-label="Description">List crosh commands</td></tr>
+        <tr><td data-label="Command">ping google.com</td><td data-label="Description">Test connectivity</td></tr>
+        <tr><td data-label="Command">top</td><td data-label="Description">View system processes</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Developer Mode</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">shell</td><td data-label="Description">Enter full bash shell</td></tr>
+        <tr><td data-label="Command">sudo su</td><td data-label="Description">Root access</td></tr>
+        <tr><td data-label="Command">lsblk</td><td data-label="Description">List block devices</td></tr>
+        <tr><td data-label="Command">mount</td><td data-label="Description">Mount storage manually</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Recovery</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">Esc + Refresh + Power</td><td data-label="Description">Enter recovery mode</td></tr>
+        <tr><td data-label="Command">Chrome Recovery Utility</td><td data-label="Description">Create recovery USB</td></tr>
+        <tr><td data-label="Command">Powerwash</td><td data-label="Description">Factory reset Chromebook</td></tr>
+        <tr><td data-label="Command">Reimage</td><td data-label="Description">Reinstall ChromeOS</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>System Info</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">uptime</td><td data-label="Description">Show system uptime</td></tr>
+        <tr><td data-label="Command">vmc list</td><td data-label="Description">List virtual machines</td></tr>
+        <tr><td data-label="Command">vmc start termina</td><td data-label="Description">Start Linux container</td></tr>
+        <tr><td data-label="Command">vmc stop termina</td><td data-label="Description">Stop Linux container</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

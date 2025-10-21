@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encryption — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Encryption</h1>
+  <h2>CLI & GUI Workflows for Data Protection</h2>
+
+  <div class="section">
+    <h2>🔐 GPG (Linux CLI)</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>gpg --gen-key</td><td>Create a new key pair</td></tr>
+        <tr><td>gpg --list-keys</td><td>View existing keys</td></tr>
+        <tr><td>gpg -e -r [user] file.txt</td><td>Encrypt file for recipient</td></tr>
+        <tr><td>gpg -d file.txt.gpg</td><td>Decrypt file</td></tr>
+        <tr><td>gpg --export -a [user]</td><td>Export public key</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🪟 BitLocker (Windows GUI)</h2>
+    <table>
+      <thead><tr><th>Action</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Control Panel > BitLocker Drive Encryption</td><td>Enable or manage encryption</td></tr>
+        <tr><td>Turn on BitLocker</td><td>Encrypt selected drive</td></tr>
+        <tr><td>Save recovery key</td><td>Backup decryption key securely</td></tr>
+        <tr><td>Suspend protection</td><td>Temporarily disable encryption</td></tr>
+        <tr><td>Manage TPM</td><td>View Trusted Platform Module settings</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🧊 VeraCrypt (Cross-platform GUI)</h2>
+    <table>
+      <thead><tr><th>Action</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Create Volume</td><td>Build encrypted container or partition</td></tr>
+        <tr><td>Mount Volume</td><td>Access encrypted data</td></tr>
+        <tr><td>Use Keyfiles</td><td>Enhance security with external keys</td></tr>
+        <tr><td>Hidden Volume</td><td>Create nested encrypted space</td></tr>
+        <tr><td>Benchmark</td><td>Test encryption performance</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🌐 TLS & Certificates</h2>
+    <table>
+      <thead><tr><th>Tool/Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>openssl req -new -x509 -days 365 -key server.key -out cert.crt</td><td>Create self-signed certificate</td></tr>
+        <tr><td>openssl s_client -connect host:443</td><td>Test TLS connection</td></tr>
+        <tr><td>Certificate Manager (Windows)</td><td>View and manage installed certs</td></tr>
+        <tr><td>Let’s Encrypt</td><td>Free SSL/TLS certificates for web servers</td></tr>
+        <tr><td>nginx/apache config</td><td>Apply certs to web services</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffle's IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

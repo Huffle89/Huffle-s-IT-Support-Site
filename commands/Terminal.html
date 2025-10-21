@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .table-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    table {
+      flex: 1 1 300px;
+      max-width: 400px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 600px) {
+      .table-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table thead {
+        display: none;
+      }
+
+      table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+      }
+
+      table tr {
+        margin-bottom: 20px;
+        border: 1px solid #0F52BA;
+        background-color: #111111;
+        padding: 10px;
+      }
+
+      table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #0F52BA;
+      }
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Terminal</h1>
+  <h2>Linux & macOS CLI Reference</h2>
+
+  <div class="table-group">
+    <table>
+      <thead><tr><th>Navigation</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">pwd</td><td data-label="Description">Show current directory</td></tr>
+        <tr><td data-label="Command">ls -la</td><td data-label="Description">List all files with details</td></tr>
+        <tr><td data-label="Command">cd /path</td><td data-label="Description">Change directory</td></tr>
+        <tr><td data-label="Command">mkdir folder</td><td data-label="Description">Create new folder</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>File Ops</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">touch file.txt</td><td data-label="Description">Create empty file</td></tr>
+        <tr><td data-label="Command">cp file1 file2</td><td data-label="Description">Copy file</td></tr>
+        <tr><td data-label="Command">mv file folder/</td><td data-label="Description">Move file</td></tr>
+        <tr><td data-label="Command">rm file.txt</td><td data-label="Description">Delete file</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Permissions</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">chmod +x script.sh</td><td data-label="Description">Make script executable</td></tr>
+        <tr><td data-label="Command">chown user file</td><td data-label="Description">Change file owner</td></tr>
+        <tr><td data-label="Command">sudo</td><td data-label="Description">Run as superuser</td></tr>
+        <tr><td data-label="Command">whoami</td><td data-label="Description">Show current user</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>System Info</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">uname -a</td><td data-label="Description">System details</td></tr>
+        <tr><td data-label="Command">top</td><td data-label="Description">Live process monitor</td></tr>
+        <tr><td data-label="Command">df -h</td><td data-label="Description">Disk usage</td></tr>
+        <tr><td data-label="Command">free -m</td><td data-label="Description">Memory usage</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Package Tools</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">apt update</td><td data-label="Description">Update package list (Debian)</td></tr>
+        <tr><td data-label="Command">brew install</td><td data-label="Description">Install via Homebrew (macOS)</td></tr>
+        <tr><td data-label="Command">yum install</td><td data-label="Description">Install via YUM (RHEL)</td></tr>
+        <tr><td data-label="Command">pacman -S</td><td data-label="Description">Install via Pacman (Arch)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

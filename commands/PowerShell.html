@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerShell — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>PowerShell</h1>
+  <h2>Windows CLI Workflows & Scripting</h2>
+
+  <div class="section">
+    <h2>⚙️ Core Commands</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Get-Process</td><td>List running processes</td></tr>
+        <tr><td>Get-Service</td><td>View service status</td></tr>
+        <tr><td>Get-EventLog -LogName System</td><td>Read system event logs</td></tr>
+        <tr><td>Get-Command</td><td>List available cmdlets</td></tr>
+        <tr><td>Get-Help Get-Process</td><td>View help for a specific command</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📁 File & System Tasks</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Get-ChildItem</td><td>List files and folders</td></tr>
+        <tr><td>Copy-Item</td><td>Copy files or folders</td></tr>
+        <tr><td>Remove-Item</td><td>Delete files or folders</td></tr>
+        <tr><td>Set-ExecutionPolicy RemoteSigned</td><td>Allow script execution</td></tr>
+        <tr><td>Test-Connection</td><td>Ping a host (like ping)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Scripting Basics</h2>
+    <table>
+      <thead><tr><th>Syntax</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>$name = "Huffle"</td><td>Define a variable</td></tr>
+        <tr><td>if ($name -eq "Huffle") { }</td><td>Conditional logic</td></tr>
+        <tr><td>foreach ($item in $list) { }</td><td>Loop through items</td></tr>
+        <tr><td>Function Get-Overlay { }</td><td>Create a custom function</td></tr>
+        <tr><td>Write-Output "Hello World"</td><td>Print to console</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffle's IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

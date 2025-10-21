@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .table-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    table {
+      flex: 1 1 300px;
+      max-width: 400px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 600px) {
+      .table-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table thead {
+        display: none;
+      }
+
+      table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+      }
+
+      table tr {
+        margin-bottom: 20px;
+        border: 1px solid #0F52BA;
+        background-color: #111111;
+        padding: 10px;
+      }
+
+      table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #0F52BA;
+      }
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Security</h1>
+  <h2>System Hardening Reference</h2>
+
+  <div class="table-group">
+    <table>
+      <thead><tr><th>Antivirus</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">Windows Defender</td><td data-label="Description">Built-in AV for Windows</td></tr>
+        <tr><td data-label="Command">ClamAV</td><td data-label="Description">Open-source AV for Linux/macOS</td></tr>
+        <tr><td data-label="Command">sudo freshclam</td><td data-label="Description">Update ClamAV signatures</td></tr>
+        <tr><td data-label="Command">sudo clamscan -r /home</td><td data-label="Description">Scan directory recursively</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Firewall</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">netsh advfirewall</td><td data-label="Description">Windows firewall CLI</td></tr>
+        <tr><td data-label="Command">ufw enable</td><td data-label="Description">Enable firewall (Linux)</td></tr>
+        <tr><td data-label="Command">ufw allow 443</td><td data-label="Description">Allow HTTPS traffic</td></tr>
+        <tr><td data-label="Command">pfctl</td><td data-label="Description">macOS firewall control</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Encryption</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">BitLocker</td><td data-label="Description">Drive encryption (Windows)</td></tr>
+        <tr><td data-label="Command">FileVault</td><td data-label="Description">macOS disk encryption</td></tr>
+        <tr><td data-label="Command">LUKS</td><td data-label="Description">Linux disk encryption</td></tr>
+        <tr><td data-label="Command">gpg --encrypt</td><td data-label="Description">Encrypt files with GPG</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>MFA & Access</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Command">Microsoft Authenticator</td><td data-label="Description">MFA app for Windows login</td></tr>
+        <tr><td data-label="Command">Google Authenticator</td><td data-label="Description">MFA app for Linux/macOS</td></tr>
+        <tr><td data-label="Command">ssh-keygen</td><td data-label="Description">Generate SSH key pair</td></tr>
+        <tr><td data-label="Command">chmod 600 ~/.ssh/id_rsa</td><td data-label="Description">Secure private key</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

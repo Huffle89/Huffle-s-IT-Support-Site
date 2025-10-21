@@ -1,0 +1,7 @@
+Copyright © 2025 Huffle’s IT Services LLC
+
+All rights reserved. This command reference, including all HTML content, styling, overlays, and the Huffle’s IT Services logo, is the intellectual property of Huffle’s IT Services LLC. No part of this repository may be copied, reproduced, distributed, modified, or used in any form without express written permission from the owner.
+
+The Huffle’s IT Services logo is a protected visual mark. Unauthorized use, reproduction, or imitation of the logo in any medium is strictly prohibited.
+
+This repository is provided for educational and operational use by authorized users only.

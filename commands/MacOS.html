@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MacOS — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    table {
+      margin: 0 auto;
+      max-width: 1000px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+  </style>
+</head>
+<body>
+  <h1>MacOS</h1>
+  <h2>System Tools & CLI Workflows</h2>
+
+  <div class="section">
+    <h2>🧰 System Utilities</h2>
+    <table>
+      <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Disk Utility</td><td>GUI</td><td>Partition, format, and repair disks</td></tr>
+        <tr><td>Activity Monitor</td><td>GUI</td><td>View CPU, memory, disk, and network usage</td></tr>
+        <tr><td>System Information</td><td>GUI</td><td>Detailed hardware and software specs</td></tr>
+        <tr><td>Console</td><td>GUI</td><td>View system logs and crash reports</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🖥️ Terminal Commands</h2>
+    <table>
+      <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>top</td><td>Live system resource monitor</td></tr>
+        <tr><td>df -h</td><td>Show disk usage in human-readable format</td></tr>
+        <tr><td>sudo shutdown -r now</td><td>Restart system immediately</td></tr>
+        <tr><td>sudo dscacheutil -flushcache</td><td>Flush DNS cache</td></tr>
+        <tr><td>sudo killall -HUP mDNSResponder</td><td>Restart DNS service</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🧹 Cleanup & Optimization</h2>
+    <table>
+      <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Finder > Go to Folder > ~/Library/Caches</td><td>GUI</td><td>Manually clear user cache files</td></tr>
+        <tr><td>AppCleaner</td><td>GUI</td><td>Remove apps and associated files cleanly</td></tr>
+        <tr><td>Terminal: `sudo rm -rf ~/Library/Caches/*`</td><td>CLI</td><td>Delete user cache via terminal</td></tr>
+        <tr><td>Terminal: `purge`</td><td>CLI</td><td>Clear inactive memory (older macOS)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🛠️ Recovery & Troubleshooting</h2>
+    <table>
+      <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Disk Utility > First Aid</td><td>GUI</td><td>Check and repair disk errors</td></tr>
+        <tr><td>Safe Mode</td><td>Boot Option</td><td>Loads minimal drivers and runs diagnostics</td></tr>
+        <tr><td>Recovery Mode (⌘+R)</td><td>Boot Option</td><td>Access reinstall, restore, and disk tools</td></tr>
+        <tr><td>Terminal: `sudo fsck -fy`</td><td>CLI</td><td>Force file system check and repair</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>

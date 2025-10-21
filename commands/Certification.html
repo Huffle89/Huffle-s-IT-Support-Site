@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications — Huffles IT Services</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0F52BA;
+      margin-bottom: 20px;
+    }
+
+    .table-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    table {
+      flex: 1 1 300px;
+      max-width: 400px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #0F52BA;
+      padding: 12px;
+      text-align: left;
+      background-color: #111111;
+    }
+
+    th {
+      background-color: #0F52BA;
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 600px) {
+      .table-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table thead {
+        display: none;
+      }
+
+      table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+      }
+
+      table tr {
+        margin-bottom: 20px;
+        border: 1px solid #0F52BA;
+        background-color: #111111;
+        padding: 10px;
+      }
+
+      table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #0F52BA;
+      }
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0F52BA;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #FFFFFF;
+      color: #0F52BA;
+    }
+
+    .study-links {
+      margin-top: 40px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .study-links a {
+      color: #0F52BA;
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Certifications</h1>
+  <h2>A+, Network+, Security+, CySA+</h2>
+
+  <div class="table-group">
+    <table>
+      <thead><tr><th>A+</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Topic">Hardware</td><td data-label="Description">PC components, peripherals</td></tr>
+        <tr><td data-label="Topic">OS</td><td data-label="Description">Windows, Linux, macOS basics</td></tr>
+        <tr><td data-label="Topic">Troubleshooting</td><td data-label="Description">Boot, startup, hardware issues</td></tr>
+        <tr><td data-label="Topic">Security</td><td data-label="Description">Basic malware and access control</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Network+</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Topic">Protocols</td><td data-label="Description">TCP/IP, DNS, DHCP, SNMP</td></tr>
+        <tr><td data-label="Topic">Devices</td><td data-label="Description">Routers, switches, firewalls</td></tr>
+        <tr><td data-label="Topic">Troubleshooting</td><td data-label="Description">Connectivity and config issues</td></tr>
+        <tr><td data-label="Topic">Security</td><td data-label="Description">Network hardening and access</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>Security+</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Topic">Threats</td><td data-label="Description">Malware, phishing, DoS</td></tr>
+        <tr><td data-label="Topic">Controls</td><td data-label="Description">Access, authentication, encryption</td></tr>
+        <tr><td data-label="Topic">Risk</td><td data-label="Description">Assessment and mitigation</td></tr>
+        <tr><td data-label="Topic">Compliance</td><td data-label="Description">Policies and frameworks</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead><tr><th>CySA+</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Topic">Threat Detection</td><td data-label="Description">SIEM, SOAR, log analysis</td></tr>
+        <tr><td data-label="Topic">Vulnerability Mgmt</td><td data-label="Description">Scanning, patching, reporting</td></tr>
+        <tr><td data-label="Topic">Incident Response</td><td data-label="Description">Containment, eradication, recovery</td></tr>
+        <tr><td data-label="Topic">Automation</td><td data-label="Description">Scripting, enrichment, alerts</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="study-links">
+    <h2>📚 Study Resources</h2>
+    <a href="https://proftia.com/" target="_blank">Proftia — Free Practice Exams (A+, Net+, Sec+, CySA+)</a>
+    <a href="https://www.comptia.org/en-us/blog/how-to-study-for-comptia-cybersecurity-analyst-cysa" target="_blank">CompTIA Blog — CySA+ Study Guide</a>
+    <a href="https://www.udemy.com/course/comptiacysaexam/" target="_blank">Udemy — CySA+ Practice Exams by Jason Dion</a>
+    <a href="https://www.reddit.com/r/CompTIA/comments/j5drjl/cysa_tips_resources_and_study_material/" target="_blank">Reddit — CySA+ Tips & Resources</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
+    <p>
+      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
+    </p>
+  </footer>
+</body>
+</html>
