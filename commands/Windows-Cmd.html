@@ -1,79 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Windows CMD — Huffles IT Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Windows CMD — Huffle’s IT Services</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
+    .section {
+      margin-bottom: 60px;
     }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
-    .table-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto 60px;
-    }
-
     table {
-      flex: 1 1 300px;
-      max-width: 400px;
+      margin: 0 auto;
+      max-width: 1000px;
       border-collapse: collapse;
       width: 100%;
     }
-
     th, td {
       border: 1px solid #0F52BA;
       padding: 12px;
       text-align: left;
       background-color: #111111;
     }
-
     th {
       background-color: #0F52BA;
       color: #FFFFFF;
     }
-
+    td:first-child {
+      width: 250px;
+      white-space: nowrap;
+    }
     @media screen and (max-width: 600px) {
-      .table-group {
-        flex-direction: column;
-        align-items: center;
-      }
-
       table thead {
         display: none;
       }
-
       table, table tbody, table tr, table td {
         display: block;
         width: 100%;
       }
-
       table tr {
         margin-bottom: 20px;
         border: 1px solid #0F52BA;
         background-color: #111111;
         padding: 10px;
       }
-
       table td {
         text-align: right;
         padding-left: 50%;
         position: relative;
       }
-
       table td::before {
         content: attr(data-label);
         position: absolute;
@@ -85,13 +61,6 @@
         color: #0F52BA;
       }
     }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -102,84 +71,141 @@
       border-radius: 6px;
       font-weight: bold;
     }
-
     .back-button:hover {
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Windows CMD</h1>
-  <h2>Command Prompt Reference</h2>
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html" class="active">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="Recovery.html">Recovery</a>
+    <a href="Reference.html">Reference</a>
+    <a href="Scan.html">Scan</a>
+    <a href="Terminal.html">Terminal</a>
+    <a href="Tools.html">Tools</a>
+    <a href="Ubiquiti.html">Ubiquiti</a>
+    <a href="VirtualMachines.html">Virtual Machines</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
 
-  <div class="table-group">
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <section class="content-block">
+    <h1>Windows CMD</h1>
+    <h2>Command Prompt Reference</h2>
+  </section>
+
+  <section class="content-block section">
+    <h2>📁 Navigation</h2>
     <table>
-      <thead><tr><th>Navigation</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">dir</td><td data-label="Description">List directory contents</td></tr>
-        <tr><td data-label="Command">cd</td><td data-label="Description">Change directory</td></tr>
-        <tr><td data-label="Command">mkdir</td><td data-label="Description">Create new folder</td></tr>
-        <tr><td data-label="Command">rmdir</td><td data-label="Description">Remove folder</td></tr>
+        <tr><td>dir</td><td>List directory contents</td></tr>
+        <tr><td>cd</td><td>Change directory</td></tr>
+        <tr><td>mkdir</td><td>Create new folder</td></tr>
+        <tr><td>rmdir</td><td>Remove folder</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>📝 File Operations</h2>
     <table>
-      <thead><tr><th>File Operations</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">copy</td><td data-label="Description">Copy files</td></tr>
-        <tr><td data-label="Command">del</td><td data-label="Description">Delete files</td></tr>
-        <tr><td data-label="Command">move</td><td data-label="Description">Move files</td></tr>
-        <tr><td data-label="Command">type</td><td data-label="Description">Display file contents</td></tr>
+        <tr><td>copy</td><td>Copy files</td></tr>
+        <tr><td>del</td><td>Delete files</td></tr>
+        <tr><td>move</td><td>Move files</td></tr>
+        <tr><td>type</td><td>Display file contents</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🧠 System</h2>
     <table>
-      <thead><tr><th>System</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">systeminfo</td><td data-label="Description">Show system details</td></tr>
-        <tr><td data-label="Command">tasklist</td><td data-label="Description">List running processes</td></tr>
-        <tr><td data-label="Command">taskkill</td><td data-label="Description">Terminate a process</td></tr>
-        <tr><td data-label="Command">shutdown</td><td data-label="Description">Shutdown or restart</td></tr>
+        <tr><td>systeminfo</td><td>Show system details</td></tr>
+        <tr><td>tasklist</td><td>List running processes</td></tr>
+        <tr><td>taskkill</td><td>Terminate a process</td></tr>
+        <tr><td>shutdown</td><td>Shutdown or restart</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🌐 Networking</h2>
     <table>
-      <thead><tr><th>Networking</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">ipconfig</td><td data-label="Description">View IP configuration</td></tr>
-        <tr><td data-label="Command">ping</td><td data-label="Description">Test connectivity</td></tr>
-        <tr><td data-label="Command">netstat</td><td data-label="Description">Show active connections</td></tr>
-        <tr><td data-label="Command">tracert</td><td data-label="Description">Trace route to host</td></tr>
+        <tr><td>ipconfig</td><td>View IP configuration</td></tr>
+        <tr><td>ping</td><td>Test connectivity</td></tr>
+        <tr><td>netstat</td><td>Show active connections</td></tr>
+        <tr><td>tracert</td><td>Trace route to host</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🧹 Disk & Maintenance</h2>
     <table>
-      <thead><tr><th>Disk & Maintenance</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">chkdsk</td><td data-label="Description">Check disk health</td></tr>
-        <tr><td data-label="Command">diskpart</td><td data-label="Description">Partition manager</td></tr>
-        <tr><td data-label="Command">sfc</td><td data-label="Description">System file checker</td></tr>
-        <tr><td data-label="Command">format</td><td data-label="Description">Format a drive</td></tr>
+        <tr><td>chkdsk</td><td>Check disk health</td></tr>
+        <tr><td>diskpart</td><td>Partition manager</td></tr>
+        <tr><td>sfc</td><td>System file checker</td></tr>
+        <tr><td>format</td><td>Format a drive</td></tr>
       </tbody>
     </table>
+  </section>
 
+  <section class="content-block section">
+    <h2>🧸 Comfort Commands</h2>
     <table>
-      <thead><tr><th>Comfort Commands</th><th>Description</th></tr></thead>
+      <thead><tr><th>Command</th><th>Description</th></tr></thead>
       <tbody>
-        <tr><td data-label="Command">cls</td><td data-label="Description">Clear the screen</td></tr>
-        <tr><td data-label="Command">echo</td><td data-label="Description">Display messages</td></tr>
-        <tr><td data-label="Command">pause</td><td data-label="Description">Pause script execution</td></tr>
-        <tr><td data-label="Command">exit</td><td data-label="Description">Close Command Prompt</td></tr>
+        <tr><td>cls</td><td>Clear the screen</td></tr>
+        <tr><td>echo</td><td>Display messages</td></tr>
+        <tr><td>pause</td><td>Pause script execution</td></tr>
+        <tr><td>exit</td><td>Close Command Prompt</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>© 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a></p>
   </footer>
 </body>
 </html>
