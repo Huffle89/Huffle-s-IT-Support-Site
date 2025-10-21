@@ -13,6 +13,13 @@
 
   <!-- 🔷 Inline Styling -->
   <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+    }
+
     .toc-block {
       max-width: 900px;
       margin: 60px auto;
@@ -45,6 +52,15 @@
       text-decoration: underline;
     }
 
+    .logo-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      max-width: 180px;
+    }
+
     footer {
       margin-top: 60px;
       font-size: 0.9em;
@@ -55,6 +71,51 @@
 </head>
 
 <body>
+  <!-- 🔷 Navigation -->
+  <nav id="menu">
+  <!-- Main Site Links -->
+   <div class="nav-group main-links">
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../intake.html">Intake Form</a>
+      <a href="../resources.html">IT Resources</a>
+      <a href="../about.html">About</a>
+      <a href="../browse.html">Browse</a>
+    </div>
+
+    <!-- Command Reference Links -->
+    <div class="nav-group command-links">
+      <a href="Commands.html">Command Reference</a>
+      <a href="Windows.html">Windows</a>
+      <a href="Linux.html">Linux</a>
+      <a href="MacOS.html">macOS</a>
+      <a href="ChromeOS.html">ChromeOS</a>
+      <a href="PowerShell.html">PowerShell</a>
+      <a href="Networking.html">Networking</a>
+      <a href="Security.html">Security</a>
+      <a href="Shortcuts.html">Keyboard Shortcuts</a>
+      <a href="Android-MDM.html">Android MDM</a>
+      <a href="iOS-MDM.html" class="active">iOS MDM</a>
+      <a href="Backup.html">Backup</a>
+      <a href="Browser.html">Browser</a>
+      <a href="BurpSuite.html">Burp Suite</a>
+      <a href="Cisco-IOS.html">Cisco IOS</a>
+      <a href="Cleanup.html">Cleanup</a>
+      <a href="Encryption.html">Encryption</a>
+      <a href="Firewall.html">Firewall</a>
+      <a href="Git-GitHub.html">Git & GitHub</a>
+      <a href="Incident-Response.html">Incident Response</a>
+      <a href="Recovery.html">Recovery</a>
+      <a href="Reference.html">Reference</a>
+      <a href="Scan.html">Scan</a>
+      <a href="Terminal.html">Terminal</a>
+      <a href="Tools.html">Tools</a>
+      <a href="Ubiquiti.html">Ubiquiti</a>
+      <a href="VirtualMachine.html">Virtual Machine</a>
+      <a href="Wireshark.html">Wireshark</a>
+    </div>
+  </nav>
+
   <!-- 🔷 Logo Header -->
   <header class="logo-header">
     <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
@@ -71,8 +132,8 @@
       <li>🖥️ <a href="windows.html">Windows CMD</a></li>
       <li>🔧 <a href="powershell.html">PowerShell</a></li>
       <li>🍎 <a href="macos.html">macOS Terminal</a></li>
-      <li>🍏 <a href="Android-MDM.html">iOS MDM</a></li>
-      <li>🤖 <a href="Android-MDM.html">Android MDM</a></li>
+      <li>🍏 <a href="ios-mdm.html">iOS MDM</a></li>
+      <li>🤖 <a href="android-mdm.html">Android MDM</a></li>
     </ul>
     <p>Each page is comfort-coded with sapphire-on-black styling, scan-ready overlays, and a “Back to TOC” button for seamless navigation.</p>
 
@@ -107,7 +168,4 @@
 
   <!-- 🔷 Footer -->
   <footer>
-    <p>© 2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
-  </footer>
-</body>
-</html>
+    <p>© 2025 Huffle’s IT Services LLC —
