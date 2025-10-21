@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encryption — Huffles IT Services</title>
+  <!-- 🔷 Meta & Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encryption — Huffle’s IT Services</title>
+
+  <!-- 🔷 Shared Stylesheets for Branding Consistency -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
+
+  <!-- 🔷 Inline Styling for Tables & Layout -->
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
     .section {
       margin-bottom: 60px;
     }
@@ -47,12 +42,6 @@
       white-space: nowrap;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -70,11 +59,44 @@
     }
   </style>
 </head>
-<body>
-  <h1>Encryption</h1>
-  <h2>CLI & GUI Workflows for Data Protection</h2>
 
-  <div class="section">
+<body>
+  <!-- 🔷 Navigation Bar (Unified for /commands/) -->
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html" class="active">Encryption</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
+
+  <!-- 🔷 Logo Header -->
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <!-- 🔷 Page Title -->
+  <section class="content-block">
+    <h1>Encryption</h1>
+    <h2>CLI & GUI Workflows for Data Protection</h2>
+  </section>
+
+  <!-- 🔹 Section: GPG (Linux CLI) -->
+  <section class="content-block section">
     <h2>🔐 GPG (Linux CLI)</h2>
     <table>
       <thead><tr><th>Command</th><th>Purpose</th></tr></thead>
@@ -86,9 +108,10 @@
         <tr><td>gpg --export -a [user]</td><td>Export public key</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: BitLocker (Windows GUI) -->
+  <section class="content-block section">
     <h2>🪟 BitLocker (Windows GUI)</h2>
     <table>
       <thead><tr><th>Action</th><th>Purpose</th></tr></thead>
@@ -100,9 +123,10 @@
         <tr><td>Manage TPM</td><td>View Trusted Platform Module settings</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: VeraCrypt (Cross-platform GUI) -->
+  <section class="content-block section">
     <h2>🧊 VeraCrypt (Cross-platform GUI)</h2>
     <table>
       <thead><tr><th>Action</th><th>Purpose</th></tr></thead>
@@ -114,9 +138,10 @@
         <tr><td>Benchmark</td><td>Test encryption performance</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: TLS & Certificates -->
+  <section class="content-block section">
     <h2>🌐 TLS & Certificates</h2>
     <table>
       <thead><tr><th>Tool/Command</th><th>Purpose</th></tr></thead>
@@ -128,13 +153,12 @@
         <tr><td>nginx/apache config</td><td>Apply certs to web services</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
+  <!-- 🔷 Footer -->
   <footer>
-    <p>&copy; 2025 Huffle's IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>©2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="../index.html">🖥️ Return to Main Site</a></p>
   </footer>
 </body>
 </html>
