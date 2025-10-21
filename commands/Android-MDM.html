@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Android MDM — Huffles IT Services</title>
+  <!-- 🔷 Meta & Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android MDM — Huffle’s IT Services</title>
+
+  <!-- 🔷 Shared Stylesheets for Branding Consistency -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
+
+  <!-- 🔷 Inline Styling for Tables & Layout -->
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
     .section {
       margin-bottom: 60px;
     }
@@ -47,12 +42,6 @@
       white-space: nowrap;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -70,11 +59,37 @@
     }
   </style>
 </head>
-<body>
-  <h1>Android MDM</h1>
-  <h2>Mobile Device Management Workflows</h2>
 
-  <div class="section">
+<body>
+  <!-- 🔷 Navigation Bar (Unified for /commands/) -->
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html" class="active">Android MDM</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
+
+  <!-- 🔷 Logo Header -->
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <!-- 🔷 Page Title -->
+  <section class="content-block">
+    <h1>Android MDM</h1>
+    <h2>Mobile Device Management Workflows</h2>
+  </section>
+
+  <!-- 🔹 Section: Enrollment & Setup -->
+  <section class="content-block section">
     <h2>📦 Enrollment & Setup</h2>
     <table>
       <thead><tr><th>Action</th><th>Method</th><th>Purpose</th></tr></thead>
@@ -85,9 +100,10 @@
         <tr><td>Manual profile install</td><td>GUI</td><td>Install MDM profile via downloaded config</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: Policy & App Control -->
+  <section class="content-block section">
     <h2>🔐 Policy & App Control</h2>
     <table>
       <thead><tr><th>Action</th><th>Method</th><th>Purpose</th></tr></thead>
@@ -99,9 +115,10 @@
         <tr><td>Set Wi-Fi & VPN profiles</td><td>GUI</td><td>Preconfigure network settings remotely</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: Remote Actions -->
+  <section class="content-block section">
     <h2>🧭 Remote Actions</h2>
     <table>
       <thead><tr><th>Action</th><th>Method</th><th>Purpose</th></tr></thead>
@@ -113,13 +130,12 @@
         <tr><td>Reboot device</td><td>GUI</td><td>Force restart for troubleshooting</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
+  <!-- 🔷 Footer -->
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>©2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="../index.html">🖥️ Return to Main Site</a></p>
   </footer>
 </body>
 </html>
