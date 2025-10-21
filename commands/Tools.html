@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools — Huffles IT Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools — Huffle’s IT Services</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
     .section {
       margin-bottom: 60px;
     }
-
     table {
       margin: 0 auto;
       max-width: 1000px;
       border-collapse: collapse;
       width: 100%;
     }
-
     th, td {
       border: 1px solid #0F52BA;
       padding: 12px;
@@ -36,23 +24,14 @@
       background-color: #111111;
       vertical-align: top;
     }
-
     th {
       background-color: #0F52BA;
       color: #FFFFFF;
     }
-
     td:first-child {
       width: 250px;
       white-space: nowrap;
     }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -63,18 +42,59 @@
       border-radius: 6px;
       font-weight: bold;
     }
-
     .back-button:hover {
       background-color: #FFFFFF;
       color: #0F52BA;
     }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #FFFFFF;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Tools</h1>
-  <h2>Grouped by OS and Function</h2>
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html">Cleanup</a>
+    <a href="Encryption.html">Encryption</a>
+    <a href="Firewall.html">Firewall</a>
+    <a href="Git-GitHub.html">Git & GitHub</a>
+    <a href="Incident-Response.html">Incident Response</a>
+    <a href="Recovery.html">Recovery</a>
+    <a href="Reference.html">Reference</a>
+    <a href="Scan.html">Scan</a>
+    <a href="Terminal.html">Terminal</a>
+    <a href="Tools.html" class="active">Tools</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
 
-  <div class="section">
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <section class="content-block">
+    <h1>Tools</h1>
+    <h2>Grouped by OS and Function</h2>
+  </section>
+
+  <section class="content-block section">
     <h2>🖥️ Windows Tools</h2>
     <table>
       <thead><tr><th>Tool</th><th>OS</th><th>Purpose</th></tr></thead>
@@ -88,9 +108,9 @@
         <tr><td>Netsh</td><td>Windows</td><td>CLI tool to manage Windows network settings</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="content-block section">
     <h2>🍎 macOS Tools</h2>
     <table>
       <thead><tr><th>Tool</th><th>OS</th><th>Purpose</th></tr></thead>
@@ -102,9 +122,9 @@
         <tr><td>Terminal + ping/traceroute</td><td>macOS</td><td>Built-in CLI for network diagnostics</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="content-block section">
     <h2>🐧 Linux Tools</h2>
     <table>
       <thead><tr><th>Tool</th><th>OS</th><th>Purpose</th></tr></thead>
@@ -116,9 +136,9 @@
         <tr><td>Terminal + ping/traceroute</td><td>Linux</td><td>Built-in CLI for network diagnostics</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="content-block section">
     <h2>🌐 Cross-Platform Tools</h2>
     <table>
       <thead><tr><th>Tool</th><th>OS</th><th>Purpose</th><th>Access & Pricing</th></tr></thead>
@@ -130,9 +150,4 @@
         <tr><td>Wireshark</td><td>Windows, macOS, Linux</td><td>Captures and analyzes network packets</td><td>🚫 No account required. Fully free and open-source</td></tr>
         <tr><td>Angry IP Scanner</td><td>Windows, macOS, Linux</td><td>Scans IP ranges and ports quickly</td><td>🚫 No account required. Fully free and open-source</td></tr>
         <tr><td>VS Code</td><td>Windows, macOS, Linux</td><td>Lightweight code editor with extensions</td><td>🚫 No account required. Free from Microsoft</td></tr>
-        <tr><td>Git</td><td>Windows, macOS, Linux</td><td>Version control system for tracking code changes</td><td>🚫 No account required. Fully free and open-source</td></tr>
-        <tr><td>Postman</td><td>Windows, macOS, Linux</td><td>API testing and automation platform</td><td>✅ Account required. Free tier available. Paid plans start at ~$12/month</td></tr>
-        <tr><td>PowerShell Core</td><td>Windows, macOS, Linux</td><td>Cross-platform CLI for scripting and automation</td><td>🚫 No account required. Free from Microsoft</td></tr>
-        <tr><td>Maltego</td><td>Windows, macOS, Linux</td><td>Graph-based OSINT tool for mapping relationships between people, domains, IPs, and more</td><td>✅ Account required. Free Community Edition available. Paid plans start at ~$1,000/year</td></tr>
-        <tr><td>theHarvester</td><td>Windows, macOS, Linux</td><td>CLI tool for gathering emails, subdomains, and hostnames from public sources</td><td>🚫 No account required. Fully free and open-source</td></tr>
-        <tr><td>SpiderFoot</td><td>Windows, macOS, Linux</td><td>Automated OSINT scanner for domains, IPs, usernames, and more</td><td>✅ Account optional. Free version available. Paid plans start at ~$50/month</td
+        <tr><td>Git</
