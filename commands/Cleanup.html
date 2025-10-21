@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cleanup — Huffles IT Services</title>
+  <!-- 🔷 Meta & Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleanup — Huffle’s IT Services</title>
+
+  <!-- 🔷 Shared Stylesheets for Branding Consistency -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/nav.css" />
+  <link rel="stylesheet" href="../assets/branding-subpage.css" />
+
+  <!-- 🔷 Inline Styling for Tables & Layout -->
   <style>
-    body {
-      background-color: #0A0A0A;
-      color: #FFFFFF;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #0F52BA;
-      margin-bottom: 20px;
-    }
-
     .section {
       margin-bottom: 60px;
     }
@@ -47,12 +42,6 @@
       white-space: nowrap;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #FFFFFF;
-    }
-
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -70,57 +59,90 @@
     }
   </style>
 </head>
-<body>
-  <h1>Cleanup</h1>
-  <h2>System Maintenance & Optimization</h2>
 
-  <div class="section">
+<body>
+  <!-- 🔷 Navigation Bar (Unified for /commands/) -->
+  <nav id="menu">
+    <a href="index.html">Command Reference</a>
+    <a href="windows.html">Windows</a>
+    <a href="linux.html">Linux</a>
+    <a href="macos.html">macOS</a>
+    <a href="powershell.html">PowerShell</a>
+    <a href="bash.html">Bash</a>
+    <a href="networking.html">Networking</a>
+    <a href="security.html">Security</a>
+    <a href="shortcuts.html">Keyboard Shortcuts</a>
+    <a href="cheatsheet.html">Cheat Sheet</a>
+    <a href="Android-MDM.html">Android MDM</a>
+    <a href="Backup.html">Backup</a>
+    <a href="Browser.html">Browser</a>
+    <a href="burpSuite.html">Burp Suite</a>
+    <a href="ChromeOS.html">ChromeOS</a>
+    <a href="Cisco-IOS.html">Cisco IOS</a>
+    <a href="Cleanup.html" class="active">Cleanup</a>
+    <a href="../index.html" style="margin-left:auto;">← Back to Main Site</a>
+  </nav>
+
+  <!-- 🔷 Logo Header -->
+  <header class="logo-header">
+    <img src="../assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
+  </header>
+
+  <!-- 🔷 Page Title -->
+  <section class="content-block">
+    <h1>Cleanup</h1>
+    <h2>System Maintenance & Optimization</h2>
+  </section>
+
+  <!-- 🔹 Section: Windows Cleanup Tools -->
+  <section class="content-block section">
     <h2>🖥️ Windows Cleanup Tools</h2>
     <table>
       <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
       <tbody>
         <tr><td>Disk Cleanup</td><td>GUI</td><td>Removes temp files, system cache, and thumbnails</td></tr>
         <tr><td>Storage Sense</td><td>GUI</td><td>Automates cleanup of unused files and recycle bin</td></tr>
-        <tr><td>CMD: `cleanmgr`</td><td>CLI</td><td>Launches Disk Cleanup via command line</td></tr>
-        <tr><td>CMD: `del /q /f /s %TEMP%\*`</td><td>CLI</td><td>Force deletes all temp files</td></tr>
-        <tr><td>PowerShell: `Get-ChildItem $env:TEMP -Recurse | Remove-Item -Force`</td><td>CLI</td><td>PowerShell method to clean temp folder</td></tr>
+        <tr><td>CMD: <code>cleanmgr</code></td><td>CLI</td><td>Launches Disk Cleanup via command line</td></tr>
+        <tr><td>CMD: <code>del /q /f /s %TEMP%\*</code></td><td>CLI</td><td>Force deletes all temp files</td></tr>
+        <tr><td>PowerShell: <code>Get-ChildItem $env:TEMP -Recurse | Remove-Item -Force</code></td><td>CLI</td><td>PowerShell method to clean temp folder</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: macOS Cleanup Tools -->
+  <section class="content-block section">
     <h2>🍎 macOS Cleanup Tools</h2>
     <table>
       <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
       <tbody>
         <tr><td>Finder > Go to Folder > ~/Library/Caches</td><td>GUI</td><td>Manually clear user cache files</td></tr>
         <tr><td>Disk Utility > First Aid</td><td>GUI</td><td>Checks and repairs disk errors</td></tr>
-        <tr><td>Terminal: `sudo rm -rf ~/Library/Caches/*`</td><td>CLI</td><td>Deletes user cache via terminal</td></tr>
-        <tr><td>Terminal: `purge`</td><td>CLI</td><td>Clears inactive memory (older macOS)</td></tr>
+        <tr><td>Terminal: <code>sudo rm -rf ~/Library/Caches/*</code></td><td>CLI</td><td>Deletes user cache via terminal</td></tr>
+        <tr><td>Terminal: <code>purge</code></td><td>CLI</td><td>Clears inactive memory (older macOS)</td></tr>
         <tr><td>AppCleaner</td><td>GUI</td><td>Removes apps and associated files cleanly</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- 🔹 Section: Linux Cleanup Tools -->
+  <section class="content-block section">
     <h2>🐧 Linux Cleanup Tools</h2>
     <table>
       <thead><tr><th>Tool/Command</th><th>Type</th><th>Purpose</th></tr></thead>
       <tbody>
         <tr><td>BleachBit</td><td>GUI</td><td>System cleaner for cache, logs, and temp files</td></tr>
-        <tr><td>Terminal: `sudo apt autoremove`</td><td>CLI</td><td>Removes unused packages (Debian/Ubuntu)</td></tr>
-        <tr><td>Terminal: `sudo apt clean`</td><td>CLI</td><td>Clears local package cache</td></tr>
-        <tr><td>Terminal: `journalctl --vacuum-time=7d`</td><td>CLI</td><td>Deletes system logs older than 7 days</td></tr>
-        <tr><td>Terminal: `rm -rf ~/.cache/*`</td><td>CLI</td><td>Clears user cache folder</td></tr>
+        <tr><td>Terminal: <code>sudo apt autoremove</code></td><td>CLI</td><td>Removes unused packages (Debian/Ubuntu)</td></tr>
+        <tr><td>Terminal: <code>sudo apt clean</code></td><td>CLI</td><td>Clears local package cache</td></tr>
+        <tr><td>Terminal: <code>journalctl --vacuum-time=7d</code></td><td>CLI</td><td>Deletes system logs older than 7 days</td></tr>
+        <tr><td>Terminal: <code>rm -rf ~/.cache/*</code></td><td>CLI</td><td>Clears user cache folder</td></tr>
       </tbody>
     </table>
-  </div>
+  </section>
 
+  <!-- 🔷 Footer -->
   <footer>
-    <p>&copy; 2025 Huffles IT Services LLC — All rights reserved.</p>
-    <p>
-      <a class="back-button" href="Huffles-IT-Services-Code-Reference.html">🖥️ Back to Porch</a>
-    </p>
+    <p>©2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned</p>
+    <p><a class="back-button" href="../index.html">🖥️ Return to Main Site</a></p>
   </footer>
 </body>
 </html>
