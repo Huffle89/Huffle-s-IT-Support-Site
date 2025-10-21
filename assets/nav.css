@@ -36,10 +36,11 @@
 
 /* 🔷 HOVER STATE */
 .nav-group a:hover {
-  background-color: #0F52BA;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #0F52BA;
+  border: 2px solid #0F52BA;
+  box-shadow: 0 0 8px rgba(15, 82, 186, 0.4);
 }
-
 /* 🔷 ACTIVE PAGE HIGHLIGHT */
 .nav-group a.active {
   background-color: #0F52BA;
