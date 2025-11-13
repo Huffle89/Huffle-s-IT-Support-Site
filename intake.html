@@ -152,13 +152,9 @@
         method="POST"
         onsubmit="return validateForm()"
       >
-        <!-- 🔹 Redirect to Thank-You Page -->
+        <!-- Hidden FormSubmit controls -->
         <input type="hidden" name="_redirect" value="https://www.hufflesitservices.online/thank-you.html" />
-
-        <!-- 🔹 Custom Subject Line -->
         <input type="hidden" name="_subject" value="New Client Intake Submission" />
-
-        <!-- 🔹 Disable CAPTCHA -->
         <input type="hidden" name="_captcha" value="false" />
 
         <!-- =========================
@@ -237,7 +233,7 @@
         </div>
 
         <!-- =========================
-             SECTION: Tech Details
+             SECTION: Device & Tech Details
         ========================== -->
         <div class="form-section">
           <h2>Device & Tech Details</h2>
@@ -401,6 +397,44 @@
         </div>
 
         <!-- =========================
+             SECTION: Veteran Status & Discount
+        ========================== -->
+        <div class="form-section">
+          <h2>Veteran Status & Discounts</h2>
+          <p class="section-hint">
+            Huffle’s IT Services is veteran-owned. Verified U.S. military veterans may qualify for
+            discounted services.
+          </p>
+
+          <div class="form-row">
+            <label for="veteran_status">Are you a U.S. military veteran?</label>
+            <select id="veteran_status" name="veteran_status">
+              <option value="">-- Select --</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="veteran_notes">Anything you’d like us to know about your service? (Optional)</label>
+            <textarea
+              id="veteran_notes"
+              name="veteran_notes"
+              rows="3"
+              placeholder="Branch, era, or anything relevant you’d like to share (optional)."
+            ></textarea>
+          </div>
+
+          <p class="no-password-note">
+            ⚠️ Veteran discounts are available, but <strong>verification will be required before services
+            are billed and paid for</strong> (e.g., VA card, veteran-designated DL, or other official proof).  
+            Please do <strong>not</strong> upload or email ID photos or documents through this form —
+            we’ll arrange a safe way to verify during scheduling or consultation.
+          </p>
+        </div>
+
+        <!-- =========================
              SECTION: Data & Risk Priorities
         ========================== -->
         <div class="form-section">
@@ -440,7 +474,7 @@
         </div>
 
         <!-- =========================
-             SECTION: Comfort & Access
+             SECTION: Comfort & Accessibility
         ========================== -->
         <div class="form-section">
           <h2>Comfort & Accessibility Preferences</h2>
