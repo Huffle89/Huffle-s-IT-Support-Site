@@ -74,6 +74,17 @@
     padding: 1rem;
     box-sizing: border-box;
   }
+  /* Extra spacing on subpages: logo header + content */
+  .logo-header {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* Make sure multiple content-blocks don't feel cramped */
+  .content-block + .content-block {
+    margin-top: 2.5rem;
+  }
 
   /* ================================
      5) Typography
