@@ -286,3 +286,48 @@ footer {
     padding: 0.75rem 1rem;
   }
 }
+/* =========================================
+   Subpage Layout & Section Spacing
+   Applies to: about, services, resources, projects, site-structure, etc.
+   ========================================= */
+
+.logo-header {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.content-block {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;   /* center + space from footer */
+  padding: 2rem 2.5rem;        /* inner padding inside each section */
+  box-sizing: border-box;
+}
+
+/* If a page has multiple .content-blocks, this makes sure
+   there's a clear visual gap between them. */
+.content-block + .content-block {
+  margin-top: 3rem;
+}
+
+/* Text spacing inside content blocks */
+.content-block h1,
+.content-block h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.content-block p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.content-block ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+
+.content-block li {
+  margin-bottom: 0.35rem;
+}
