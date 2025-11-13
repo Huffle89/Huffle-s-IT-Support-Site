@@ -5,30 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Client Intake Form — Huffle’s IT Services</title>
 
-  <!-- 🔹 Comfort-Coded Stylesheets -->
+  <!-- 🔹 Site Stylesheets -->
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="assets/nav.css" />
   <link rel="stylesheet" href="assets/branding-subpage.css" />
 
-  <!-- 🔹 Inline Form Styling -->
+  <!-- 🔹 Inline Form Styling (kept scoped and on-theme) -->
   <style>
-    form {
+    .intake-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .intake-intro {
+      margin-bottom: 1.5rem;
+    }
+
+    .intake-form {
+      background-color: #ffffff;
+      padding: 1.75rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
 
-    label {
-      font-weight: bold;
-      margin-bottom: 0.25rem;
+    .form-section {
+      margin-bottom: 1.25rem;
     }
 
-    input, select, textarea {
+    .form-section h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-section p.section-hint {
+      font-size: 0.9rem;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      color: #444;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .field-hint {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    input,
+    select,
+    textarea {
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 1rem;
       width: 100%;
+      box-sizing: border-box;
     }
 
     textarea {
@@ -59,21 +102,29 @@
     .consent-block p {
       margin: 0.5rem 0;
     }
+
+    @media (max-width: 600px) {
+      .intake-form {
+        padding: 1.25rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <!-- 🔷 Navigation Menu -->
   <nav id="menu">
-  <div class="nav-group main-links">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="intake.html">Intake Form</a>
-    <a href="resources.html">IT Resources</a>
-    <a href="about.html">About</a>
-    <a href="browse.html">Browse</a>
-  </div>
-</nav>
+    <div class="nav-group main-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="intake.html">Intake Form</a>
+      <a href="resources.html">IT Resources</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="browse.html">Browse</a>
+    </div>
+  </nav>
+
   <!-- 🔷 Logo Header -->
   <header class="logo-header">
     <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
@@ -81,92 +132,216 @@
 
   <!-- 🔷 Intake Form Section -->
   <section class="content-block">
-    <h1>Client Intake Form</h1>
-    <p>Let us know what you need. We’ll respond with comfort-first support and a clear plan.</p>
+    <div class="intake-wrapper">
+      <h1>Client Intake Form</h1>
+      <p class="intake-intro">
+        Let us know what you need. We’ll respond with comfort-first support and a clear plan,
+        tailored to both your tech and your nervous system.
+      </p>
 
-    <!-- 🔷 FormSubmit Integration -->
-    <form action="https://formsubmit.co/hufflesitservices@gmail.com" method="POST" onsubmit="return validateForm()">
-      <!-- 🔹 Redirect to Thank-You Page -->
-      <input type="hidden" name="_redirect" value="https://www.hufflesitservices.online/thank-you.html" />
+      <!-- 🔷 FormSubmit Integration -->
+      <form
+        class="intake-form"
+        action="https://formsubmit.co/hufflesitservices@gmail.com"
+        method="POST"
+        onsubmit="return validateForm()"
+      >
+        <!-- 🔹 Redirect to Thank-You Page -->
+        <input type="hidden" name="_redirect" value="https://www.hufflesitservices.online/thank-you.html" />
 
-      <!-- 🔹 Custom Subject Line -->
-      <input type="hidden" name="_subject" value="New Client Intake Submission" />
+        <!-- 🔹 Custom Subject Line -->
+        <input type="hidden" name="_subject" value="New Client Intake Submission" />
 
-      <!-- 🔹 Disable CAPTCHA -->
-      <input type="hidden" name="_captcha" value="false" />
+        <!-- 🔹 Disable CAPTCHA -->
+        <input type="hidden" name="_captcha" value="false" />
 
-      <!-- 🔹 Form Fields -->
-      <label for="name">Full Name: *</label>
-      <input type="text" id="name" name="name" required />
+        <!-- =========================
+             SECTION: Basic Information
+        ========================== -->
+        <div class="form-section">
+          <h2>Basic Information</h2>
+          <p class="section-hint">
+            Tell us who you are and how to reach you. We’ll only use this info to respond to your request.
+          </p>
 
-      <label for="phone">Preferred Phone: *</label>
-      <input type="tel" id="phone" name="phone" maxlength="14" placeholder="(123)456-7890" oninput="formatPhone(this)" required />
+          <div class="form-row">
+            <label for="name">Full Name: *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
 
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required />
+          <div class="form-row">
+            <label for="phone">Preferred Phone: *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              maxlength="14"
+              placeholder="(123)456-7890"
+              oninput="formatPhone(this)"
+              required
+            />
+            <span class="field-hint">We’ll only call or text in the way you specify below.</span>
+          </div>
 
-      <label for="contact">Preferred Method of Contact:</label>
-      <select id="contact" name="contact">
-        <option value="Phone">Phone</option>
-        <option value="Email">Email</option>
-        <option value="Text">Text</option>
-        <option value="Other">Other</option>
-      </select>
+          <div class="form-row">
+            <label for="email">Email Address: *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-      <label for="pronouns">Pronouns:</label>
-      <select id="pronouns" name="pronouns">
-        <option value="She/Her">She/Her</option>
-        <option value="He/Him">He/Him</option>
-        <option value="They/Them">They/Them</option>
-        <option value="Other">Other</option>
-      </select>
+          <div class="form-row">
+            <label for="contact">Preferred Method of Contact:</label>
+            <select id="contact" name="contact">
+              <option value="Phone">Phone</option>
+              <option value="Email">Email</option>
+              <option value="Text">Text</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-      <label for="os">Operating System: *</label>
-      <select id="os" name="os" required>
-        <option value="">-- Select OS --</option>
-        <option value="Windows">Windows</option>
-        <option value="macOS">macOS</option>
-        <option value="Linux">Linux</option>
-        <option value="iOS">iOS</option>
-        <option value="Android">Android</option>
-        <option value="Other">Other</option>
-      </select>
+          <div class="form-row">
+            <label for="contact_time">Best Time to Reach You:</label>
+            <input
+              type="text"
+              id="contact_time"
+              name="contact_time"
+              placeholder="Example: Weekdays after 5pm CT, Saturdays, etc."
+            />
+          </div>
 
-      <label for="device">Device Type:</label>
-      <input type="text" id="device" name="device" />
+          <div class="form-row">
+            <label for="pronouns">Pronouns:</label>
+            <select id="pronouns" name="pronouns">
+              <option value="">-- Select --</option>
+              <option value="She/Her">She/Her</option>
+              <option value="He/Him">He/Him</option>
+              <option value="They/Them">They/Them</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-      <label for="service">Service Needed:</label>
-      <select id="service" name="service">
-        <option value="Firewall Setup & Support">Firewall Setup & Support</option>
-        <option value="Encryption Guidance">Encryption Guidance</option>
-        <option value="Backup Planning">Backup Planning</option>
-        <option value="Monitoring & Alerts">Monitoring & Alerts</option>
-        <option value="Incident Response Sheet">Incident Response Sheet</option>
-        <option value="Custom Gaming System Build">Custom Gaming System Build</option>
-        <option value="New Computer Setup">New Computer Setup</option>
-        <option value="Smart Home Device Setup">Smart Home Device Setup</option>
-        <option value="Home Network Setup">Home Network Setup</option>
-        <option value="Software Diagnosis & Repair">Software Diagnosis & Repair</option>
-        <option value="Hardware Diagnosis & Repair">Hardware Diagnosis & Repair</option>
-        <option value="General Tech Support">General Tech Support</option>
-        <option value="Other">Other</option>
-      </select>
+          <div class="form-row">
+            <label for="referral">How did you hear about Huffle’s IT Services?</label>
+            <input
+              type="text"
+              id="referral"
+              name="referral"
+              placeholder="Friend, social media, search, referral, etc."
+            />
+          </div>
+        </div>
 
-      <label for="message">Additional Notes:</label>
-      <textarea id="message" name="message" rows="5"></textarea>
+        <!-- =========================
+             SECTION: Tech Details
+        ========================== -->
+        <div class="form-section">
+          <h2>Device & Tech Details</h2>
+          <p class="section-hint">
+            This helps us prepare before we reach out so you’re not repeating yourself.
+          </p>
 
-      <!-- 🔹 Consent Block -->
-      <div class="consent-block">
-        <label>
-          <input type="checkbox" id="consent" name="consent" required />
-          I consent to Huffle’s IT Services reviewing this information to provide support.
-        </label>
-        <p><strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless caused by proven negligence.</p>
-      </div>
+          <div class="form-row">
+            <label for="os">Operating System: *</label>
+            <select id="os" name="os" required>
+              <option value="">-- Select OS --</option>
+              <option value="Windows">Windows</option>
+              <option value="macOS">macOS</option>
+              <option value="Linux">Linux</option>
+              <option value="iOS">iOS</option>
+              <option value="Android">Android</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-      <!-- 🔹 Submit Button -->
-      <button type="submit">Submit Intake</button>
-    </form>
+          <div class="form-row">
+            <label for="device">Device Type:</label>
+            <input
+              type="text"
+              id="device"
+              name="device"
+              placeholder="Example: Gaming desktop, work laptop, home server, phone, tablet"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="service">Service Needed:</label>
+            <select id="service" name="service">
+              <option value="Firewall Setup & Support">Firewall Setup & Support</option>
+              <option value="Encryption Guidance">Encryption Guidance</option>
+              <option value="Backup Planning">Backup Planning</option>
+              <option value="Monitoring & Alerts">Monitoring & Alerts</option>
+              <option value="Incident Response Sheet">Incident Response Sheet</option>
+              <option value="Custom Gaming System Build">Custom Gaming System Build</option>
+              <option value="New Computer Setup">New Computer Setup</option>
+              <option value="Smart Home Device Setup">Smart Home Device Setup</option>
+              <option value="Home Network Setup">Home Network Setup</option>
+              <option value="Software Diagnosis & Repair">Software Diagnosis & Repair</option>
+              <option value="Hardware Diagnosis & Repair">Hardware Diagnosis & Repair</option>
+              <option value="General Tech Support">General Tech Support</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="urgency">How urgent does this feel for you?</label>
+            <select id="urgency" name="urgency">
+              <option value="">-- Select --</option>
+              <option value="Calm — whenever you can">Calm — whenever you can</option>
+              <option value="Soon — this is stressing me out">Soon — this is stressing me out</option>
+              <option value="Urgent — blocking work or safety">Urgent — blocking work or safety</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Additional Notes:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Anything you’ve already tried, how the issue started, screenshots you can reference, or what “fixed” would feel like for you."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- =========================
+             SECTION: Comfort & Access
+        ========================== -->
+        <div class="form-section">
+          <h2>Comfort & Accessibility Preferences</h2>
+          <p class="section-hint">
+            Optional, but very welcome. If certain approaches, tones, or tools help you feel safer,
+            tell us here so we can adapt.
+          </p>
+
+          <div class="form-row">
+            <label for="access">Comfort / Accessibility Needs:</label>
+            <textarea
+              id="access"
+              name="access"
+              rows="4"
+              placeholder="Example: I need slower pacing, written steps instead of calls, no surprise phone calls, sensory triggers, etc."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- =========================
+             SECTION: Consent
+        ========================== -->
+        <div class="consent-block">
+          <label>
+            <input type="checkbox" id="consent" name="consent" required />
+            I consent to Huffle’s IT Services reviewing this information to provide support.
+          </label>
+          <p>
+            <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery
+            cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless
+            caused by proven negligence.
+          </p>
+        </div>
+
+        <!-- 🔹 Submit Button -->
+        <button type="submit">Submit Intake</button>
+      </form>
+    </div>
   </section>
 
   <!-- 🔷 Footer -->
