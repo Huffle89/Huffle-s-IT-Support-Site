@@ -32,7 +32,7 @@
     }
 
     .form-section {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
     .form-section h2 {
@@ -101,6 +101,12 @@
 
     .consent-block p {
       margin: 0.5rem 0;
+    }
+
+    .no-password-note {
+      font-size: 0.9rem;
+      color: #b00020;
+      margin-top: 0.5rem;
     }
 
     @media (max-width: 600px) {
@@ -282,6 +288,32 @@
           </div>
 
           <div class="form-row">
+            <label for="issue_category">Issue Category:</label>
+            <select id="issue_category" name="issue_category">
+              <option value="">-- Select --</option>
+              <option value="Performance / Slow system">Performance / Slow system</option>
+              <option value="Network / Internet issues">Network / Internet issues</option>
+              <option value="Malware / Security concern">Malware / Security concern</option>
+              <option value="Data loss / Corruption">Data loss / Corruption</option>
+              <option value="Hardware problem">Hardware problem</option>
+              <option value="Setup / Migration">Setup / Migration</option>
+              <option value="Accessibility / Usability">Accessibility / Usability</option>
+              <option value="Other / Not sure">Other / Not sure</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="scope">Scope of the Issue:</label>
+            <select id="scope" name="scope">
+              <option value="">-- Select --</option>
+              <option value="One device">One device</option>
+              <option value="A few devices">A few devices</option>
+              <option value="Whole home network">Whole home network</option>
+              <option value="Small business environment">Small business environment</option>
+            </select>
+          </div>
+
+          <div class="form-row">
             <label for="urgency">How urgent does this feel for you?</label>
             <select id="urgency" name="urgency">
               <option value="">-- Select --</option>
@@ -297,8 +329,113 @@
               id="message"
               name="message"
               rows="5"
-              placeholder="Anything you’ve already tried, how the issue started, screenshots you can reference, or what “fixed” would feel like for you."
+              placeholder="Anything you’ve already tried, how the issue started, error messages, or what “fixed” would feel like for you."
             ></textarea>
+          </div>
+        </div>
+
+        <!-- =========================
+             SECTION: Current Setup Snapshot
+        ========================== -->
+        <div class="form-section">
+          <h2>Current Setup Snapshot</h2>
+          <p class="section-hint">
+            Optional, but very helpful. This gives us a quick picture of your environment.
+          </p>
+
+          <div class="form-row">
+            <label for="environment_type">Environment Type:</label>
+            <select id="environment_type" name="environment_type">
+              <option value="">-- Select --</option>
+              <option value="Home / Personal">Home / Personal</option>
+              <option value="Home Office">Home Office</option>
+              <option value="Small Business">Small Business</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="business_name">Business Name (if applicable):</label>
+            <input type="text" id="business_name" name="business_name" />
+          </div>
+
+          <div class="form-row">
+            <label for="isp">Internet Provider (ISP):</label>
+            <input
+              type="text"
+              id="isp"
+              name="isp"
+              placeholder="Example: Spectrum, Xfinity, AT&T, etc."
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="router">Router / Modem Brand & Model:</label>
+            <input
+              type="text"
+              id="router"
+              name="router"
+              placeholder="Example: Netgear Nighthawk, ISP-provided modem/router, etc."
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="security_software">Security Software in Use:</label>
+            <input
+              type="text"
+              id="security_software"
+              name="security_software"
+              placeholder="Built-in only, Windows Defender, Bitdefender, etc."
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="backup_method">Do you currently have backups?</label>
+            <textarea
+              id="backup_method"
+              name="backup_method"
+              rows="3"
+              placeholder="Example: External drive once a month, cloud backup, no backups yet, not sure."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- =========================
+             SECTION: Data & Risk Priorities
+        ========================== -->
+        <div class="form-section">
+          <h2>Data & Risk Priorities</h2>
+          <p class="section-hint">
+            Help us understand what’s most important to protect and what would be most painful to lose.
+          </p>
+
+          <div class="form-row">
+            <label for="critical_data">What data is most important to you?</label>
+            <textarea
+              id="critical_data"
+              name="critical_data"
+              rows="3"
+              placeholder="Example: Family photos, work documents, school projects, client data, financial records, etc."
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="risk_tolerance">How cautious do you prefer to be?</label>
+            <select id="risk_tolerance" name="risk_tolerance">
+              <option value="">-- Select --</option>
+              <option value="Very cautious — safety over convenience">
+                Very cautious — safety over convenience
+              </option>
+              <option value="Balanced — some convenience, some safety">
+                Balanced — some convenience, some safety
+              </option>
+              <option value="Convenience-focused — minimal friction">
+                Convenience-focused — minimal friction
+              </option>
+              <option value="Not sure — please recommend">
+                Not sure — please recommend
+              </option>
+            </select>
           </div>
         </div>
 
@@ -321,6 +458,39 @@
               placeholder="Example: I need slower pacing, written steps instead of calls, no surprise phone calls, sensory triggers, etc."
             ></textarea>
           </div>
+
+          <div class="form-row">
+            <label for="consult_format">Preferred Consultation Format:</label>
+            <select id="consult_format" name="consult_format">
+              <option value="">-- Select --</option>
+              <option value="Phone call">Phone call</option>
+              <option value="Video call (if available)">Video call (if available)</option>
+              <option value="Text / email focused">Text / email focused</option>
+              <option value="Remote support session (screen share)">Remote support session (screen share)</option>
+              <option value="Not sure — please recommend">Not sure — please recommend</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="remote_access_ok">Are you comfortable with remote access tools if needed?</label>
+            <select id="remote_access_ok" name="remote_access_ok">
+              <option value="">-- Select --</option>
+              <option value="Yes, with explanation and consent each time">
+                Yes, with explanation and consent each time
+              </option>
+              <option value="Maybe — I’d like it explained first">
+                Maybe — I’d like it explained first
+              </option>
+              <option value="No — I prefer only guided steps">
+                No — I prefer only guided steps
+              </option>
+            </select>
+          </div>
+
+          <p class="no-password-note">
+            ⚠️ Please do <strong>not</strong> include any passwords or full login credentials in this form.
+            If temporary access is needed, we’ll arrange a safe method during the consultation.
+          </p>
         </div>
 
         <!-- =========================
