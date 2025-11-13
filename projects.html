@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 🔹 Meta & Title -->
+  <!-- Meta and Title -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Huffle's IT Services</title>
+  <title>Projects - Huffle's IT Services</title>
 
-  <!-- 🔹 Stylesheets (all live in /assets on main) -->
+  <!-- Stylesheets for public site pages -->
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="assets/nav.css" />
   <link rel="stylesheet" href="assets/branding-subpage.css" />
@@ -14,62 +14,194 @@
 </head>
 
 <body>
-  <!-- ================================
-       NAVIGATION BAR
-       ================================ -->
+  <!-- Navigation Bar -->
   <nav id="menu">
     <div class="nav-group main-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="intake.html">Intake Form</a>
       <a href="resources.html">IT Resources</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="about.html">About</a>
       <a href="browse.html">Browse</a>
     </div>
   </nav>
 
-  <!-- ================================
-       LOGO HEADER
-       (logo.png, background handled by CSS)
-       ================================ -->
+  <!-- Logo Header -->
   <header class="logo-header">
     <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
   </header>
 
-  <!-- ================================
-       PROJECTS CONTENT
-       ================================ -->
+  <!-- Main Projects Content -->
   <section class="content-block" id="projects">
-    <h1>Projects & Case Studies</h1>
+    <h1>Projects and Portfolio</h1>
     <p>
-      This page will showcase selected builds, fixes, and comfort-coded solutions completed by
-      Huffle’s IT Services. For now, it’s wired into the site’s styling so it matches the look
-      of the other pages.
+      This page collects open Linux projects and real world work done through
+      <strong>Huffle's IT Services</strong>. It serves both as a portfolio for clients
+      and a home for open resources built on different Linux flavors.
+    </p>
+    <p>
+      Over time, entries here can link out to repositories, scripts, documentation
+      and, later, to a private dashboard view for active clients.
     </p>
 
-    <!-- 🔹 Placeholder section you can expand later -->
-    <h2>Coming Soon</h2>
+    <!-- Open Linux Projects Section -->
+    <h2>Open Linux Projects by Flavor</h2>
     <p>
-      Detailed write-ups of real projects will live here, including:
+      These projects are designed for specific Linux flavors or families. Each entry lists
+      the target distro, what problem it solves and what tools or languages were used.
     </p>
-    <ul>
-      <li>Secure home network hardening and Wi-Fi reconfiguration</li>
-      <li>Gaming and streaming system optimization and cleanup</li>
-      <li>Small business starter stacks (domain, email, basic site, backups)</li>
-    </ul>
 
+    <div class="project-list">
+      <!-- Bazzite / Fedora family -->
+      <article class="project-item">
+        <h3>Bazzite and Fedora Family</h3>
+        <p class="project-meta">
+          <strong>Target flavors:</strong> Bazzite, Fedora and compatible spins
+        </p>
+        <ul>
+          <li>
+            <strong>Example:</strong> Gaming profile setup and maintenance script  
+            <br />
+            Automates installation of core gaming tools, drivers and QoL utilities on Bazzite or Fedora,
+            with sensible defaults for updates and rollback awareness.
+          </li>
+          <li>
+            <strong>Tech used:</strong> Bash scripting, dnf, flatpak, basic systemd integration
+          </li>
+        </ul>
+      </article>
+
+      <!-- Debian / Ubuntu family -->
+      <article class="project-item">
+        <h3>Debian and Ubuntu Family</h3>
+        <p class="project-meta">
+          <strong>Target flavors:</strong> Ubuntu, Linux Mint, Debian based systems
+        </p>
+        <ul>
+          <li>
+            <strong>Example:</strong> Home workstation hardening preset  
+            <br />
+            A repeatable checklist and scripts that lock down a personal desktop, set up backups,
+            and add basic monitoring with clear documentation for non technical users.
+          </li>
+          <li>
+            <strong>Tech used:</strong> Bash, ufw, unattended upgrades, rsync or restic
+          </li>
+        </ul>
+      </article>
+
+      <!-- Arch / rolling family -->
+      <article class="project-item">
+        <h3>Arch and Rolling Based Systems</h3>
+        <p class="project-meta">
+          <strong>Target flavors:</strong> Arch, Manjaro and similar rolling releases
+        </p>
+        <ul>
+          <li>
+            <strong>Example:</strong> Comfort coded base install profile  
+            <br />
+            A documented install flow that builds a stable daily driver on top of Arch or a
+            derivative, with opinionated defaults that favor clarity and recovery.
+          </li>
+          <li>
+            <strong>Tech used:</strong> pacman, AUR helpers, shell scripts, documentation overlays
+          </li>
+        </ul>
+      </article>
+
+      <!-- Placeholder template for future specific projects -->
+      <!--
+      <article class="project-item">
+        <h3>[Flavor or project name]</h3>
+        <p class="project-meta">
+          <strong>Target flavors:</strong> list here
+        </p>
+        <ul>
+          <li>
+            <strong>Project:</strong> Short description of what it does and who it is for.
+          </li>
+          <li>
+            <strong>Tech used:</strong> Bash, Python, Ansible, etc.
+          </li>
+          <li>
+            <strong>Links:</strong> Git repo or docs (add when ready)
+          </li>
+        </ul>
+      </article>
+      -->
+    </div>
+
+    <!-- Client and Company Work Section -->
+    <h2>Client and Company Portfolio</h2>
     <p>
-      As we build out the client dashboard, this page can be linked to show public-safe versions
-      of completed work and reference builds.
+      These examples describe the kind of work done through Huffle's IT Services. Client names
+      are not listed, only the type of client, the problem and the shape of the solution.
+    </p>
+
+    <div class="project-list">
+      <article class="project-item">
+        <h3>Secure Home Network for a Veteran Household</h3>
+        <p class="project-meta">
+          <strong>Client type:</strong> Veteran family, mixed device environment  
+          <br />
+          <strong>Focus:</strong> Security, clarity and low maintenance
+        </p>
+        <p>
+          Audited an existing home network, replaced default router settings, set up a safer
+          Wi Fi layout and separated smart devices from work and personal machines. Documented
+          the setup in plain language so the household could maintain it without stress.
+        </p>
+        <p>
+          <strong>Skills applied:</strong> CompTIA Network+, Security+, CySA+ mindset for risk reduction
+        </p>
+      </article>
+
+      <article class="project-item">
+        <h3>Gaming and Streaming Desktop Refresh</h3>
+        <p class="project-meta">
+          <strong>Client type:</strong> Neurodivergent gamer  
+          <br />
+          <strong>Focus:</strong> Performance, predictability and reduced overwhelm
+        </p>
+        <p>
+          Cleaned and optimized a gaming system, configured launchers and streaming tools,
+          removed unnecessary startup clutter and set up simple restore points so the system
+          could be returned to a known good state after changes.
+        </p>
+        <p>
+          <strong>Skills applied:</strong> CompTIA A+, hardware diagnosis, OS tuning and UX awareness
+        </p>
+      </article>
+
+      <article class="project-item">
+        <h3>Small Business Tech Starter Stack</h3>
+        <p class="project-meta">
+          <strong>Client type:</strong> Local small business  
+          <br />
+          <strong>Focus:</strong> Reliable basics and growth room
+        </p>
+        <p>
+          Helped set up a domain, basic email, a simple web presence and a practical backup plan.
+          Outlined future steps for when the business grows, such as shared storage, access controls
+          and more advanced monitoring.
+        </p>
+        <p>
+          <strong>Skills applied:</strong> A+, Network+, Security+, small business planning
+        </p>
+      </article>
+    </div>
+
+    <!-- Call To Action -->
+    <p>
+      Want something similar for your own system or business?  
+      Head over to the <a href="intake.html">Client Intake Form</a> and tell Huffle's what you are working with.
     </p>
   </section>
 
-  <!-- ================================
-       FOOTER
-       ================================ -->
+  <!-- Footer -->
   <footer>
-    © 2025 Huffle’s IT Services LLC — Comfort-Coded & Veteran-Owned
+    © 2025 Huffle's IT Services LLC - Comfort Coded and Veteran Owned
   </footer>
 </body>
 </html>
