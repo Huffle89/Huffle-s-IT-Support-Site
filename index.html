@@ -6,41 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to Huffle's IT Services</title>
 
-  <!-- === Linked Stylesheets (Modular & Comfort-Coded) === -->
+  <!-- === Linked Stylesheets === -->
   <link rel="stylesheet" href="assets/style.css" />
-  <link rel="stylesheet" href="assets/branding.css" />   <!-- ✅ This one controls backgrounds + glow -->
+  <link rel="stylesheet" href="assets/branding.css" />
   <link rel="stylesheet" href="assets/mobile.css" />
   <link rel="stylesheet" href="assets/nav.css" />
   <link rel="stylesheet" href="assets/forms.css" />
 </head>
+
 <body>
   <!-- === Navigation Bar === -->
   <nav id="menu">
-  <div class="nav-group main-links">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="intake.html">Intake Form</a>
-    <a href="resources.html">IT Resources</a>
-    <a href="about.html">About</a>
-    <a href="browse.html">Browse</a>
-  </div>
-</nav>
-  <!-- === Logo Section === -->
-  <div class="logo">
-    <img src="assets/logo.png" alt="Huffle's IT Services Logo" />
-  </div>
+    <div class="nav-group main-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="intake.html">Intake Form</a>
+      <a href="resources.html">IT Resources</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="browse.html">Browse</a>
+    </div>
+  </nav>
 
-  <!-- === Main Content Container === -->
-  <div class="container">
-    <h1>Welcome to Huffle's IT Services</h1>
-    <p>
-      Smart technology with a soft touch.
-Because comfort and capability should go hand in hand.
-    </p>
-  </div>
+  <!-- === HERO SECTION === -->
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="hero-logo" />
 
-  <!-- === Footer === -->
+      <h1 class="hero-title">Smart technology with a soft touch.</h1>
+      <p class="hero-subtitle">
+        Comfort-coded support for homes, veterans, neurodivergent users, and small businesses.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="intake.html" class="btn primary">Request Support</a>
+        <a href="services.html" class="btn secondary">Browse Services</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- === MINI FEATURES SECTION (Optional but 🔥) === -->
+  <section class="content-block homepage-highlights">
+    <h2>Why Huffle's?</h2>
+    <ul>
+      <li>🛡 Veteran-Owned & Security Certified (A+, Net+, Sec+, CySA+)</li>
+      <li>💙 Designed for real people — neurodivergent, anxious, overwhelmed, or brand new to tech</li>
+      <li>🏠 Remote-first support with porch-side visits (local only)</li>
+      <li>🔧 Everyday fixes to advanced home labs & gaming setups</li>
+    </ul>
+  </section>
+
+  <!-- === FOOTER === -->
   <footer>
     &copy; 2025 Huffle's IT Services LLC — Comfort-Coded & Veteran-Owned
   </footer>
 </body>
+</html>
