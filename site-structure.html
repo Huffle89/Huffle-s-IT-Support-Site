@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 🔹 Meta & Title -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Site Structure — Huffle’s IT Services</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- 🔹 Styles (you can point this at your main site styles) -->
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <main>
+  <main class="content-block">
     <h1>📁 Site Structure</h1>
-    <p>This page outlines the full directory layout of <strong>Huffle’s IT Services LLC</strong>, including overlays, assets, and key HTML pages.</p>
+    <p>
+      This page outlines the current directory layout of
+      <strong>Huffle’s IT Services LLC</strong>, including main pages, assets,
+      and planned areas like the future client dashboard.
+    </p>
 
     <div class="readme-block">
-      <pre><code>
-HIT-IT-Support-Site/
-├── index.html                ← Main landing page
-├── Reference.html
-├── overlays/                 ← Service pages (Firewall, Encryption, etc.)
-│   ├── firewall.html
-│   ├── encryption.html
-│   ├── backup.html
-│   ├── monitoring.html
-│   └── incident-response.html ← Quick-access command sheet
-├── browse.html               ← Service page
-├── mobile.html               ← coming soon
-├── assets/
-│   ├── logo.png
-│   ├── background-circuitry.png
-│   └── styles.css
-      </code></pre>
+      <pre><code>HIT-IT-Support-Site/
+├── index.html                  ← Main landing page (Smart technology with a soft touch)
+├── services.html               ← Services overview (comfort-coded IT offerings)
+├── intake.html                 ← Client Intake Form (FormSubmit-powered)
+├── resources.html              ← IT Resources & comfort tools
+├── about.html                  ← About Huffle’s IT Services
+├── browse.html                 ← Browse Our Services summary
+├── projects.html               ← Projects / portfolio (for showcase & case studies)
+├── thank-you.html              ← Intake submission confirmation page
+├── site-structure.html         ← This page (site map / internal reference)
+
+├── commands/                   ← Command reference overlays
+│   └── Commands.html           ← Windows / Linux / PowerShell command reference
+
+├── assets/                     ← Shared branding & styling
+│   ├── logo.png                ← Huffle’s IT Services logo (black background wolf mark)
+│   ├── background-circuitry.png← Circuit board background image
+│   ├── style.css               ← Base site styling
+│   ├── branding.css            ← Landing-page & global branding styles
+│   ├── branding-subpage.css    ← Subpage branding (content blocks, headers)
+│   ├── nav.css                 ← Navigation bar & menu styling
+│   ├── mobile.css              ← Mobile-specific layout adjustments
+│   ├── forms.css               ← Form and input styling
+│   └── other-media…            ← Any additional images/fonts/icons
+
+└── dashboard/                  ← (Planned) Client dashboard integration
+    └── index.html              ← Client dashboard home (to be implemented)</code></pre>
     </div>
 
-    <p>🔗 <a href="https://www.hufflesitservices.online/index.html" target="_blank">Return to Main Site</a></p>
+    <p>
+      🔧 The <strong>dashboard/</strong> section is reserved for future expansion. This page
+      can be linked from the dashboard as an internal “Site Map” or developer reference.
+    </p>
+
+    <p>
+      🔗 <a href="index.html">Return to Main Site</a>
+    </p>
   </main>
 </body>
 </html>
