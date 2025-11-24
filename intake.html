@@ -141,8 +141,9 @@
     <div class="intake-wrapper">
       <h1>Client Intake Form</h1>
       <p class="intake-intro">
-        Let us know what you need. We’ll respond with comfort-first support and a clear plan,
-        tailored to both your tech and your nervous system.
+        This form helps us understand your situation so we can prepare a quote and a clear plan.
+        You are not committing to paid work by submitting it. We do not collect payment information
+        or passwords here, and short, simple answers or bullet points are perfectly fine.
       </p>
 
       <!-- 🔷 FormSubmit Integration -->
@@ -236,7 +237,7 @@
              SECTION: Device & Tech Details
         ========================== -->
         <div class="form-section">
-          <h2>Device & Tech Details</h2>
+          <h2>Device &amp; Tech Details</h2>
           <p class="section-hint">
             This helps us prepare before we reach out so you’re not repeating yourself.
           </p>
@@ -267,19 +268,20 @@
           <div class="form-row">
             <label for="service">Service Needed:</label>
             <select id="service" name="service">
-              <option value="Firewall Setup & Support">Firewall Setup & Support</option>
+              <option value="">-- Select (if you know) --</option>
+              <option value="Firewall Setup & Support">Firewall Setup &amp; Support</option>
               <option value="Encryption Guidance">Encryption Guidance</option>
               <option value="Backup Planning">Backup Planning</option>
-              <option value="Monitoring & Alerts">Monitoring & Alerts</option>
+              <option value="Monitoring & Alerts">Monitoring &amp; Alerts</option>
               <option value="Incident Response Sheet">Incident Response Sheet</option>
               <option value="Custom Gaming System Build">Custom Gaming System Build</option>
               <option value="New Computer Setup">New Computer Setup</option>
               <option value="Smart Home Device Setup">Smart Home Device Setup</option>
               <option value="Home Network Setup">Home Network Setup</option>
-              <option value="Software Diagnosis & Repair">Software Diagnosis & Repair</option>
-              <option value="Hardware Diagnosis & Repair">Hardware Diagnosis & Repair</option>
+              <option value="Software Diagnosis & Repair">Software Diagnosis &amp; Repair</option>
+              <option value="Hardware Diagnosis & Repair">Hardware Diagnosis &amp; Repair</option>
               <option value="General Tech Support">General Tech Support</option>
-              <option value="Other">Other</option>
+              <option value="Other">Other / Not sure</option>
             </select>
           </div>
 
@@ -310,7 +312,7 @@
           </div>
 
           <div class="form-row">
-            <label for="urgency">How urgent does this feel for you?</label>
+            <label for="urgency">How urgent is this for you?</label>
             <select id="urgency" name="urgency">
               <option value="">-- Select --</option>
               <option value="Calm — whenever you can">Calm — whenever you can</option>
@@ -325,7 +327,7 @@
               id="message"
               name="message"
               rows="5"
-              placeholder="Anything you’ve already tried, how the issue started, error messages, or what “fixed” would feel like for you."
+              placeholder="Anything you’ve already tried, how the issue started, error messages, or what “fixed” would feel like for you. Short notes or bullet points are fine."
             ></textarea>
           </div>
         </div>
@@ -336,7 +338,7 @@
         <div class="form-section">
           <h2>Current Setup Snapshot</h2>
           <p class="section-hint">
-            Optional, but very helpful. This gives us a quick picture of your environment.
+            Optional, but helpful. This gives us a quick picture of your environment. You can skip this if it feels like too much.
           </p>
 
           <div class="form-row">
@@ -361,12 +363,12 @@
               type="text"
               id="isp"
               name="isp"
-              placeholder="Example: Spectrum, Xfinity, AT&T, etc."
+              placeholder="Example: Spectrum, Xfinity, AT&amp;T, etc."
             />
           </div>
 
           <div class="form-row">
-            <label for="router">Router / Modem Brand & Model:</label>
+            <label for="router">Router / Modem Brand &amp; Model:</label>
             <input
               type="text"
               id="router"
@@ -397,22 +399,26 @@
         </div>
 
         <!-- =========================
-             SECTION: Veteran Status & Discount
+             SECTION: Military & First Responder Discount (Optional)
         ========================== -->
         <div class="form-section">
-          <h2>Veteran Status & Discounts</h2>
+          <h2>Military &amp; First Responder Discount</h2>
           <p class="section-hint">
-            Huffle’s IT Services is veteran-owned. Verified U.S. military veterans may qualify for
-            discounted services.
+            Optional. Huffle’s IT Services is veteran-owned. Verified U.S. Military (active or veteran)
+            and verified first responders (police, fire, EMS) may qualify for discounted services.
+            You may skip this question if you prefer.
           </p>
 
           <div class="form-row">
-            <label for="veteran_status">Are you a U.S. military veteran?</label>
-            <select id="veteran_status" name="veteran_status">
-              <option value="">-- Select --</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              <option value="Prefer not to say">Prefer not to say</option>
+            <label for="discount_status">
+              Are you U.S. Military or a first responder? <span style="font-weight: normal;">(Optional)</span>
+            </label>
+            <select id="discount_status" name="discount_status">
+              <option value="">-- Select (or skip) --</option>
+              <option value="us_military">U.S. Military (active or veteran)</option>
+              <option value="first_responder">First responder (police, fire, EMS)</option>
+              <option value="no">No</option>
+              <option value="prefer_not_say">Prefer not to say</option>
             </select>
           </div>
 
@@ -427,10 +433,9 @@
           </div>
 
           <p class="no-password-note">
-            ⚠️ Veteran discounts are available, but <strong>verification will be required before services
-            are billed and paid for</strong> (e.g., VA card, veteran-designated DL, or other official proof).  
-            Please do <strong>not</strong> upload or email ID photos or documents through this form —
-            we’ll arrange a safe way to verify during scheduling or consultation.
+            ⚠️ Discounts require verification (for example: VA card, veteran-designated driver’s license,
+            or other official proof). Please do <strong>not</strong> upload or email ID photos or documents
+            through this form — we’ll arrange a safe way to verify during scheduling or consultation.
           </p>
         </div>
 
@@ -438,9 +443,10 @@
              SECTION: Data & Risk Priorities
         ========================== -->
         <div class="form-section">
-          <h2>Data & Risk Priorities</h2>
+          <h2>Data &amp; Risk Priorities</h2>
           <p class="section-hint">
-            Help us understand what’s most important to protect and what would be most painful to lose.
+            This helps us understand what matters most so we can protect the right things first.
+            Short answers or bullet points are fine.
           </p>
 
           <div class="form-row">
@@ -477,10 +483,10 @@
              SECTION: Comfort & Accessibility
         ========================== -->
         <div class="form-section">
-          <h2>Comfort & Accessibility Preferences</h2>
+          <h2>Comfort &amp; Accessibility Preferences</h2>
           <p class="section-hint">
-            Optional, but very welcome. If certain approaches, tones, or tools help you feel safer,
-            tell us here so we can adapt.
+            Completely optional. If certain approaches, tones, or tools help you feel safer or less overwhelmed,
+            you can tell us here. You can also leave this blank.
           </p>
 
           <div class="form-row">
@@ -533,7 +539,7 @@
         <div class="consent-block">
           <label>
             <input type="checkbox" id="consent" name="consent" required />
-            I consent to Huffle’s IT Services reviewing this information to provide support.
+            I consent to Huffle’s IT Services reviewing this information to provide support and a quote.
           </label>
           <p>
             <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery
@@ -550,7 +556,7 @@
 
   <!-- 🔷 Footer -->
   <footer>
-    ©2025 Huffle’s IT Services LLC — Comfort-Guided & Veteran-Owned
+    ©2025 Huffle’s IT Services LLC — Comfort-Guided &amp; Veteran-Owned
   </footer>
 
   <!-- 🔷 Form Validation & Phone Formatting -->
