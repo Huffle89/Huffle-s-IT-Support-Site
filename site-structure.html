@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 🔹 Meta & Title -->
+  <!-- ==========================
+       META & PAGE TITLE
+  =========================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Site Structure — Huffle’s IT Services</title>
   <meta name="robots" content="noindex, nofollow" />
 
-  <!-- 🔹 Styles -->
+  <!-- ==========================
+       SITE STYLESHEETS
+  =========================== -->
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="assets/branding-subpage.css" />
   <link rel="stylesheet" href="assets/nav.css" />
   <link rel="stylesheet" href="assets/mobile.css" />
 
-  <!-- 🔹 Internal page styling -->
+  <!-- ==========================
+       INTERNAL PAGE STYLES
+  =========================== -->
   <style>
     .internal-banner {
-      background: #222;
+      background: #1f2937;
       color: #f5f5f5;
-      padding: 0.75rem 1rem;
-      font-size: 0.9rem;
-      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      border-radius: 8px;
       margin-bottom: 1rem;
+      border-left: 4px solid #0f52ba;
     }
 
     .internal-banner strong {
-      color: #ffd54f;
+      color: #cfe3ff;
     }
 
     .readme-block {
       background: #0f172a;
       color: #e5e7eb;
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 1rem;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
         "Courier New", monospace;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       margin: 1rem 0 2rem 0;
       overflow-x: auto;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
     }
 
     .readme-block code {
@@ -46,12 +54,13 @@
 
     .tree-container {
       margin-top: 2rem;
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 1rem 1.25rem;
       background: #0b1120;
       color: #e5e7eb;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
         "Courier New", monospace;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
     }
 
     .tree-header {
@@ -65,21 +74,25 @@
     .tree-header h2 {
       margin: 0;
       font-size: 1.1rem;
+      color: #ffffff;
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
     .tree-search {
       margin-left: auto;
-      min-width: 200px;
+      min-width: 220px;
     }
 
     .tree-search input {
       width: 100%;
-      padding: 0.35rem 0.5rem;
-      border-radius: 4px;
+      padding: 0.45rem 0.6rem;
+      border-radius: 6px;
       border: 1px solid #4b5563;
       background: #020617;
       color: #e5e7eb;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
+      box-sizing: border-box;
     }
 
     .tree-search input:focus {
@@ -92,20 +105,21 @@
       list-style: none;
       padding-left: 0;
       margin: 0;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
     .tree li {
       position: relative;
       padding-left: 1.2rem;
-      margin: 0.1rem 0;
+      margin: 0.12rem 0;
+      line-height: 1.5;
     }
 
     .tree li::before {
       content: "";
       position: absolute;
       left: 0.35rem;
-      top: 0.75rem;
+      top: 0.8rem;
       width: 0.5rem;
       height: 1px;
       background: #374151;
@@ -158,6 +172,10 @@
       padding: 0 2px;
     }
 
+    .return-link {
+      margin-top: 1.5rem;
+    }
+
     @media (max-width: 640px) {
       .tree-header {
         flex-direction: column;
@@ -173,67 +191,63 @@
 </head>
 
 <body>
-  <!-- ===================================
-       LOGO HEADER (reuse site branding)
-       =================================== -->
+  <!-- ==========================
+       LOGO HEADER
+  =========================== -->
   <header class="logo-header">
     <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
   </header>
 
-  <!-- ===================================
+  <!-- ==========================
        MAIN CONTENT
-       =================================== -->
+  =========================== -->
   <main class="content-block">
     <div class="internal-banner">
-      <strong>Internal Reference:</strong> This page is meant for you (the owner/dev) and
-      future dashboard tools. It’s not linked in public navigation and is marked
-      <code>noindex</code> for search engines.
+      <strong>Internal Reference:</strong> This page is intended as a private structure map for site upkeep, planning, and development. It is not part of the public navigation and is marked <code>noindex</code> for search engines.
     </div>
 
-    <h1>📁 Full Site Structure</h1>
+    <h1>Site Structure</h1>
     <p>
-      This is the current directory layout for
-      <strong>Huffle’s IT Services LLC</strong>, including public pages, assets, command
-      references, and the planned dashboard area. Use this as a quick reference while
-      developing, updating, or wiring in automations.
+      This page documents the current file structure for the Huffle’s IT Services website.
+      It can be used as a quick internal reference when updating pages, styling, assets,
+      and future software-related additions.
     </p>
 
-    <!-- ================================
-         ASCII TREE (GitHub-style view)
-         ================================ -->
+    <!-- ==========================
+         ASCII TREE VIEW
+    =========================== -->
     <div class="readme-block">
-      <code>HIT-IT-Support-Site/
-├── index.html                  ← Landing page (Smart technology with a soft touch)
-├── services.html               ← Full service list
-├── intake.html                 ← Client Intake Form
-├── resources.html              ← IT Resources & comfort tools
-├── about.html                  ← Company background & certifications
-├── browse.html                 ← Service browsing hub
-├── projects.html               ← Showcased work / portfolio cases
-├── thank-you.html              ← Intake submission confirmation
-├── site-structure.html         ← This file (site map / internal reference)
+      <code>/
+├── CNAME
+├── LICENSE
+├── README.md
+├── about.html
+├── browse.html
+├── index.html
+├── intake.html
+├── projects.html
+├── resources.html
+├── services.html
+├── site-structure.html
+├── software.html
 
-├── commands/                   ← Command references
-│   └── Commands.html           ← Windows / Linux / PowerShell quick sheet
+├── assets/
+│   ├── background.png
+│   ├── branding-subpage.css
+│   ├── branding.css
+│   ├── circuit-pattern.png
+│   ├── logo.png
+│   ├── mobile.css
+│   ├── nav.css
+│   └── style.css
 
-├── assets/                     ← Global styling & branding
-│   ├── logo.png                ← Main brand logo (black background wolf mark)
-│   ├── background-circuitry.png← Sitewide background image
-│   ├── style.css               ← Base site layout/styles
-│   ├── branding.css            ← Branding + landing page visuals
-│   ├── branding-subpage.css    ← Subpage styles & content blocks
-│   ├── nav.css                 ← Navigation bar styling
-│   ├── mobile.css              ← Mobile corrections & responsive rules
-│   ├── forms.css               ← Form styling (inputs/buttons)
-│   └── (other media, icons…)   ← Additional static assets
-
-└── dashboard/                  ← (Planned) Client dashboard system
-    └── index.html              ← Dashboard root (to be implemented)</code>
+└── commands/
+    └── (reserved for future command documentation)</code>
     </div>
 
-    <!-- ================================
+    <!-- ==========================
          INTERACTIVE TREE VIEW
-         ================================ -->
+    =========================== -->
     <section class="tree-container">
       <div class="tree-header">
         <h2>Interactive Directory View</h2>
@@ -241,7 +255,7 @@
           <input
             type="text"
             id="treeSearch"
-            placeholder="Search files or folders (e.g., 'intake', 'dashboard', 'assets')..."
+            placeholder="Search files or folders (e.g. intake, assets, software)..."
           />
         </div>
       </div>
@@ -250,98 +264,46 @@
         <li class="folder open">
           <span class="node-label">
             <span class="chevron">▶</span>
-            📁 HIT-IT-Support-Site/
+            /
           </span>
           <ul>
-            <!-- Root files -->
-            <li class="file">
-              📄 <span class="node-text">index.html — Landing page (Smart technology with a soft touch)</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">services.html — Full service list</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">intake.html — Client Intake Form</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">resources.html — IT Resources & comfort tools</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">about.html — Company background & certifications</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">browse.html — Service browsing hub</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">projects.html — Showcased work / portfolio cases</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">thank-you.html — Intake submission confirmation</span>
-            </li>
-            <li class="file">
-              📄 <span class="node-text">site-structure.html — Site map / internal reference</span>
-            </li>
+            <li class="file"><span class="node-text">CNAME</span></li>
+            <li class="file"><span class="node-text">LICENSE</span></li>
+            <li class="file"><span class="node-text">README.md</span></li>
+            <li class="file"><span class="node-text">about.html — Company background and certifications</span></li>
+            <li class="file"><span class="node-text">browse.html — Guided support options page</span></li>
+            <li class="file"><span class="node-text">index.html — Homepage / company overview</span></li>
+            <li class="file"><span class="node-text">intake.html — Client intake form</span></li>
+            <li class="file"><span class="node-text">projects.html — Portfolio and representative project scenarios</span></li>
+            <li class="file"><span class="node-text">resources.html — Public IT resource library</span></li>
+            <li class="file"><span class="node-text">services.html — Services overview</span></li>
+            <li class="file"><span class="node-text">site-structure.html — Internal structure reference</span></li>
+            <li class="file"><span class="node-text">software.html — Software releases and downloads</span></li>
 
-            <!-- commands/ -->
             <li class="folder open">
               <span class="node-label">
                 <span class="chevron">▶</span>
-                📁 commands/
+                assets/
               </span>
               <ul>
-                <li class="file">
-                  📄 <span class="node-text">Commands.html — Windows / Linux / PowerShell quick sheet</span>
-                </li>
+                <li class="file"><span class="node-text">background.png — Main page background image</span></li>
+                <li class="file"><span class="node-text">branding-subpage.css — Shared subpage styling</span></li>
+                <li class="file"><span class="node-text">branding.css — Homepage branding and layout styling</span></li>
+                <li class="file"><span class="node-text">circuit-pattern.png — Secondary background pattern</span></li>
+                <li class="file"><span class="node-text">logo.png — Main Huffle’s IT Services logo</span></li>
+                <li class="file"><span class="node-text">mobile.css — Responsive adjustments</span></li>
+                <li class="file"><span class="node-text">nav.css — Main navigation styling</span></li>
+                <li class="file"><span class="node-text">style.css — Global base styles and utility classes</span></li>
               </ul>
             </li>
 
-            <!-- assets/ -->
             <li class="folder open">
               <span class="node-label">
                 <span class="chevron">▶</span>
-                📁 assets/
+                commands/
               </span>
               <ul>
-                <li class="file">
-                  📄 <span class="node-text">logo.png — Main brand logo (black background wolf mark)</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">background-circuitry.png — Sitewide background image</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">style.css — Base site layout/styles</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">branding.css — Branding + landing page visuals</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">branding-subpage.css — Subpage styles & content blocks</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">nav.css — Navigation bar styling</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">mobile.css — Mobile corrections & responsive rules</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">forms.css — Form styling (inputs/buttons)</span>
-                </li>
-                <li class="file">
-                  📄 <span class="node-text">(other media, icons…) — Additional static assets</span>
-                </li>
-              </ul>
-            </li>
-
-            <!-- dashboard/ -->
-            <li class="folder">
-              <span class="node-label">
-                <span class="chevron">▶</span>
-                📁 dashboard/ (planned)
-              </span>
-              <ul>
-                <li class="file">
-                  📄 <span class="node-text">index.html — Dashboard root (to be implemented)</span>
-                </li>
+                <li class="file"><span class="node-text">(reserved for future command documentation)</span></li>
               </ul>
             </li>
           </ul>
@@ -349,23 +311,22 @@
       </ul>
     </section>
 
-    <p style="margin-top: 1.5rem;">
-      🔗 <a href="index.html">Return to Main Site</a>
+    <p class="return-link">
+      <a href="index.html">Return to Main Site</a>
     </p>
   </main>
 
-  <!-- ===================================
+  <!-- ==========================
        FOOTER
-       =================================== -->
+  =========================== -->
   <footer>
-    © 2025 Huffle’s IT Services LLC — Comfort-Coded & Veteran-Owned
+    © 2025 Huffle’s IT Services LLC — Comfort-Guided, Veteran-Owned, and Disability-Aware
   </footer>
 
-  <!-- ===================================
+  <!-- ==========================
        INTERACTIVE TREE SCRIPT
-       =================================== -->
+  =========================== -->
   <script>
-    // Toggle folder open/closed on label click
     document.addEventListener("click", function (event) {
       const label = event.target.closest(".tree .folder > .node-label");
       if (!label) return;
@@ -374,7 +335,6 @@
       folder.classList.toggle("open");
     });
 
-    // Simple search/filter for tree nodes
     const searchInput = document.getElementById("treeSearch");
     const treeRoot = document.getElementById("treeRoot");
 
@@ -394,7 +354,6 @@
       clearMatches();
 
       if (!query) {
-        // If search is cleared, expand the root and keep other folders as-is
         const rootFolder = treeRoot.querySelector(".folder");
         if (rootFolder) rootFolder.classList.add("open");
         return;
@@ -402,43 +361,38 @@
 
       const q = query.toLowerCase();
 
-      // First pass: mark matches & non-matches
       items.forEach((li) => {
         const textEl = li.querySelector(".node-text") || li.querySelector(".node-label");
         if (!textEl) return;
 
-        const text = textEl.textContent.toLowerCase();
+        const original = textEl.textContent;
+        const text = original.toLowerCase();
+
         if (text.includes(q)) {
-          // Highlight match text
-          const original = textEl.textContent;
-          const index = text.toLowerCase().indexOf(q);
-          if (index >= 0) {
-            const before = original.slice(0, index);
-            const match = original.slice(index, index + q.length);
-            const after = original.slice(index + q.length);
+          const index = text.indexOf(q);
+          const before = original.slice(0, index);
+          const match = original.slice(index, index + q.length);
+          const after = original.slice(index + q.length);
 
-            const frag = document.createDocumentFragment();
-            if (before) frag.appendChild(document.createTextNode(before));
+          const frag = document.createDocumentFragment();
+          if (before) frag.appendChild(document.createTextNode(before));
 
-            const markSpan = document.createElement("span");
-            markSpan.className = "match-highlight";
-            markSpan.textContent = match;
-            frag.appendChild(markSpan);
+          const markSpan = document.createElement("span");
+          markSpan.className = "match-highlight";
+          markSpan.textContent = match;
+          frag.appendChild(markSpan);
 
-            if (after) frag.appendChild(document.createTextNode(after));
+          if (after) frag.appendChild(document.createTextNode(after));
 
-            textEl.textContent = "";
-            textEl.appendChild(frag);
-          }
-          // Keep this visible
+          textEl.textContent = "";
+          textEl.appendChild(frag);
+
           li.classList.remove("hidden-by-search");
         } else {
-          // Tentatively hide; we may unhide later if it has children that match
           li.classList.add("hidden-by-search");
         }
       });
 
-      // Second pass: ensure ancestors of matches stay visible
       items.forEach((li) => {
         if (!li.classList.contains("hidden-by-search")) {
           let parent = li.parentElement;
