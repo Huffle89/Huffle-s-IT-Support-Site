@@ -196,11 +196,6 @@ body {
 /* -------------------------------------------------------------------------- */
 /* Keeps Sapphire integrated in an intentional, professional way.             */
 /* ========================================================================== */
-/* ========================================================================== */
-/* 07. LINKS, BUTTON-LIKE ACTIONS, AND ACCENTS                                */
-/* -------------------------------------------------------------------------- */
-/* Keeps Sapphire integrated in an intentional, professional way.             */
-/* ========================================================================== */
 .container a:not(.button):not(.cta-button) {
   color: var(--color-primary-dark);
   text-decoration: none;
@@ -214,41 +209,32 @@ body {
   text-shadow: 0 0 8px rgba(15, 82, 186, 0.18);
 }
 
-.button,
-.cta-button,
 .container a.button,
-.container a.cta-button {
+.container a.cta-button,
+.button,
+.cta-button {
   display: inline-block;
   margin-top: 0.75rem;
   padding: 0.8rem 1.25rem;
   border-radius: var(--radius-md);
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   font-weight: 600;
   box-shadow: 0 10px 20px rgba(15, 82, 186, 0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
-.button:hover,
-.button:focus,
-.cta-button:hover,
-.cta-button:focus,
 .container a.button:hover,
 .container a.button:focus,
 .container a.cta-button:hover,
-.container a.cta-button:focus {
-  color: #ffffff;
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 16px 28px rgba(15, 82, 186, 0.24);
-  filter: brightness(1.03);
-}
-
+.container a.cta-button:focus,
 .button:hover,
 .button:focus,
 .cta-button:hover,
 .cta-button:focus {
+  color: #ffffff !important;
+  text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 16px 28px rgba(15, 82, 186, 0.24);
   filter: brightness(1.03);
