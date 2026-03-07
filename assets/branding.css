@@ -1,61 +1,365 @@
-/* ============================= */
-/* === Huffle Branding Styles === */
-/* ============================= */
+/* ========================================================================== */
+/* HUFFLE'S IT SERVICES LLC                                                   */
+/* branding.css                                                               */
+/* -------------------------------------------------------------------------- */
+/* Primary branding stylesheet for homepage-style layouts.                    */
+/* Use this for pages centered around the main company presentation and       */
+/* hero-style branding sections.                                              */
+/* ========================================================================== */
 
-/* === Layered Background Styling === */
-body {
-  background-image: 
-    url("background.png"),
-    url("circuit-pattern.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center center, center center;
-  background-size: cover, cover;
-  background-attachment: fixed, fixed;
+
+
+/* ========================================================================== */
+/* 01. DESIGN TOKENS                                                          */
+/* -------------------------------------------------------------------------- */
+/* Central brand settings for color, spacing, sizing, and effects.            */
+/* Adjust these first when refining the overall homepage presentation.        */
+/* ========================================================================== */
+:root {
+  --color-primary: #0f52ba;
+  --color-primary-dark: #005a9c;
+  --color-primary-soft: rgba(15, 82, 186, 0.10);
+  --color-primary-soft-strong: rgba(15, 82, 186, 0.18);
+
+  --color-text: #1a1a1a;
+  --color-text-muted: #4a5568;
+  --color-surface: rgba(255, 255, 255, 0.88);
+  --color-surface-strong: rgba(255, 255, 255, 0.94);
+  --color-border: rgba(15, 82, 186, 0.14);
+
+  --shadow-soft: 0 14px 28px rgba(15, 82, 186, 0.08);
+  --shadow-card: 0 16px 32px rgba(0, 0, 0, 0.10);
+  --shadow-logo: 0 0 14px rgba(15, 82, 186, 0.75);
+  --shadow-logo-hover: 0 0 24px rgba(15, 82, 186, 0.95);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --spacing-page-y: clamp(1.25rem, 2vw, 2.5rem);
+  --spacing-page-x: clamp(1rem, 4vw, 3rem);
+  --spacing-section: clamp(1.5rem, 3vw, 2.75rem);
+
+  --max-width-container: 860px;
+}
+
+
+
+/* ========================================================================== */
+/* 02. GLOBAL RESET                                                           */
+/* -------------------------------------------------------------------------- */
+/* Basic consistency across browsers.                                         */
+/* ========================================================================== */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+
+
+/* ========================================================================== */
+/* 03. PAGE FOUNDATION                                                        */
+/* -------------------------------------------------------------------------- */
+/* Shared background and structural layout for the homepage-style experience. */
+/* Keeps the technical brand feel while improving polish and readability.     */
+/* ========================================================================== */
+body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--color-text);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.28)),
+    url("background.png"),
+    url("circuit-pattern.png");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: center center, center center, center center;
+  background-size: cover, cover, 600px;
+  background-attachment: fixed, fixed, fixed;
+  padding: var(--spacing-page-y) var(--spacing-page-x) 0;
 }
 
-/* === Logo Styling with Sapphire Glow === */
+
+
+/* ========================================================================== */
+/* 04. LOGO / HERO BRANDING                                                   */
+/* -------------------------------------------------------------------------- */
+/* Main brand presentation area for the homepage.                             */
+/* ========================================================================== */
 .logo {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .logo img {
-  max-width: 300px;
+  max-width: min(300px, 72vw);
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0 0 12px #0f52ba);
+  filter: drop-shadow(var(--shadow-logo));
 }
 
 .logo img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 20px #0f52ba);
+  transform: scale(1.04);
+  filter: drop-shadow(var(--shadow-logo-hover));
 }
 
-/* === Main Content Styling === */
+
+
+/* ========================================================================== */
+/* 05. MAIN CONTENT CONTAINER                                                 */
+/* -------------------------------------------------------------------------- */
+/* Primary homepage content wrapper.                                          */
+/* Designed to feel more polished and professional while staying on-brand.    */
+/* ========================================================================== */
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.85); /* Transparent white */
-  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width-container);
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  padding: clamp(1.75rem, 3vw, 2.75rem);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
   text-align: center;
-  color: #000000; /* Black text */
+  color: var(--color-text);
   flex-grow: 1;
+  backdrop-filter: blur(4px);
 }
 
-/* === Footer Styling === */
-footer {
-  background-color: #000000;
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 82, 186, 0.07),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+/* ========================================================================== */
+/* 06. TYPOGRAPHY INSIDE HOMEPAGE PANELS                                      */
+/* -------------------------------------------------------------------------- */
+/* Shared heading and paragraph styling for homepage content.                 */
+/* ========================================================================== */
+.container h1,
+.container h2,
+.container h3 {
+  color: var(--color-text);
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.container h1 {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+}
+
+.container h2 {
+  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
+  color: var(--color-primary-dark);
+}
+
+.container h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+}
+
+.container p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.container strong {
+  color: var(--color-primary-dark);
+}
+
+
+
+/* ========================================================================== */
+/* 07. LINKS, BUTTON-LIKE ACTIONS, AND ACCENTS                                */
+/* -------------------------------------------------------------------------- */
+/* Keeps Sapphire integrated in an intentional, professional way.             */
+/* ========================================================================== */
+.container a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.container a:hover,
+.container a:focus {
+  color: var(--color-primary);
+  text-shadow: 0 0 8px rgba(15, 82, 186, 0.18);
+}
+
+.button,
+.cta-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.8rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: #ffffff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  box-shadow: 0 0 10px #0f52ba;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(15, 82, 186, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.button:hover,
+.button:focus,
+.cta-button:hover,
+.cta-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(15, 82, 186, 0.24);
+  filter: brightness(1.03);
+}
+
+
+
+/* ========================================================================== */
+/* 08. FEATURE / HIGHLIGHT BLOCKS                                             */
+/* -------------------------------------------------------------------------- */
+/* Optional reusable homepage modules for service highlights or announcements.*/
+/* ========================================================================== */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 82, 186, 0.12);
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.feature-card h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: 0.65rem;
+}
+
+.feature-card p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight-strip {
+  margin-top: 1.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-soft);
+  border: 1px solid rgba(15, 82, 186, 0.12);
+}
+
+
+
+/* ========================================================================== */
+/* 09. LIST STYLING                                                           */
+/* -------------------------------------------------------------------------- */
+/* Clean homepage list styling with subtle Sapphire markers.                  */
+/* ========================================================================== */
+.container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.container li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.container li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  box-shadow: 0 0 0 3px rgba(15, 82, 186, 0.12);
+}
+
+
+
+/* ========================================================================== */
+/* 10. FOOTER                                                                 */
+/* -------------------------------------------------------------------------- */
+/* Homepage footer styling.                                                   */
+/* Keeps the site grounded and branded without feeling too heavy.             */
+/* ========================================================================== */
+footer {
   width: 100%;
+  margin-top: auto;
+  padding: 1.15rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #05070c, #0f172a);
+  box-shadow: 0 0 14px rgba(15, 82, 186, 0.28);
+  border-top: 1px solid rgba(15, 82, 186, 0.18);
+}
+
+
+
+/* ========================================================================== */
+/* 11. RESPONSIVE ADJUSTMENTS                                                 */
+/* -------------------------------------------------------------------------- */
+/* Keeps the homepage clean and balanced on tablets and phones.               */
+/* ========================================================================== */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 1rem 0;
+    background-size: cover, cover, 420px;
+  }
+
+  .logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button,
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
 }
