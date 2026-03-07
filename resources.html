@@ -1,207 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 🔷 HEAD: Meta + Styles -->
+  <!-- ==========================
+       META & PAGE TITLE
+  =========================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IT Resources — Huffle’s IT Services</title>
+  <title>IT Resources — Huffle's IT Services</title>
+
+  <!-- ==========================
+       SITE STYLESHEETS
+  =========================== -->
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="assets/nav.css" />
   <link rel="stylesheet" href="assets/branding-subpage.css" />
+  <link rel="stylesheet" href="assets/mobile.css" />
 </head>
+
 <body>
-  <!-- 🔷 NAVIGATION BAR -->
+
+  <!-- ==========================
+       MAIN NAVIGATION
+  =========================== -->
   <nav id="menu">
     <div class="nav-group main-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="intake.html">Intake Form</a>
-      <a href="resources.html">IT Resources</a>
+      <a href="resources.html" class="active">IT Resources</a>
       <a href="projects.html">Projects</a>
+      <a href="software.html">Software</a>
       <a href="about.html">About</a>
       <a href="browse.html">Browse</a>
     </div>
   </nav>
 
-  <!-- 🔷 LOGO HEADER -->
+  <!-- ==========================
+       LOGO HEADER
+  =========================== -->
   <header class="logo-header">
     <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
   </header>
 
-  <!-- 🔷 MAIN CONTENT BLOCK -->
-  <section class="content-block">
-    <h1>IT Resources &amp; Comfort Tools</h1>
+  <!-- ==========================
+       MAIN CONTENT
+  =========================== -->
+  <section class="content-block" id="resources">
+    <h1>IT Resources</h1>
+
     <p>
-      This page is a calm starting point, not a to-do list. Everything here is optional.
-      You can pick one thing, do that, and call it enough. None of these links will sign
-      you up for anything automatically.
+      This page collects practical, plain-language guidance for everyday technology use.
+      It is designed to help individuals, households, and small businesses understand common
+      IT basics, reduce avoidable risks, and feel more confident about their systems.
     </p>
 
-    <!-- 🔷 START HERE: SECURITY & BASICS -->
-    <h2>Start Here: Security &amp; Basics</h2>
-    <ul>
-      <li>
-        🛡️ <strong>Home Network Security Guide:</strong>
-        Best practices from the NSA for securing your home network and smart devices.
-        <a
-          href="https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/csi-best-practices-for-keeping-home-network-secure.pdf?v=1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download PDF
-        </a>
-      </li>
-
-      <li>
-        🧰 <strong>Free Cybersecurity Tools:</strong>
-        CISA’s curated list of free services and software for home users and small businesses.
-        <a
-          href="https://www.cisa.gov/resources-tools/resources/free-cybersecurity-services-and-tools"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore CISA Tools
-        </a>
-      </li>
-
-      <li>
-        🔍 <strong>Have I Been Pwned:</strong>
-        Check if your email address has appeared in known data breaches so you know when to
-        change passwords or turn on extra protection.
-        <a
-          href="https://haveibeenpwned.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check Your Email
-        </a>
-      </li>
-    </ul>
-
-    <!-- 🔷 HANDS-ON TOOLS & HOME SERVERS -->
-    <h2>Hands-On Tools &amp; Home Servers</h2>
-    <ul>
-      <li>
-        💻 <strong>Command Reference Site:</strong>
-        Scan-ready overlays for Windows, Linux, and PowerShell commands. Built for clarity,
-        comfort, and neurodivergent accessibility.
-        <a href="https://hufflesitservices.online/commands/Commands.html">
-          Open Command Reference
-        </a>
-      </li>
-
-      <li>
-        💾 <strong>Backup Planning Template:</strong>
-        A printable sheet to map your backup schedule, devices, and what matters most to you.
-        <em>(Coming soon)</em><br />
-        Until this is ready, you can jot notes on paper or in a simple text file; the template
-        will just give you a clearer structure later.
-      </li>
-
-      <li>
-        🧠 <strong>Sanctuary Overlay Builder:</strong>
-        A modular worksheet to design your own comfort-coded tech space.
-        <em>(Coming soon)</em><br />
-        This will help you slowly shape a tech area that feels safer and less overwhelming over time.
-      </li>
-
-      <li>
-        🖥️ <strong>Recommended Home Server OS:</strong>
-        TrueNAS, Proxmox, and OpenMediaVault are common picks for secure, flexible home storage.
-        <a
-          href="https://fixthephoto.com/best-home-server-software.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read Comparison
-        </a>
-      </li>
-    </ul>
-
-    <!-- 🔷 HOW TO USE THESE RESOURCES -->
-    <h2>How to Use These Resources</h2>
     <p>
-      You don’t have to work through all of this. These steps are meant to keep things small and manageable:
+      These resources are meant to be useful starting points, not a replacement for one-on-one
+      support. If your situation feels more complex than a checklist or quick guide, Huffle’s
+      IT Services can help you sort through it.
     </p>
-    <ol>
-      <li>
-        <strong>Pick one safety item.</strong> Start with either the NSA Home Network
-        Security Guide or the CISA tools page. Choose <strong>one or two</strong> small
-        changes you feel okay making, like changing your Wi-Fi password.
-      </li>
-      <li>
-        <strong>Do one action, then stop.</strong> After you make one change, you’re
-        allowed to be done for the day. You don’t have to “finish” the whole guide.
-      </li>
-      <li>
-        <strong>Use the Command Reference only when needed.</strong> If you run into
-        commands, open the reference in another tab and copy carefully instead of guessing.
-      </li>
-      <li>
-        <strong>Plan backups when you’re calm.</strong> When the Backup Planning Template
-        is ready, fill it out during a low-stress moment so future-you has a map when
-        something goes wrong.
-      </li>
-    </ol>
 
-    <!-- 🔷 ADDITIONAL TRUSTED RESOURCES -->
-    <h2>Additional Trusted IT &amp; Security Resources</h2>
-    <p>
-      These external resources can help you learn more and improve privacy without getting
-      lost in scary news feeds or deep technical rabbit holes.
-    </p>
+
+    <!-- ==========================
+         WHAT YOU'LL FIND HERE
+    =========================== -->
+    <h2>What You’ll Find Here</h2>
+
     <ul>
-      <li>
-        🔐 <strong>EFF Surveillance Self-Defense:</strong>
-        Guides for everyday privacy, secure messaging, and safer browsing—especially helpful
-        if you’re anxious about who can see your data.
-        <a
-          href="https://ssd.eff.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit EFF SSD
-        </a>
-      </li>
-
-      <li>
-        🧩 <strong>Password Managers (1Password, Bitwarden, etc.):</strong>
-        Password managers reduce the mental load of remembering everything while improving
-        security. If you’re not sure which is right for you, we can go over options together
-        during a support session.
-      </li>
-
-      <li>
-        🏠 <strong>Vendor Router Support Pages:</strong>
-        Most home routers have online manuals and support articles that show where security
-        settings live. If you know your router brand (for example: Netgear, TP-Link, ASUS,
-        or your ISP’s model), bookmarking its support page can make future fixes easier.
-      </li>
+      <li>Practical security basics explained in plain language.</li>
+      <li>Backup, maintenance, and home network guidance for everyday users.</li>
+      <li>Clear starting points for reducing stress and improving digital safety.</li>
     </ul>
 
-    <!-- 🔷 HOW HUFFLE’S CAN HELP -->
-    <h2>How Huffle’s Can Help With These</h2>
+
+    <!-- ==========================
+         PASSWORD & ACCOUNT SAFETY
+    =========================== -->
+    <h2>Password and Account Safety</h2>
+
     <p>
-      You don’t have to work through any of this alone. Huffle’s IT Services can:
+      Good account security is one of the most important parts of protecting your digital life.
+      Small improvements here can reduce a great deal of risk.
     </p>
+
     <ul>
-      <li>Walk through the NSA and CISA guidance with you as part of a Security Consultation.</li>
-      <li>Help you design a backup plan built around your actual devices and comfort level.</li>
-      <li>Advise on home server choices like TrueNAS, Proxmox, or OpenMediaVault.</li>
-      <li>Lock down your router and Wi-Fi if vendor documentation feels confusing.</li>
+      <li>Use unique passwords for important accounts instead of repeating the same one everywhere.</li>
+      <li>Enable multi-factor authentication whenever it is available, especially for email and financial accounts.</li>
+      <li>Consider using a password manager if keeping track of strong passwords feels overwhelming.</li>
+      <li>Be cautious with password reset messages or login alerts that arrive unexpectedly.</li>
     </ul>
 
-    <!-- 🔷 INTAKE LINK -->
+
+    <!-- ==========================
+         BACKUP BASICS
+    =========================== -->
+    <h2>Backup Basics</h2>
+
     <p>
-      If you’d like guided help with any of these steps,
-      <a href="intake.html">submit an intake form</a>
-      and we’ll move at a pace that works for you.
+      Backups matter most before something goes wrong. A simple backup plan can protect photos,
+      documents, business files, and irreplaceable personal records from accidents, hardware
+      failure, or malware.
+    </p>
+
+    <ul>
+      <li>Keep at least one backup outside the main device you use every day.</li>
+      <li>External drives are useful, but cloud backups can add another layer of protection.</li>
+      <li>Check backups occasionally to make sure they are actually running and storing the right data.</li>
+      <li>Prioritize the files that would hurt most to lose, not just the largest folders.</li>
+    </ul>
+
+
+    <!-- ==========================
+         SCAM & PHISHING AWARENESS
+    =========================== -->
+    <h2>Scam and Phishing Awareness</h2>
+
+    <p>
+      Many modern scams try to create urgency, fear, or confusion. If a message feels pushy,
+      alarming, or too convenient, that is often the first warning sign.
+    </p>
+
+    <ul>
+      <li>Be suspicious of unexpected emails or texts asking you to click links, verify accounts, or send personal information.</li>
+      <li>Watch for slight misspellings in sender names, company names, or website addresses.</li>
+      <li>Do not trust pop-ups that claim your device is infected and demand immediate action.</li>
+      <li>If you are unsure, stop first and verify through the official website or support channel rather than the message itself.</li>
+    </ul>
+
+
+    <!-- ==========================
+         HOME NETWORK BASICS
+    =========================== -->
+    <h2>Home Network Basics</h2>
+
+    <p>
+      Home Wi-Fi now supports far more than laptops and phones. Smart TVs, consoles, cameras,
+      and other connected devices all share the same environment, which makes basic network
+      hygiene more important than ever.
+    </p>
+
+    <ul>
+      <li>Change default router passwords and avoid leaving setup credentials unchanged.</li>
+      <li>Keep router firmware updated when updates are available from the manufacturer.</li>
+      <li>Use strong Wi-Fi encryption and avoid weak or outdated security settings.</li>
+      <li>Consider a guest network for visitors or smart devices when separation makes sense.</li>
+    </ul>
+
+
+    <!-- ==========================
+         DEVICE CARE & MAINTENANCE
+    =========================== -->
+    <h2>Device Care and Maintenance</h2>
+
+    <p>
+      A little routine care can help devices stay more stable, more secure, and less frustrating
+      to use over time.
+    </p>
+
+    <ul>
+      <li>Install system and application updates regularly rather than putting them off indefinitely.</li>
+      <li>Restart devices from time to time, especially when performance becomes inconsistent.</li>
+      <li>Keep enough free storage available so systems can update and function normally.</li>
+      <li>Pay attention to early warning signs such as unusual noise, repeated crashes, or sudden slowdowns.</li>
+    </ul>
+
+
+    <!-- ==========================
+         SMALL BUSINESS BASICS
+    =========================== -->
+    <h2>Small Business Technology Basics</h2>
+
+    <p>
+      Even very small businesses benefit from a few foundational habits. Putting reliable basics
+      in place early makes growth easier later.
+    </p>
+
+    <ul>
+      <li>Use business email tied to your own domain instead of relying only on personal accounts.</li>
+      <li>Keep shared documents, account access, and backups organized from the start.</li>
+      <li>Separate personal and business accounts wherever possible.</li>
+      <li>Think about who needs access, what data matters most, and what would happen if a device failed tomorrow.</li>
+    </ul>
+
+
+    <!-- ==========================
+         COMFORT-FIRST NOTE
+    =========================== -->
+    <h2>Comfort-First Support Matters</h2>
+
+    <p>
+      Technical guidance should not leave people feeling more confused than when they started.
+      Clear communication, realistic pacing, and practical explanations are part of good support,
+      not extra features.
+    </p>
+
+    <p>
+      If you need slower pacing, written steps, or a calmer approach to technology help, that is
+      a valid support need, not a problem to apologize for.
+    </p>
+
+
+    <!-- ==========================
+         CALL TO ACTION
+    =========================== -->
+    <h2>Need Help Beyond a Resource Page?</h2>
+
+    <p>
+      Guides and checklists can be a helpful start, but some situations need individual support.
+      If your issue is ongoing, stressful, or difficult to pin down, the next step is simple.
+    </p>
+
+    <p>
+      Visit the <a href="intake.html">Client Intake Form</a> and describe what is happening,
+      what concerns you most, and what you want your technology to feel like when things are
+      working properly again.
+    </p>
+
+    <p>
+      Huffle’s IT Services can help turn that into a clearer plan and a more manageable path forward.
     </p>
   </section>
 
-  <!-- 🔷 FOOTER -->
+  <!-- ==========================
+       FOOTER
+  =========================== -->
   <footer>
-    ©2025 Huffle’s IT Services LLC — Comfort-Guided &amp; Veteran-Owned
+    © 2025 Huffle’s IT Services LLC — Comfort-Guided, Veteran-Owned, and Disability-Aware
   </footer>
+
 </body>
 </html>
