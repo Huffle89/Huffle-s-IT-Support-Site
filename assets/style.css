@@ -1,81 +1,297 @@
-/* --- Basic Reset --- */
+/* ========================================================================== */
+/* HUFFLE'S IT SERVICES LLC                                                   */
+/* style.css                                                                  */
+/* -------------------------------------------------------------------------- */
+/* Global foundation stylesheet.                                              */
+/* This file provides shared defaults, typography, links, utility panels,     */
+/* and helper classes across the site.                                        */
+/*                                                                            */
+/* IMPORTANT:                                                                 */
+/* - Navigation styling belongs in nav.css                                    */
+/* - Homepage layout styling belongs in branding.css                          */
+/* - Subpage layout styling belongs in branding-subpage.css                   */
+/* ========================================================================== */
+
+
+
+/* ========================================================================== */
+/* 01. DESIGN TOKENS                                                          */
+/* -------------------------------------------------------------------------- */
+/* Shared global values for color, spacing, radius, and light utility use.    */
+/* ========================================================================== */
+:root {
+  --global-color-primary: #0f52ba;
+  --global-color-primary-dark: #005a9c;
+  --global-color-primary-soft: rgba(15, 82, 186, 0.10);
+  --global-color-primary-soft-strong: rgba(15, 82, 186, 0.18);
+
+  --global-color-text: #1f2933;
+  --global-color-text-muted: #52606d;
+  --global-color-heading: #111827;
+  --global-color-link: #0f52ba;
+  --global-color-link-hover: #005a9c;
+
+  --global-color-surface-light: rgba(255, 255, 255, 0.92);
+  --global-color-surface-dark: rgba(0, 0, 0, 0.62);
+  --global-color-border: rgba(15, 82, 186, 0.14);
+
+  --global-radius-sm: 8px;
+  --global-radius-md: 12px;
+  --global-radius-lg: 18px;
+
+  --global-shadow-soft: 0 10px 22px rgba(15, 82, 186, 0.08);
+  --global-shadow-panel: 0 12px 24px rgba(0, 0, 0, 0.12);
+  --global-shadow-glow: 0 0 8px rgba(15, 82, 186, 0.20);
+
+  --global-max-width: 960px;
+}
+
+
+
+/* ========================================================================== */
+/* 02. GLOBAL RESET / BASE ELEMENTS                                           */
+/* -------------------------------------------------------------------------- */
+/* Keeps shared defaults clean without overriding branding-specific layouts.   */
+/* ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    padding: 0;
-    margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background-color: transparent; /* ✅ Allows branding.css backgrounds to show */
-    color: #222;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: transparent;
+  color: var(--global-color-text);
 }
 
-/* --- Container Layout --- */
+
+
+/* ========================================================================== */
+/* 03. GENERIC CONTAINER FOUNDATION                                           */
+/* -------------------------------------------------------------------------- */
+/* Lightweight shared container base. Visual shell styling belongs elsewhere. */
+/* ========================================================================== */
 .container {
-    padding: 20px;
-    max-width: 960px;
-    margin: 2rem auto; /* ✅ Adds vertical spacing */
+  width: 100%;
+  max-width: var(--global-max-width);
+  margin: 2rem auto;
+  padding: 1.25rem;
 }
 
-/* === Title Styling === */
-h1, h2, h3, h4, h5, h6 {
-  color: black;
-}
 
-/* === Paragraph Styling === */
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+
+/* ========================================================================== */
+/* 04. GLOBAL TYPOGRAPHY                                                      */
+/* -------------------------------------------------------------------------- */
+/* Calm, professional typography defaults that work under all page themes.    */
+/* ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
   margin-bottom: 1rem;
+  color: var(--global-color-heading);
+  line-height: 1.25;
+  font-weight: 600;
 }
 
-/* === Link Styling (Optional) === */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--global-color-text);
+}
+
+small {
+  color: var(--global-color-text-muted);
+}
+
+
+
+/* ========================================================================== */
+/* 05. GLOBAL LINK STYLING                                                    */
+/* -------------------------------------------------------------------------- */
+/* Applies Sapphire branding to links site-wide without becoming overpowering.*/
+/* ========================================================================== */
 a {
-  color: #0077cc;
+  color: var(--global-color-link);
   text-decoration: none;
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease,
+    text-decoration-color 0.2s ease;
 }
-a:hover {
+
+a:hover,
+a:focus {
+  color: var(--global-color-link-hover);
   text-decoration: underline;
+  text-decoration-color: rgba(15, 82, 186, 0.40);
 }
-/* === Navigation Bar Styling === */
-.navbar {
-  background-color: #f0f0f0;
-  padding: 1rem;
+
+a:focus-visible {
+  outline: 2px solid rgba(15, 82, 186, 0.24);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+
+
+/* ========================================================================== */
+/* 06. LIST DEFAULTS                                                          */
+/* -------------------------------------------------------------------------- */
+/* Neutral base list styling. More decorative list styles belong in page CSS. */
+/* ========================================================================== */
+ul,
+ol {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+
+
+/* ========================================================================== */
+/* 07. SHARED TEXT / INFO PANELS                                              */
+/* -------------------------------------------------------------------------- */
+/* Reusable dark-overlay utility blocks for high-contrast content sections.   */
+/* These preserve the spirit of your older panel classes while cleaning them  */
+/* up into a more professional shared system.                                 */
+/* ========================================================================== */
+.text-block,
+.audit-log,
+.cue-panel,
+.employee-panel,
+.utility-panel-dark {
+  color: #ffffff;
+  background-color: var(--global-color-surface-dark);
+  padding: 1rem 1.1rem;
+  border-radius: var(--global-radius-md);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Segoe UI", sans-serif;
+  text-shadow: 0 0 4px rgba(15, 82, 186, 0.35);
+  border: 1px solid rgba(15, 82, 186, 0.16);
+  box-shadow: var(--global-shadow-panel);
+}
+
+.text-block a,
+.audit-log a,
+.cue-panel a,
+.employee-panel a,
+.utility-panel-dark a {
+  color: #cfe3ff;
+}
+
+.text-block a:hover,
+.audit-log a:hover,
+.cue-panel a:hover,
+.employee-panel a:hover,
+.utility-panel-dark a:hover {
+  color: #ffffff;
+}
+
+
+
+/* ========================================================================== */
+/* 08. LIGHT UTILITY PANELS                                                   */
+/* -------------------------------------------------------------------------- */
+/* Optional lighter shared panel style for general reusable content blocks.    */
+/* ========================================================================== */
+.utility-panel-light {
+  background-color: var(--global-color-surface-light);
+  border: 1px solid var(--global-color-border);
+  border-radius: var(--global-radius-md);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--global-shadow-soft);
+}
+
+
+
+/* ========================================================================== */
+/* 09. HELPER / UTILITY CLASSES                                               */
+/* -------------------------------------------------------------------------- */
+/* Small helper classes for alignment and spacing.                            */
+/* ========================================================================== */
+.text-center {
   text-align: center;
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.text-left {
+  text-align: left;
 }
 
-.navbar li {
-  display: inline;
-  margin: 0 1rem;
+.text-muted {
+  color: var(--global-color-text-muted);
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: bold;
+.max-width-global {
+  max-width: var(--global-max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
-}
-/* 🧠 Universal Text Block Fix */
-.text-block, .audit-log, .cue-panel, .employee-panel {
-  color: #FFFFFF; /* High contrast white text */
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-family: 'Segoe UI', sans-serif;
-  text-shadow: 0 0 4px #0F52BA; /* Optional glow */
+.mt-0 {
+  margin-top: 0;
 }
 
-/* 📱 Responsive Font Scaling */
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+
+
+/* ========================================================================== */
+/* 10. MEDIA / IMAGE DEFAULTS                                                 */
+/* -------------------------------------------------------------------------- */
+/* Keeps visual content responsive by default.                                */
+/* ========================================================================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* ========================================================================== */
+/* 11. RESPONSIVE ADJUSTMENTS                                                 */
+/* -------------------------------------------------------------------------- */
+/* Small-screen refinements for shared text blocks and global spacing.        */
+/* ========================================================================== */
 @media (max-width: 600px) {
-  .text-block, .audit-log, .cue-panel, .employee-panel {
-    font-size: 0.9rem;
+  .container {
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .text-block,
+  .audit-log,
+  .cue-panel,
+  .employee-panel,
+  .utility-panel-dark,
+  .utility-panel-light {
+    font-size: 0.95rem;
+    padding: 0.95rem 1rem;
   }
 }
