@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ==========================
+       META & PAGE TITLE
+  =========================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Client Intake Form — Huffle’s IT Services</title>
 
-  <!-- 🔹 Site Stylesheets -->
+  <!-- ==========================
+       SITE STYLESHEETS
+  =========================== -->
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="assets/nav.css" />
   <link rel="stylesheet" href="assets/branding-subpage.css" />
 
-  <!-- 🔹 Inline Form Styling (kept scoped and on-theme) -->
+  <!-- ==========================
+       PAGE-SPECIFIC FORM STYLES
+  =========================== -->
   <style>
     .intake-wrapper {
       max-width: 800px;
@@ -22,10 +29,11 @@
     }
 
     .intake-form {
-      background-color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.98);
       padding: 1.75rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      box-shadow: 0 10px 22px rgba(15, 82, 186, 0.08);
+      border: 1px solid rgba(15, 82, 186, 0.12);
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -41,37 +49,45 @@
     }
 
     .form-section p.section-hint {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       margin-top: 0;
       margin-bottom: 0.75rem;
-      color: #444;
+      color: #4a5568;
     }
 
     .form-row {
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
     }
 
     label {
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .field-hint {
-      font-size: 0.85rem;
-      color: #555;
+      font-size: 0.88rem;
+      color: #52606d;
     }
 
     input,
     select,
     textarea {
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid rgba(15, 82, 186, 0.16);
+      border-radius: 8px;
       font-size: 1rem;
       width: 100%;
       box-sizing: border-box;
+      background-color: #ffffff;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid rgba(15, 82, 186, 0.18);
+      border-color: #0f52ba;
     }
 
     textarea {
@@ -79,24 +95,30 @@
     }
 
     button {
-      padding: 0.75rem;
-      background-color: #005a9c;
+      padding: 0.9rem 1rem;
+      background: linear-gradient(135deg, #0f52ba, #005a9c);
       color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 10px;
       font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
+      box-shadow: 0 10px 20px rgba(15, 82, 186, 0.16);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
     }
 
     button:hover {
-      background-color: #004080;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 24px rgba(15, 82, 186, 0.22);
+      filter: brightness(1.02);
     }
 
     .consent-block {
       margin-top: 1rem;
       padding: 1rem;
-      background-color: #f9f9f9;
+      background-color: rgba(230, 240, 255, 0.28);
       border-left: 4px solid #005a9c;
+      border-radius: 8px;
     }
 
     .consent-block p {
@@ -104,9 +126,16 @@
     }
 
     .no-password-note {
-      font-size: 0.9rem;
-      color: #b00020;
+      font-size: 0.92rem;
+      color: #8b1e3f;
       margin-top: 0.5rem;
+    }
+
+    .form-reassurance {
+      font-size: 0.95rem;
+      color: #4a5568;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     @media (max-width: 600px) {
@@ -118,35 +147,47 @@
 </head>
 
 <body>
-  <!-- 🔷 Navigation Menu -->
+  <!-- ==========================
+       MAIN NAVIGATION
+  =========================== -->
   <nav id="menu">
     <div class="nav-group main-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="intake.html">Intake Form</a>
+      <a href="intake.html" class="active">Intake Form</a>
       <a href="resources.html">IT Resources</a>
       <a href="projects.html">Projects</a>
+      <a href="software.html">Software</a>
       <a href="about.html">About</a>
       <a href="browse.html">Browse</a>
     </div>
   </nav>
 
-  <!-- 🔷 Logo Header -->
+  <!-- ==========================
+       LOGO HEADER
+  =========================== -->
   <header class="logo-header">
     <img src="assets/logo.png" alt="Huffle's IT Services Logo" class="logo" />
   </header>
 
-  <!-- 🔷 Intake Form Section -->
+  <!-- ==========================
+       MAIN CONTENT
+  =========================== -->
   <section class="content-block">
     <div class="intake-wrapper">
       <h1>Client Intake Form</h1>
+
       <p class="intake-intro">
-        This form helps us understand your situation so we can prepare a quote and a clear plan.
-        You are not committing to paid work by submitting it. We do not collect payment information
-        or passwords here, and short, simple answers or bullet points are perfectly fine.
+        This form helps us understand your situation so we can prepare a quote, recommend the right support, and respond with a clear plan. Submitting this form does not commit you to paid work. You do not need to have everything figured out before reaching out, and short answers or bullet points are completely fine.
       </p>
 
-      <!-- 🔷 FormSubmit Integration -->
+      <p class="intake-intro">
+        We do not collect payment information or passwords here. Just share what you know, what feels wrong, and what kind of help you are hoping for.
+      </p>
+
+      <!-- ==========================
+           FORM
+      =========================== -->
       <form
         class="intake-form"
         action="https://formsubmit.co/hufflesitservices@gmail.com"
@@ -164,7 +205,7 @@
         <div class="form-section">
           <h2>Basic Information</h2>
           <p class="section-hint">
-            Tell us who you are and how to reach you. We’ll only use this info to respond to your request.
+            Tell us who you are and how to reach you. We will only use this information to respond to your request.
           </p>
 
           <div class="form-row">
@@ -183,7 +224,7 @@
               oninput="formatPhone(this)"
               required
             />
-            <span class="field-hint">We’ll only call or text in the way you specify below.</span>
+            <span class="field-hint">We will only call or text in the way you specify below.</span>
           </div>
 
           <div class="form-row">
@@ -234,12 +275,12 @@
         </div>
 
         <!-- =========================
-             SECTION: Device & Tech Details
+             SECTION: Device and Technical Details
         ========================== -->
         <div class="form-section">
-          <h2>Device &amp; Tech Details</h2>
+          <h2>Device and Technical Details</h2>
           <p class="section-hint">
-            This helps us prepare before we reach out so you’re not repeating yourself.
+            This helps us prepare before we reach out so you do not have to repeat yourself.
           </p>
 
           <div class="form-row">
@@ -312,7 +353,7 @@
           </div>
 
           <div class="form-row">
-            <label for="urgency">How urgent is this for you?</label>
+            <label for="urgency">How urgent does this feel right now?</label>
             <select id="urgency" name="urgency">
               <option value="">-- Select --</option>
               <option value="Calm — whenever you can">Calm — whenever you can</option>
@@ -327,18 +368,18 @@
               id="message"
               name="message"
               rows="5"
-              placeholder="Anything you’ve already tried, how the issue started, error messages, or what “fixed” would feel like for you. Short notes or bullet points are fine."
+              placeholder="Anything you have already tried, how the issue started, any error messages, or what a good outcome would look like for you. Short notes or bullet points are fine."
             ></textarea>
           </div>
         </div>
 
         <!-- =========================
-             SECTION: Current Setup Snapshot
+             SECTION: Current Setup Overview
         ========================== -->
         <div class="form-section">
-          <h2>Current Setup Snapshot</h2>
+          <h2>Current Setup Overview</h2>
           <p class="section-hint">
-            Optional, but helpful. This gives us a quick picture of your environment. You can skip this if it feels like too much.
+            Optional, but helpful. This gives us a quick picture of your environment. You can skip this section if it feels like too much.
           </p>
 
           <div class="form-row">
@@ -368,7 +409,7 @@
           </div>
 
           <div class="form-row">
-            <label for="router">Router / Modem Brand &amp; Model:</label>
+            <label for="router">Router / Modem Brand and Model:</label>
             <input
               type="text"
               id="router"
@@ -388,25 +429,23 @@
           </div>
 
           <div class="form-row">
-            <label for="backup_method">Do you currently have backups?</label>
+            <label for="backup_method">What backup method, if any, do you currently use?</label>
             <textarea
               id="backup_method"
               name="backup_method"
               rows="3"
-              placeholder="Example: External drive once a month, cloud backup, no backups yet, not sure."
+              placeholder="Example: External drive once a month, cloud backup, no backups yet, or not sure."
             ></textarea>
           </div>
         </div>
 
         <!-- =========================
-             SECTION: Military & First Responder Discount (Optional)
+             SECTION: Military and First Responder Discount
         ========================== -->
         <div class="form-section">
-          <h2>Military &amp; First Responder Discount</h2>
+          <h2>Military and First Responder Discount</h2>
           <p class="section-hint">
-            Optional. Huffle’s IT Services is veteran-owned. Verified U.S. Military (active or veteran)
-            and verified first responders (police, fire, EMS) may qualify for discounted services.
-            You may skip this question if you prefer.
+            Optional. Huffle’s IT Services is veteran-owned. Verified U.S. Military personnel and veterans, along with verified first responders such as police, fire, and EMS, may qualify for discounted services.
           </p>
 
           <div class="form-row">
@@ -423,30 +462,27 @@
           </div>
 
           <div class="form-row">
-            <label for="veteran_notes">Anything you’d like us to know about your service? (Optional)</label>
+            <label for="veteran_notes">Anything you would like us to know about your service background? (Optional)</label>
             <textarea
               id="veteran_notes"
               name="veteran_notes"
               rows="3"
-              placeholder="Branch, era, or anything relevant you’d like to share (optional)."
+              placeholder="Branch, era, or anything else you would like to share."
             ></textarea>
           </div>
 
           <p class="no-password-note">
-            ⚠️ Discounts require verification (for example: VA card, veteran-designated driver’s license,
-            or other official proof). Please do <strong>not</strong> upload or email ID photos or documents
-            through this form — we’ll arrange a safe way to verify during scheduling or consultation.
+            ⚠️ Discounts require verification, such as a VA card, veteran-designated driver’s license, or other official proof. Please do <strong>not</strong> upload or email ID photos or documents through this form. We will arrange a safer verification method during scheduling or consultation if needed.
           </p>
         </div>
 
         <!-- =========================
-             SECTION: Data & Risk Priorities
+             SECTION: Data and Risk Priorities
         ========================== -->
         <div class="form-section">
-          <h2>Data &amp; Risk Priorities</h2>
+          <h2>Data and Risk Priorities</h2>
           <p class="section-hint">
-            This helps us understand what matters most so we can protect the right things first.
-            Short answers or bullet points are fine.
+            This helps us understand what matters most so we can protect the right things first. Short answers or bullet points are fine.
           </p>
 
           <div class="form-row">
@@ -480,17 +516,16 @@
         </div>
 
         <!-- =========================
-             SECTION: Comfort & Accessibility
+             SECTION: Comfort and Accessibility Preferences
         ========================== -->
         <div class="form-section">
-          <h2>Comfort &amp; Accessibility Preferences</h2>
+          <h2>Comfort and Accessibility Preferences</h2>
           <p class="section-hint">
-            Completely optional. If certain approaches, tones, or tools help you feel safer or less overwhelmed,
-            you can tell us here. You can also leave this blank.
+            Completely optional. If certain approaches, tones, or tools help you feel safer or less overwhelmed, you can tell us here. You can also leave this section blank.
           </p>
 
           <div class="form-row">
-            <label for="access">Comfort / Accessibility Needs:</label>
+            <label for="access">Comfort and Accessibility Preferences:</label>
             <textarea
               id="access"
               name="access"
@@ -518,23 +553,29 @@
               <option value="Yes, with explanation and consent each time">
                 Yes, with explanation and consent each time
               </option>
-              <option value="Maybe — I’d like it explained first">
-                Maybe — I’d like it explained first
+              <option value="Maybe — I would like it explained first">
+                Maybe — I would like it explained first
               </option>
-              <option value="No — I prefer only guided steps">
-                No — I prefer only guided steps
+              <option value="No — I prefer guided steps only">
+                No — I prefer guided steps only
               </option>
             </select>
           </div>
 
           <p class="no-password-note">
-            ⚠️ Please do <strong>not</strong> include any passwords or full login credentials in this form.
-            If temporary access is needed, we’ll arrange a safe method during the consultation.
+            ⚠️ Please do <strong>not</strong> include any passwords or full login credentials in this form. If temporary access is needed, we will arrange a safer method during the consultation.
           </p>
         </div>
 
         <!-- =========================
-             SECTION: Consent
+             SECTION: FINAL REASSURANCE
+        ========================== -->
+        <p class="form-reassurance">
+          You do not need to complete every section for us to help. If you are unsure about any question, leave it blank and share what you do know.
+        </p>
+
+        <!-- =========================
+             SECTION: CONSENT
         ========================== -->
         <div class="consent-block">
           <label>
@@ -542,24 +583,28 @@
             I consent to Huffle’s IT Services reviewing this information to provide support and a quote.
           </label>
           <p>
-            <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery
-            cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless
-            caused by proven negligence.
+            <strong>Disclaimer:</strong> While every effort will be made to assist, full data recovery cannot be guaranteed. Huffle’s IT Services is not liable for data loss or damage unless caused by proven negligence.
           </p>
         </div>
 
-        <!-- 🔹 Submit Button -->
+        <!-- =========================
+             SUBMIT
+        =========================== -->
         <button type="submit">Submit Intake</button>
       </form>
     </div>
   </section>
 
-  <!-- 🔷 Footer -->
+  <!-- ==========================
+       FOOTER
+  =========================== -->
   <footer>
-    ©2025 Huffle’s IT Services LLC — Comfort-Guided &amp; Veteran-Owned
+    © 2025 Huffle’s IT Services LLC — Comfort-Guided, Veteran-Owned, and Disability-Aware
   </footer>
 
-  <!-- 🔷 Form Validation & Phone Formatting -->
+  <!-- ==========================
+       FORM VALIDATION / HELPERS
+  =========================== -->
   <script>
     function formatPhone(input) {
       let digits = input.value.replace(/\D/g, "").substring(0, 10);
